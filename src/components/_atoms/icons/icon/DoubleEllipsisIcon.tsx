@@ -1,0 +1,19 @@
+import React from "react";
+
+interface iDoubleEllipsisIcon {
+  className?: string;
+}
+
+const DoubleEllipsisIcon = ({ className }: iDoubleEllipsisIcon) => (
+  <svg width="31" height="27" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path d="M12.6 7.98735C12.1651 7.98735 11.8125 7.63478 11.8125 7.19985C11.8125 6.76493 12.1651 6.41235 12.6 6.41235C13.0349 6.41235 13.3875 6.76493 13.3875 7.19985C13.3875 7.63478 13.0349 7.98735 12.6 7.98735Z" stroke="#4B5563" strokeWidth="1.575" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M12.6 14.2874C12.1651 14.2874 11.8125 13.9348 11.8125 13.4999C11.8125 13.0649 12.1651 12.7124 12.6 12.7124C13.0349 12.7124 13.3875 13.0649 13.3875 13.4999C13.3875 13.9348 13.0349 14.2874 12.6 14.2874Z" stroke="#4B5563" strokeWidth="1.575" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M12.6 20.5874C12.1651 20.5874 11.8125 20.2348 11.8125 19.7999C11.8125 19.3649 12.1651 19.0124 12.6 19.0124C13.0349 19.0124 13.3875 19.3649 13.3875 19.7999C13.3875 20.2348 13.0349 20.5874 12.6 20.5874Z" stroke="#4B5563" strokeWidth="1.575" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M17.85 7.98735C17.4151 7.98735 17.0625 7.63478 17.0625 7.19985C17.0625 6.76493 17.4151 6.41235 17.85 6.41235C18.2849 6.41235 18.6375 6.76493 18.6375 7.19985C18.6375 7.63478 18.2849 7.98735 17.85 7.98735Z" stroke="#4B5563" strokeWidth="1.575" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M17.85 14.2874C17.4151 14.2874 17.0625 13.9348 17.0625 13.4999C17.0625 13.0649 17.4151 12.7124 17.85 12.7124C18.2849 12.7124 18.6375 13.0649 18.6375 13.4999C18.6375 13.9348 18.2849 14.2874 17.85 14.2874Z" stroke="#4B5563" strokeWidth="1.575" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M17.85 20.5874C17.4151 20.5874 17.0625 20.2348 17.0625 19.7999C17.0625 19.3649 17.4151 19.0124 17.85 19.0124C18.2849 19.0124 18.6375 19.3649 18.6375 19.7999C18.6375 20.2348 18.2849 20.5874 17.85 20.5874Z" stroke="#4B5563" strokeWidth="1.575" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+
+);
+
+export default DoubleEllipsisIcon;

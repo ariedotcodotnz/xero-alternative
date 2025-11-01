@@ -1,0 +1,73 @@
+import COPModal from "./COPModal";
+
+/* *********************************
+ * THIS FILE IS EXCLUDED IN THE STORYBOOK CONFIG AS IT FAILS TO BUILD
+ * TO RE-ENABLE REMOVE THE EXCLUSION IN: .storybook/main.ts
+ * 
+ * TICKET TO FIX: https://hnry-nz.monday.com/boards/5316216020/pulses/8026426245
+ * ********************************* */
+
+export default {
+  title: "Organisms/COPModal",
+  component: COPModal,
+  tags: ["autodocs"],
+  parameters: {
+    docs: {
+      story: {
+        inline: false,
+        iframeHeight: 600,
+      },
+    },
+  },
+};
+
+export const Default = {
+  args: {
+    fields: [
+      {
+        label: "Account type",
+        value: "Personal",
+      },
+      {
+        label: "Sort Code",
+        value: "1234456",
+      },
+    ],
+    actionName: "create allocation",
+  },
+  parameters: {
+    mockData: [
+      {
+        url: "/api/reports/income_expense",
+        method: "GET",
+        status: 200,
+        response: {
+          status: "ok",
+          data: {
+            totalProfit: {
+              amount: 98620.69,
+              currency: "NZD",
+            },
+            monthlyData: [
+              {
+                date: "2024-04-30T12:00:00.000Z",
+                incomeBeforeTax: { amount: 9, currency: "NZD" },
+                approvedExpenses: {
+                  amount: 0,
+                  currency: "NZD",
+                },
+                profit: {
+                  amount: 9,
+                  currency: "NZD",
+                },
+              },
+            ],
+          },
+        },
+      },
+    ],
+  },
+};
+
+
+

@@ -1,0 +1,31 @@
+var map = {
+	"./": 4222,
+	"./ato_prefill_channel": 56919,
+	"./ato_prefill_channel.js": 56919,
+	"./impersonate_channel": 45251,
+	"./impersonate_channel.js": 45251,
+	"./index": 4222,
+	"./index.js": 4222,
+	"./receipt_scanning_channel": 63164,
+	"./receipt_scanning_channel.js": 63164
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 9080;
