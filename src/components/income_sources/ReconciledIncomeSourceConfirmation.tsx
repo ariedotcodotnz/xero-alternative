@@ -3,7 +3,7 @@ import { formatNumeral } from "cleave-zen";
 import Tooltip from "@hui/_atoms/tooltip/Tooltip";
 import I18n from "../../utilities/translations";
 import { iIncomeSource as financialIncomeSource } from "../../types/financialIncomeSource.type";
-import { timeZoneType } from "../../types/index.js";
+import { timeZoneType } from "../../types";
 import AmountsAndDates from "./AmountsAndDates";
 import RadioButtonList from "../_molecules/radio_button_list/RadioButtonList";
 

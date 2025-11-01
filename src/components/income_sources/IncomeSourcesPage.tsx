@@ -3,7 +3,7 @@ import IncomeSourceRow from "./IncomeSourceRow";
 import { iIncomeSource as financialIncomeSource, iMidYearTransition } from "../../types/financialIncomeSource.type";
 import I18n from "../../utilities/translations";
 import PreHnryIncomeRow from "./PreHnryIncomeRow";
-import { timeZoneType } from "../../types/index.js";
+import { timeZoneType } from "../../types";
 import isMobile from "../../es_utilities/isMobile";
 
 interface iIncomeSourcesPage {

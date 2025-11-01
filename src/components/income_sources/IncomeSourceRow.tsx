@@ -7,7 +7,7 @@ import { iIncomeSource as financialIncomeSource } from "../../types/financialInc
 import IncomeSourceModal from "./IncomeSourceModal";
 import DeleteConfirmationModal from "./DeleteConfirmationModal";
 import I18n from "../../utilities/translations";
-import { timeZoneType } from "../../types/index.js";
+import { timeZoneType } from "../../types";
 import isMobile from "../../es_utilities/isMobile";
 
 interface iIncomeSourceRow {

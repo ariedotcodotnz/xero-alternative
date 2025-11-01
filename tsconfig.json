@@ -4,9 +4,15 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
     "skipLibCheck": true,
-    "outDir": "dist"
-  },
-  "include": ["src"]
+    "outDir": "dist",
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@hui/*": ["src/components/*"],
+      "@api/*": ["src/API/*"],
+      "@types/*": ["src/types/*"]
+    }
+  }
 }

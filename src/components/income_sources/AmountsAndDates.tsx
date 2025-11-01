@@ -6,7 +6,7 @@ import Switch from "@hui/_atoms/switch/Switch"
 import I18n from "../../utilities/translations";
 import { getUserJurisdictionCurrencySymbol, getUserJurisdictionLocale } from "../../utilities/user_attributes";
 import { iIncomeSource as financialIncomeSource } from "../../types/financialIncomeSource.type";
-import { timeZoneType } from "../../types/index.js";
+import { timeZoneType } from "../../types";
 import { castDateToTimezone } from "../../es_utilities/ScheduleInputHelpers";
 
 const BROWSER_TIMEZONE = Intl.DateTimeFormat().resolvedOptions().timeZone;

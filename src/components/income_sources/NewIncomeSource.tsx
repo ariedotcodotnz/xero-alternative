@@ -3,7 +3,7 @@ import IncomeSourceModal from "./IncomeSourceModal";
 import { iIncomeSource as financialIncomeSource } from "../../types/financialIncomeSource.type";
 import I18n from "../../utilities/translations";
 import Button from "../_atoms/button/Button";
-import { timeZoneType } from "../../types/index.js";
+import { timeZoneType } from "../../types";
 
 interface iNewIncomeSource {
   incomeSource: financialIncomeSource;

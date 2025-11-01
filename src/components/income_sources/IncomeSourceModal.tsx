@@ -12,7 +12,7 @@ import TaxRateConsentModal from "./TaxRateConsentModal";
 import I18n from "../../utilities/translations";
 import { iIncomeSource as financialIncomeSource } from "../../types/financialIncomeSource.type";
 import { updateIncomeSource, createIncomeSource } from "../../API/financial_income_source.api";
-import { timeZoneType } from "../../types/index.js";
+import { timeZoneType } from "../../types";
 
 const SALARY_TYPE = "PAYE/Salary"
 
