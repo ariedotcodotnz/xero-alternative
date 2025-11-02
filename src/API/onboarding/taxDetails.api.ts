@@ -1,6 +1,6 @@
 import { OnboardingResponseBody } from "@hui/onboarding/Tour/Shared/types/onboardingTypes";
 import { get, postJson } from "../config/fetch.api";
-import BasicResponse from "../types/basicResponse";
+import BasicResponse from "../types/basicResponse.js";
 
 export interface taxDetailsDto {
   vatNumber?: string;

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react.js";
 import Input from "../../_atoms/input/Input";
 import {
   Address,

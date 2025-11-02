@@ -1,5 +1,5 @@
 import { get, postJson } from "@api/config/fetch.api";
-import CreateClientResponseBody from "./CreateClientResponseBody";
+import CreateClientResponseBody from "./CreateClientResponseBody.js";
 
 export interface iClient {
   id: string;

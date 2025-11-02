@@ -1,5 +1,5 @@
 import { postJson, get } from "../config/fetch.api";
-import BasicResponse from "../types/basicResponse";
+import BasicResponse from "../types/basicResponse.js";
 
 export default interface getPayslipPathResponseBody extends BasicResponse {
   data: {

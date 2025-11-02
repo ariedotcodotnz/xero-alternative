@@ -1,6 +1,6 @@
 import { OnboardingResponseBody } from "@hui/onboarding/Tour/Shared/types/onboardingTypes";
 import { postJson, get } from "../config/fetch.api";
-import BasicResponse from "../types/basicResponse";
+import BasicResponse from "../types/basicResponse.js";
 
 export interface incomeDetailsDto {
   prior_expenses_this_year: number;
