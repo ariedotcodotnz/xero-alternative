@@ -24,14 +24,18 @@ import "./channels";
 // 6. Import utilities and global helpers
 import "./utilities";
 
-// 7. Initialize Datadog monitoring
+// 7. Import ES utilities (provides window.initializeFormDisabledButtons and others)
+import "./es_utilities";
+
+// 8. Initialize Datadog monitoring
 import "./datadog";
 
-// 8. Import Bootstrap and application styles
+// 9. Import Bootstrap JavaScript and CSS
+import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "./stylesheets/application.scss";
 
-// 9. Setup global Hnry object for legacy code
+// 10. Setup global Hnry object for legacy code
 if (typeof window !== "undefined") {
   window.Hnry = window.Hnry || {
     Config: {

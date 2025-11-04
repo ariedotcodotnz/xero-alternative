@@ -50,3 +50,4 @@ const disableFormSubmitUntilValid = () => {
 };
 
 export default disableFormSubmitUntilValid;
+export { toggleSubmitOnFormValidity };

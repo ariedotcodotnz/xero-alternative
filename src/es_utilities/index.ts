@@ -4,7 +4,7 @@ import bindClickableRows, { processClickableRows } from "./clickableRows";
 import bindToastFlashMessages, { toastFlashMessages } from "./flash";
 import cardPinValidator from "./cardPinValidator";
 import disableFormSubmitUntilChange from "./disabledFormSubmitUntilChange";
-import disableFormSubmitUntilValid from "./disableFormSubmitUntilValid";
+import disableFormSubmitUntilValid, { toggleSubmitOnFormValidity } from "./disableFormSubmitUntilValid";
 import dismissNotification from "./dismissNotification";
 import loggedOutAnalyticsHelper from "./loggedOutAnalyticsHelper";
 import unsavedChangesAlert from "./unsavedChangesAlert";
@@ -27,6 +27,8 @@ disableFormSubmitUntilChange();
 // Yes I'm sad too.
 // @ts-ignore
 window.initializeFormDisabledButtons = disableFormSubmitUntilValid;
+// @ts-ignore
+window.flipSubmit = toggleSubmitOnFormValidity;
 // @ts-ignore
 window.processClickableRows = processClickableRows;
 // @ts-ignore

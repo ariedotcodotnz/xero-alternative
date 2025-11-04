@@ -14,11 +14,13 @@ document.addEventListener("turbolinks:load", () => {
     const intercomHomeLink = document.getElementById("intercom-home");
     const intercomLinks = document.querySelectorAll("[data-intercom-article-id]");
 
-    intercomHomeLink.addEventListener("click", (event) => {
-      event.preventDefault();
+    if (intercomHomeLink) {
+      intercomHomeLink.addEventListener("click", (event) => {
+        event.preventDefault();
 
-      Intercom("showSpace", "help");
-    });
+        Intercom("showSpace", "help");
+      });
+    }
 
     intercomLinks.forEach(link => {
       if (link.getAttribute("data-intercom-article-id") !== "") {
