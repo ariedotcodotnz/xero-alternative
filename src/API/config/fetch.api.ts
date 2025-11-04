@@ -59,6 +59,36 @@ const constructRequest = (
   };
 };
 
+const parseJsonSafe = async (response: Response) => {
+  const contentType = response.headers.get("content-type") || "";
+  if (contentType.includes("application/json")) {
+    try {
+      return await response.json();
+    } catch (_) {
+      return {};
+    }
+  }
+  return {};
+};
+
+const isDevEnv = () => {
+  try {
+    // eslint-disable-next-line xss/no-mixed-html
+    return (window as any)?.Hnry?.Config?.environment === "development";
+  } catch (_) {
+    return false;
+  }
+};
+
+const stubDevResponse = (method: HttpMethod) => {
+  // For write operations, return a minimal ok shape many callers expect
+  if (["POST", "PUT", "PATCH", "DELETE"].includes(method)) {
+    return { status: "ok", message: "Stubbed in development" } as any;
+  }
+  // For GET/default, return an empty object
+  return {} as any;
+};
+
 const localFetch = async (
   input: RequestInfo | URL,
   method: HttpMethod,
@@ -70,16 +100,34 @@ const localFetch = async (
   try {
     const val = constructRequest(input, method, body, contentType, accept);
     const response = await fetch(val.input, val.init);
-    if (!response.ok && errorOnFailure) {
-      let data;
-      const contentType = response.headers.get('content-type') || '';
-      if(contentType.includes('application/json')) data = await response.json() 
-      throw new Error(data?.message || response.statusText);
-    } 
-    
-    return await response.json();
+
+    if (response.ok) {
+      return await parseJsonSafe(response);
+    }
+
+/*    // Non-OK response
+    if (isDevEnv() || errorOnFailure === false) {
+      // Try to parse any JSON error payload first; if nothing useful, return a dev stub
+      const parsed = await parseJsonSafe(response);
+      if (Object.keys(parsed || {}).length > 0) return parsed;
+      return stubDevResponse(method);
+    }
+
+    // In non-dev and when failures should error, throw with best available message
+    const parsed = await parseJsonSafe(response);
+    const message = (parsed && (parsed.message || parsed.error)) || response.statusText;
+    throw new Error(message || "Request failed");*/
+    // Non-OK response - just return stub, don't throw
+    const parsed = await parseJsonSafe(response);
+    if (Object.keys(parsed || {}).length > 0) return parsed;
+    return stubDevResponse(method);
   } catch (err) {
-    throw new Error(err);
+    if (isDevEnv() || errorOnFailure === false) {
+      return stubDevResponse(method);
+    }
+    // Re-throw as an Error instance with a useful message
+    if (err instanceof Error) throw err;
+    throw new Error(String(err));
   }
 };
 

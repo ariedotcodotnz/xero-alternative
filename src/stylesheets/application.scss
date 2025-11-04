@@ -1,0 +1,19 @@
+/* Minimal app stylesheet to satisfy import and provide basic styles */
+@charset "UTF-8";
+
+:root {
+  --brand-color: #6b5cff;
+}
+
+body {
+  background: #fafafa;
+}
+
+.copy-trigger.btn {
+  background-color: var(--brand-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+}
+

@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classnames.js";
+import classNames from "classnames";
 import {
   ArrowRightOnRectangleIcon,
   CalendarDaysIcon,
@@ -21,9 +21,9 @@ import {
   XCircleIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import NZIcon from "./NZIcon.js";
-import AUIcon from "./AUIcon.js";
-import UKIcon from "./UKIcon.js";
+import NZIcon from "./NZIcon";
+import AUIcon from "./AUIcon";
+import UKIcon from "./UKIcon";
 
 export const sizeClasses = {
   xs: "w-3.5 h-3.5",

@@ -2,7 +2,7 @@ import React, { ReactNode, useState } from "react";
 import classNames from "classnames";
 import * as RadixCollapsible from "@radix-ui/react-collapsible";
 import Icon from "../../_atoms/icons/icon/Icon";
-import "./styles.scss";
+// import "./styles.scss";
 
 interface iAccordion {
   /** The content of the accordion */

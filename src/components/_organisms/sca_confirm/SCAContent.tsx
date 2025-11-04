@@ -1,6 +1,6 @@
 import React from "react";
 import I18n from "../../../utilities/translations";
-import "./styles.scss";
+// import "./styles.scss";
 
 interface iSCAConfirm {
   deviceName: string;

@@ -1,3 +1,15 @@
+// Provide safe fallbacks for globals expected by legacy code
+if (typeof window !== "undefined") {
+  // Used by turbolinks_transitions.js and dialog.js
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  window.initializeComponents = window.initializeComponents || function () {};
+  // Some modules call Materialize.updateTextFields() directly
+  window.Materialize = window.Materialize || {};
+  if (typeof window.Materialize.updateTextFields !== "function") {
+    window.Materialize.updateTextFields = function () {};
+  }
+}
+
 require("./admin/expense_categories");
 require("./admin/onboarding");
 require("./admin/notes");

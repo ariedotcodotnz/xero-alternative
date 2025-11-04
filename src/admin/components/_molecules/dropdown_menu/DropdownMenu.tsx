@@ -3,7 +3,7 @@ import classNames from "classnames";
 import * as UIDropdownMenu from "@radix-ui/react-dropdown-menu";
 import { IconType } from "@hui/_atoms/icons/icon/Icon";
 import Icon from "../../_atoms/icon/Icon";
-import "./styles.scss";
+// import "./styles.scss";
 
 type DropdownMenuOptionsType = {
   url?: string,

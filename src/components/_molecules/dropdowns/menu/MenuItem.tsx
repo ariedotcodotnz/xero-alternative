@@ -2,7 +2,7 @@ import React from "react";
 import { Menu } from "@headlessui/react";
 import classNames from "classnames";
 import Icon, { IconType } from "../../../_atoms/icons/icon/Icon";
-import "./styles.scss";
+// import "./styles.scss";
 
 interface iMenuItem {
   asButton?: boolean;

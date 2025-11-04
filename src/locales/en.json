@@ -1,0 +1,938 @@
+{
+  "account_details_mailer": {
+    "template": {
+      "bsb": "BSB",
+      "confirmation_of_payee_link_text": "visit the Confirmation of Payee help article",
+      "confirmation_of_payee_link_url": "https://hnry.co.nz/news/confirmation-of-payee-banking-change/",
+      "confirmation_of_payee_text": "You will need to save this account information as a Payee in your internet banking. To find out more,",
+      "line_2_html": "I've just started using <a href=\"https://hnry.co.nz/\">Hnry</a> (who sort all my taxes for me), which means I need you to update my payment info on your end."
+    }
+  },
+  "activemodel": {
+    "attributes": {
+      "nz/ird/gateway_services/returns/file_gst_return": {
+        "gateway_file": "Gateway failed:",
+        "gateway_prepop": "Gateway failed:"
+      }
+    },
+    "errors": {
+      "models": {
+        "nz/ird/gateway_services/returns/generate_gst_return": {
+          "attributes": {
+            "base": {
+              "refiling": "Refilings have to be filed manually"
+            }
+          }
+        }
+      }
+    }
+  },
+  "allocation_preferences": {
+    "allocation_button": {
+      "card": {
+        "allocation_path": "hnry-card-nz",
+        "body": "Auto-top-up my Hnry Card so I can purchase expenses on the go.",
+        "body_updated": "Automatically add funds to my Hnry Account so I can purchase expenses on the go.",
+        "heading": "Set aside funds for business expenses"
+      },
+      "custom": {
+        "allocation_path": "custom",
+        "body": "Send money to any NZ bank account, repay someone or pay off my credit card.",
+        "heading": "Create a custom allocation"
+      },
+      "investment": {
+        "body": "Pay into savings, investments or donate to charity every time I get paid.",
+        "heading": "Contribute to KiwiSaver or investment"
+      },
+      "suggestion": {
+        "body": "Can’t see the one you are looking for? Make a suggestion and we’ll consider it.",
+        "heading": "Make a suggestion"
+      },
+      "tax_contribution": {
+        "body": "Regularly pay down my old tax debt or my student loan.",
+        "heading": "Make additional tax contributions"
+      },
+      "transacting_account": {
+        "allocation_path": "transacting-account-nz",
+        "body": "Auto-top-up my Hnry Card so I can purchase expenses on the go.",
+        "body_updated": "Automatically add funds to my Hnry Account so I can purchase expenses on the go.",
+        "heading": "Set aside funds for business expenses"
+      }
+    },
+    "categories": {
+      "investment": "Contribute to KiwiSaver or investment"
+    },
+    "did_you_know_card": {
+      "holiday": {
+        "body": "Setting aside a small portion of your income throughout the year is a great way to save for that next big trip or staycation.",
+        "title": "You can save for a holiday"
+      },
+      "sick_leave": {
+        "body": "Everyone gets sick, but don't get caught out by unexpected bills whilst you're not earning. Set up a rainy day fund.",
+        "title": "You can save for sick leave"
+      }
+    },
+    "index": {
+      "intro_p1": "By default all income after taxes and deductions will be transferred to your personal bank account. Use Allocations to automatically transfer portions of your income to Sharesies, KiwiSaver and more, or to any other New Zealand Bank Account.",
+      "learn_more_link": "<a href=\"https://help.hnry.io/en/articles/3503322-how-do-allocations-work\" target=\"_blank\">Learn more</a>",
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/3503322-how-do-allocations-work"
+    },
+    "overview_banner": {
+      "body": "Take the reins of your financial journey by allocating a percentage of your income to an account of your choosing every time you get paid. Whether it's boosting your KiwiSaver, building your savings, fuelling your investment dreams, or supporting a charity close to your heart.",
+      "heading": "Save like a pro with Allocations",
+      "learn_more_link": "https://help.hnry.io/en/articles/3503322-how-do-allocations-work"
+    },
+    "select_template": {
+      "default_caption": "Create an Allocation to any local Bank Account, or select from one of our preset Allocations from our list below."
+    }
+  },
+  "bulk_expenses": {
+    "modal_form": {
+      "depreciation_rental_warning_p2_html": "Please save your progress on this form and <a href=\"%{intercom_link}\">contact the Hnry team</a> to let them know you have a investment property expense that requires depreciation.",
+      "depreciation_warning_p1": "In accordance with IRD policy, the full cost of this item cannot be claimed in a single year and must be depreciated instead.",
+      "depreciation_warning_p2": "Please save your progress on this form and add this item as an Expense on your Hnry profile and wait for the Hnry team to review and approve before proceeding with your Year End form submission.",
+      "mileage_cap_warning": ""
+    }
+  },
+  "cards": {
+    "card_transactions": {
+      "card_audit": {
+        "card_audit": "CARD AUDIT",
+        "cards_file_balance": "Cards File Balance",
+        "hnry_balance": "Hnry Balance",
+        "latest_cards_file_name": "Latest Cards Filename",
+        "pending_count": "Pending Count",
+        "pending_provider_balance": "Novatti Pending Balance",
+        "pending_tx_sum": "Hnry Pending TX Sum",
+        "provider_balance": "Novatti Balance",
+        "settled_count": "Settled Count",
+        "settled_sum": "Settled Sum"
+      }
+    }
+  },
+  "clients": {
+    "convert_quote": {
+      "has_prior_deduction_percentage": "Does this client deduct tax prior to payment?",
+      "prior_deduction_percentage": "What tax rate did you specify on your IR330C form? (e.g. 20 for 20%)"
+    },
+    "form": {
+      "errors": {
+        "zero_rated_or_directors_drawings": "Client cannot be zero-rated for GST and pay director's drawings"
+      },
+      "outside_country": {
+        "sales_tax_registered": {
+          "false": {
+            "label": "This Client is outside NZ",
+            "tooltip": "International payment details will be displayed on your Invoices. GST is not collected from international Clients."
+          },
+          "true": {
+            "label": "This Client is outside NZ or zero-rated for GST",
+            "tooltip": "GST will not be charged to zero-rated Clients. Clients should be marked as zero-rated if they do not trade in your country."
+          }
+        }
+      },
+      "per_diems": {
+        "tooltip": {
+          "link": "https://help.hnry.io/en/articles/3614536-how-to-add-per-diems-with-hnry"
+        }
+      },
+      "prior_deductions": {
+        "invalid_messages": {
+          "greater_than": "Witholding tax percentage must be less than or equal to 45%",
+          "less_than": "Witholding tax percentage must be greater than or equal to 9.9%"
+        },
+        "percentage_label": "What tax rate did you specify on your IR330C form? (e.g. 20 for 20%)",
+        "tooltip": {
+          "link": "https://help.hnry.io/en/articles/3945849-should-you-raise-fees-as-a-business-expense"
+        },
+        "variable_alert_text": "If your Client deducts expenses prior to payment, you will need to send us your payment remittance to support@hnry.co.nz before your payment can be processed."
+      },
+      "raise_invoices": {
+        "reminders": {
+          "tooltip": {
+            "link": "https://help.hnry.io/en/articles/2770119-invoice-reminders"
+          }
+        }
+      },
+      "withholding_tax": {
+        "tooltip": {
+          "link": "https://help.hnry.io/en/articles/2186918-withholding-tax-and-ir330c-forms",
+          "text": "To find out more about IR330C forms and withholding tax, see the link below"
+        }
+      }
+    },
+    "index": {
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/2337837-how-to-add-a-client-with-hnry"
+    }
+  },
+  "currency": "NZD",
+  "emoji": "🇳🇿",
+  "expense_creation": {
+    "upload_receipt": {
+      "mileage_validation": "Please upload logbook records"
+    },
+    "upload_receipt_title_mileage": "Upload Logbook Records"
+  },
+  "expenses": {
+    "form": {
+      "client_reimbursement_notice_html": "Client Reimbursements cannot also be raised as a Business Expense. See <a href=\"http://help.hnry.io/en/articles/2766950-client-reimbursements\" target=\"_blank\" rel=\"noopener\">this article</a> for more details.",
+      "mileage_eoyf_text": "All mileage expenses raised within Hnry throughout the year have been updated to reflect the new mileage rate for 2023/24 published by IRD on 30 May 2024. Please ensure you use the updated rate for any additional expenses added to your annual review form.",
+      "mileage_link": "https://help.hnry.io/en/articles/2910892-how-to-claim-mileage",
+      "mileage_text": "Please note that we are in the process of making it easier for you to claim your Mileage. Soon, you will just need to enter the number of Kms you have travelled, and we will calculate the claimable amount for you. You can continue with raising your Mileage claim now, but please be aware that you will be prompted to update your expense claim to show the number of Kms once these changes take effect. Expenses relating to the 2024/2025 financial year can be added as normal.",
+      "motor_vehicle_link": "https://help.hnry.io/en/articles/2427517-motor-vehicle-expenses",
+      "motor_vehicle_text": "IRD rules specify you can only claim either Mileage or Motor Vehicle Expenses each year - but not both. By creating a Motor Vehicle or Mileage Expense, you will only be able to use this category for the remainder of the financial year, and will be unable to switch. This is due to the IRD requirement of not mixing Motor Vehicle and Mileage expenses.",
+      "motor_vehicles": {
+        "validations": {
+          "vehicle_type": "Please choose a fuel type"
+        },
+        "vehicle_type": "Fuel type",
+        "vehicle_type_default": "Select a fuel type"
+      }
+    },
+    "index": {
+      "intro_october_html": "We've made some changes to Expenses! <a href=\"https://app.hnry.io/app/sign_in?redirect_to=https://help.hnry.io/en/articles/5622838-changes-to-business-expenses\" target=\"_blank\">Please see here for more info</a>.",
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/1979845-what-can-i-claim-as-a-business-expense"
+    },
+    "learn_more": {
+      "link": "https://help.hnry.io/en/articles/1979845-what-can-i-claim-as-a-business-expense"
+    },
+    "rejection_accept_modal": {
+      "reject_acceptance_terms": "I accept full liability for this expense and want Hnry to claim this for me",
+      "warning_text": "This expense has been declined as it is not claimable according to IRD policy. By resubmitting this expense, you are accepting full liability and, in the event of an IRD audit, you will be required to provide proof of the validity of this claim."
+    },
+    "self_reviews": {
+      "reasons": {
+        "just_under": {
+          "consent": "I understand",
+          "p1_html": "We have noticed the amount you have claimed for this category is now in excess of what others in the same industry are claiming. Please continue to raise your expenses however, be aware that IRD may require additional documentation to support the expenses you have claimed.",
+          "p2_html": "If you have any concerns please get in touch with the team."
+        },
+        "over": {
+          "consent": "I understand",
+          "p1_html": "We have noticed the amount you have claimed for this category is now in excess of what others in your industry are claiming. You may still submit this but please be aware that this may flag you for further review by IRD once your Income Tax return is filed. In this case, IRD will need to be satisfied that all expenses you have claimed were legitimately required for your business.",
+          "p2_html": "If you have any concerns please get in touch with the team."
+        }
+      }
+    },
+    "table": {
+      "delete_filed": "Cannot be deleted because this expense has already been filed in IRD. Please get in touch with the team if it is no longer valid."
+    }
+  },
+  "filing_obligations": {
+    "amendments": {
+      "dropdown_label": "Reason"
+    },
+    "create": {
+      "fail_to_fetch": "Failed to fetch IRD transactions %{errors}",
+      "has_filing": "Already exists for fy %{year_end}",
+      "has_period": "Period can't be blank",
+      "my_ir_required": "MyIR auth required",
+      "no_bots": "No OAuth authentications available",
+      "no_ird_account": "Income tax filing created but no Income Tax Account set up for %{user_name}. Transactions can't be fetched",
+      "no_status_available": "Could not retrieve the status of the return from IRD %{error}",
+      "tax_rate_note": "%{fy} user had tax rate override",
+      "unknown_on_hold_reason": "Unknown on hold reason: %{reason}",
+      "user_opted_out": "User has opted out of end of year filings"
+    },
+    "duplicate": {
+      "filed": "This form cannot be moved to user filed as it is already filed in Hnry",
+      "no_submission_found": "No form could be found in IRD",
+      "user_filed": "The user filed this return outside of Hnry",
+      "user_filed_in_ird": "User filed found after we filed the return in IRD",
+      "user_filed_on_create": "User filed found when we created the form",
+      "user_submitted": "User filed found after the user submitted the form to us"
+    },
+    "export_reminders": {
+      "failure": "Could not export the EOFY reminders."
+    },
+    "file": {
+      "failure": "Couldn't file IR3: %{error}",
+      "success": "Successfully filed IR3"
+    },
+    "filing_obligation_income_sources": {
+      "form": {
+        "income_amount": "Total gross income received from this income source in NZD",
+        "warning": {
+          "paragraph_3_html": "<strong> Do not add self-employed income as other income</strong>. If you earned any self-employed income outside of Hnry, please use the 'Self-employed income' type instead."
+        }
+      },
+      "overseas": {
+        "location_options": {
+          "nz": "New Zealand",
+          "overseas": "Overseas"
+        },
+        "overseas_income_jurisdiction": "What was the jurisdiction of this income?",
+        "overseas_income_source": "What was the source of this income?",
+        "qualify_as_transitional_tax_resident": {
+          "href": "transitional tax resident",
+          "link": "https://www.ird.govt.nz/roles/nz-tax-residents/exemption",
+          "text_html": "I qualify as a %{external_link}"
+        },
+        "tax_paid": "Overseas tax paid in NZD"
+      },
+      "table_rows_other_incomes": {
+        "edit": "Edit",
+        "outside_hnry": "Invoices marked as paid direct",
+        "pre_hnry": "Additional income earned prior to Hnry",
+        "review_html": "Review<span class=\"hidden-sm-down\"> now</span>",
+        "se_income": "Self-employed Income"
+      }
+    },
+    "filings": {
+      "additional_expense_warning_modal": {
+        "number_of_years": 7
+      },
+      "additional_income_warning_modal": {
+        "paragraph_1_html": "Adding an income source directly to your Annual Review form may result in a <strong>tax amount to pay</strong> once we file your income tax return."
+      },
+      "begin": {
+        "paragraph_1": "Now that the %{fy_date} financial year is complete, we are in the process of preparing to file your Income Tax return (IR3) for you. Before we can do this, we just need you to confirm that the information we have for you is correct and complete.",
+        "paragraph_2": "This should take you no more than 5 minutes (you can save and come back to it if need be) and then you sit back, relax, and let us take care of the rest.",
+        "paragraph_3": "Please be aware that this is the best method of filing your tax return, as any self-employed income received via Hnry (other than Schedular Income) is not automatically pre-populated on your tax return in the IRD form. As we act as your Tax Agent, we will declare this income on your behalf when we file your Tax Return, ensuring you are compliant and declaring the correct income to IRD.",
+        "paragraph_4_html": "If you have already filed your tax return independently of Hnry, please <a href=\"%{url}\" target=\"_blank\">get in touch with us</a>.",
+        "pre_paid_taxes_refunded_html": "We have been alerted by IRD that some or all of your pre-paid taxes via Hnry have been refunded to you by IRD at some point during the financial year. Please be aware that you may end up with a payable amount once your return has been finalised with IRD. Please <a href=\"%{intercom_link}\">get in touch with the team</a> if you have any questions.",
+        "pre_paid_taxes_transferred_html": "We have been alerted by IRD that some or all of your pre-paid taxes via Hnry have been transferred to cover outstanding debt with IRD at some point during the financial year. Please be aware that you may end up with a payable amount once your return has been finalised with IRD. Please <a href=\"%{intercom_link}\">get in touch with the team</a> if you have any questions."
+      },
+      "confirm_details": {
+        "self_employed": "Did you start being self-employed between %{from_date} and %{to_date}?"
+      },
+      "confirm_income_modal": {
+        "heading": "Confirm taxable income",
+        "paid_direct_warning": "You have invoices for this period that have been paid direct. Please be aware that this may result in a tax amount owing.",
+        "paragraph_1": "Please confirm your total taxable income for the %{fin_year} financial year:",
+        "paragraph_2_html": "You requested a fixed tax rate for all or part of %{fin_year}. Please note, this may result in an amount payable to IRD. Please <a href=\"%{intercom_link}\"> get in touch</a> if you have any questions.",
+        "paye_warning_html": "It appears that you have been undertaxed on your PAYE/Salary income. Please be aware that this may result in a tax amount owing."
+      },
+      "confirm_ir4": {
+        "heading": "Confirm lodging IR4",
+        "paragraph": "Because you have Shareholder-employee Salary income, you will need to file an IR4 return with IRD before you continue. We are not able to file your income tax return until your IR4 has been finalised with IRD. Please press 'Save and Exit' and let the team know once your IR4 has been finalised.",
+        "paragraph_more_info_html": "You can find more information on the <a href=\"https://www.ird.govt.nz/income-tax/income-tax-for-businesses-and-organisations/income-tax-for-companies/file-a-companies-income-tax-return-ir4\" target=\"_blank\">IRD website<a/>."
+      },
+      "confirm_ir7": {
+        "heading": "Confirm lodging IR7",
+        "paragraph_both": "Because you have LTC and Partnership income, you will need to file an IR7L (LTC) and IR7P (Partnership) return with IRD before you continue. We are not able to file your income tax return until your IR7 has been finalised with IRD. Please press 'Save and Exit' and let the team know once your IR7 has been finalised.",
+        "paragraph_ltc": "Because you have LTC income, you will need to file an IR7L return with IRD before you continue. We are not able to file your income tax return until your IR7 has been finalised with IRD. Please press 'Save and Exit' and let the team know once your IR7 has been finalised.",
+        "paragraph_more_info_html": "You can find more information on the <a href=\"https://www.ird.govt.nz/income-tax/income-tax-for-businesses-and-organisations/income-tax-for-partnerships/file-a-partnerships-and-look-through-companies-income-tax-return---ir7\" target=\"_blank\">IRD website<a/>.",
+        "paragraph_partnership": "Because you have Partnership income, you will need to file an IR7P return with IRD before you continue. We are not able to file your income tax return until your IR7 has been finalised with IRD. Please press 'Save and Exit' and let the team know once your IR7 has been finalised."
+      },
+      "expenses": {
+        "excess_untaxed_deposits_html": "<strong>Please note that you have received untaxed deposits in excess of the expenses you have claimed and this could lead to a tax amount owing.</strong>",
+        "paragraph_1": "Once you submit this Annual Review we will begin the process of filing your Income Tax Return with IRD and it will be too late to claim any more Expenses."
+      },
+      "final_checks_modal": {
+        "legal_heading": "The Legal Stuff",
+        "paragraph_1_html": "To the best of my knowledge, I confirm that the information declared in this form is true and correct, and represents my assessment for the year ended <strong>%{fin_year_end}</strong> as required under the Tax Administration Act 1994.",
+        "paragraph_2": "It is also a correct statement of my income earned outside of Hnry Limited for the purposes of the Accident Compensation Act 2001.",
+        "refund_bank_account": "Refund bank account",
+        "review_before_submitting": "Make sure to review your refund bank account in IRD before submitting!",
+        "terms_accepted": "I understand that the information I am submitting is considered final and complete, and will be used to file my Income Tax return. If the information I have provided is later deemed to be incorrect, there may be a one-off fee for the Hnry Expert Services team to refile my Income Tax return.",
+        "updated_terms_accepted_html": "I have read and agree to the <a href=\"%{url}\" target=\"_blank\">Hnry Service Agreement</a> and Authority to Act."
+      },
+      "form": {
+        "income": {
+          "title": "Income summary"
+        }
+      },
+      "income": {
+        "paragraph_1": "Below is a summary of your income for the Financial Year, based on your Hnry profile and other information we have received directly from IRD."
+      },
+      "shared_content": {
+        "income": "Income summary"
+      },
+      "win_message_modals": {
+        "modal_1_paragraph_html": "From the team at Hnry, congratulations on a fantastic year. Thank you for the support and letting us help you with your taxes. <br/><br/>We look forward to continue helping you for the year ahead.",
+        "modal_1_title": "Woohoo! 🎉",
+        "modal_2_paragraph": "We will notify you of the outcome as soon as it has been processed at their end. Any refund owed to you will be paid directly into your personal bank account.",
+        "modal_2_title_html": "We will now file your Income <br/>Tax return (IR3) with IRD",
+        "modal_3_paragraph": "This will likely result in your Income Tax return needing to be refiled, at an additional cost (and/or you possibly needing to return your refund to IRD).",
+        "modal_3_title": "Please do not submit anything directly to IRD yourself!"
+      }
+    },
+    "my_ir_authentication_required": "You need to link your myIR account to fetch income from IRD Gateway Services",
+    "prepopulate": {
+      "failure": "Couldn't populate income data from IRD: %{error}",
+      "success": "Populated income data from IRD"
+    },
+    "refresh": {
+      "income": "Refresh IRD income via gws"
+    }
+  },
+  "financial_income_sources": {
+    "edit": {
+      "title": "Edit Income Source"
+    },
+    "index": {
+      "empty_state_subheading": "Don't worry about adding any salary income, we'll work that out after your first pay.",
+      "intro_html": "<p>This page contains the details of all your sources of income <em>not</em> paid through Hnry. It is imperative that this information is always up to date, as it helps us to keep you on the right tax rate, and will ensure that your end-of-year tax filing is as accurate as possible. Some of the items below will come directly from IRD's system.</p>",
+      "title": "Income Sources",
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/4379459-declaring-other-income-sources-to-hnry"
+    }
+  },
+  "global": {
+    "app_stores": {
+      "apple_app": "apple_app",
+      "apple_app_store_link": "https://apps.apple.com/nz/app/hnry/id1451761596",
+      "google_play": "google_play",
+      "google_play_link": "https://play.google.com/store/apps/details?id=io.hnry.hnry"
+    },
+    "app_urls": {
+      "development": "http://localhost:3000",
+      "production": "https://app.hnry.io",
+      "staging": "https://staging.hnry.io",
+      "test": "http://localhost:3000",
+      "uat": "https://uat.hnry.io"
+    },
+    "bank_account_number_mask": "00-0000-0000000-000",
+    "business_address": {
+      "address_line_1": "6/29 Brandon Street",
+      "address_line_2": "Wellington 6011, New Zealand"
+    },
+    "business_number": "NZBN",
+    "company_name": "Hnry Limited",
+    "contact": {
+      "email": {
+        "accounts": "accounts@hnry.co.nz",
+        "members": "members@hnry.co.nz",
+        "no_reply": "no-reply@hnry.co.nz",
+        "post": "post@hnry.co.nz",
+        "support": "support@hnry.co.nz"
+      },
+      "phone": {
+        "concise_formatted": "0800 467 969"
+      }
+    },
+    "currency_name": "dollar",
+    "currency_symbol": "$",
+    "footer": {
+      "social_network": {
+        "facebook": "https://facebook.com/hnrynz/",
+        "facebook_short": "facebook.com/hnrynz",
+        "instagram": "https://www.instagram.com/hnrynz/",
+        "linkedin": "https://nz.linkedin.com/company/hnry",
+        "twitter": "https://twitter.com/hnry_nz",
+        "twitter_short": "@hnry_nz"
+      }
+    },
+    "hnry_sales_tax_number": "122-287-416",
+    "hnry_tax_agent_number": "IRD Tax Agent No. 122-287-416",
+    "links": {
+      "account_closure": "https://hnry.co.nz/account-closure",
+      "agreement": "https://hnry.com/agreement",
+      "contact": "https://hnry.co.nz/contact",
+      "facebook": "https://www.facebook.com/hnrynz",
+      "instagram": "https://www.instagram.com/hnrynz",
+      "marketing_site": "https://hnry.co.nz",
+      "marketing_site_short": "hnry.co.nz",
+      "medical_agency": "https://www.acc.co.nz",
+      "tax_agency_admin": "https://myir.ird.govt.nz/_/",
+      "twitter": "https://twitter.com/hnry_nz"
+    },
+    "medical_agency_short": "ACC",
+    "medical_id_number": "ACC number",
+    "phone": {
+      "concise_formatted": "0800 467 969"
+    },
+    "sales_tax": "GST",
+    "sales_tax_filing_name": "GST return",
+    "tax_collection_authority": "Inland revenue",
+    "tax_collection_authority_short": "IRD",
+    "tin": "IRD number"
+  },
+  "home": {
+    "articles": {
+      "active": {
+        "false": {
+          "num_1": {
+            "id": 1960473,
+            "url": "https://help.hnry.io/en/articles/1960473-what-is-hnry-and-how-does-it-work"
+          },
+          "num_2": {
+            "id": 3494931,
+            "url": "https://help.hnry.io/en/articles/3494931-setting-up-your-hnry-profile"
+          },
+          "num_3": {
+            "id": 8067906,
+            "url": "https://help.hnry.io/en/articles/8067906-how-to-get-paid-through-hnry"
+          },
+          "num_4": {
+            "id": 10088420,
+            "text": "NZ banks are changing the way you confirm the person you are paying",
+            "title": "Confirmation of Payee Changes",
+            "url": "https://help.hnry.io/en/articles/10088420-confirmation-of-payee-changes"
+          }
+        },
+        "true": {
+          "num_1": {
+            "id": 9788502,
+            "text": "What do I do with my ACC invoice?",
+            "title": "Your ACC invoice",
+            "url": "http://help.hnry.io/en/articles/9788502-your-acc-invoice"
+          },
+          "num_2": {
+            "id": 1979845,
+            "text": "Our detailed guide, listing the expenses you can claim",
+            "title": "What can I claim as a business expense?",
+            "url": "https://help.hnry.io/en/articles/1979845-what-can-i-claim-as-a-business-expense"
+          },
+          "num_3": {
+            "id": 3189201,
+            "text": "How we ensure you do not end up owing tax",
+            "title": "How does Hnry (& IRD) calculate your income tax rate?",
+            "url": "https://help.hnry.io/en/articles/3189201-how-does-hnry-ird-calculate-your-income-tax-rate"
+          },
+          "num_4": {
+            "id": 2496925,
+            "text": "Allocate a percentage of your income to an account of your choosing every time you get paid.",
+            "title": "How to set up an Allocation",
+            "url": "https://help.hnry.io/en/articles/2496925-how-to-set-up-an-allocation"
+          }
+        }
+      }
+    },
+    "call_to_action": {
+      "filing_obligation_coming_soon": {
+        "content_html": "We're almost ready to file your Income Tax Return — we're just waiting for the %{tax_agency} to finalise all their information before we can send it to you for review. Please <strong>do not</strong> submit your own tax return in myIR."
+      },
+      "filing_obligations": {
+        "description": "Now that the %{financial_year} financial year has finished we can go ahead and get your tax return sorted. We just need to confirm a few details with you first."
+      },
+      "welcome": {
+        "profile_list": {
+          "tax_agency_number": "Your IRD number"
+        }
+      },
+      "wff_partner_return": {
+        "content": "Your Income Tax return has been filed, but in order to calculate your Working for Families entitlements, IRD require your partner to submit their return before they can finalise your return.",
+        "learn_more": "Learn more",
+        "title": "Income Tax Return on hold - Partner’s return pending"
+      }
+    },
+    "cards": {
+      "more_info": {
+        "link": "https://hnry.co.nz/the-new-hnry-debit-card/"
+      }
+    },
+    "index": {
+      "business_expenses_savings": "Business Expenses work to reduce the amount of Income Tax (and GST) you need to pay. Make sure to raise your Business Expenses using the correct categories and we will calculate the Claimable Amount for you.",
+      "business_expenses_savings_link": "https://help.hnry.io/en/articles/2676870-how-do-business-expenses-work",
+      "income_and_expenditure_tooltip_link": "http://help.hnry.io/en/articles/9195097-understanding-the-income-and-expenses-graph",
+      "self_reconcile": {
+        "client_payment_modal": {
+          "success_alert": "Your payment should arrive in your personal bank account within 30 minutes to 4 hours, depending on bank processing times."
+        },
+        "multiple_clients_modal": {
+          "disclaimer": "Please note that you only need to assign a payment to multiple clients if some have GST or withholding tax included, and others do not.",
+          "instruction": "To make sure this payment is processed correctly, please include each client's name and the amount they paid."
+        }
+      }
+    }
+  },
+  "income_sources": {
+    "consent_modal": {
+      "learn_more_url": "https://help.hnry.io/en/articles/3189201-how-does-hnry-ird-calculate-your-income-tax-rate"
+    }
+  },
+  "income_tax_filings": {
+    "form": {
+      "pre_hnry_income": "Self-employed income earned prior to Hnry"
+    },
+    "refiling_reasons": {
+      "KEY": "I have additional income to declare; and/or I have claimed too much in expenses, losses or credits in my return",
+      "MATH": "I made an error when calculating an amount",
+      "OTHER": "Other",
+      "TRNSPO": "I entered an amount into the wrong field/I made an error when entering an amount"
+    }
+  },
+  "invoice_mailer": {
+    "send_invoice": {
+      "cop_link": "https://hnry.co.nz/news/confirmation-of-payee-banking-change/",
+      "cop_link_text": "visit the Confirmation of Payee article",
+      "cop_paragraph": "Confirmation of Payee is now live in NZ. To find out more about what this means for you"
+    }
+  },
+  "invoice_quotes": {
+    "business_number_prompt": ""
+  },
+  "invoices": {
+    "index": {
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/7193065-how-do-i-send-an-invoice-using-hnry"
+    }
+  },
+  "levies": {
+    "short_name": "ACC"
+  },
+  "mailers": {
+    "sales_tax_filing": {
+      "inactive_nil": {
+        "action": "Would you like us to cancel your GST return?",
+        "disclaimer": "If we don’t hear back from you by %{due_date} we will start the process of closing down your Hnry Account, do note this return is due to be filed by %{due_date}.",
+        "intro": "Hi %{name},",
+        "option_1": "I am no longer earning any self-employed income",
+        "option_2": "I have moved overseas",
+        "option_3": "I am making alternative arrangements to have my taxes filed",
+        "paragraph_1": "I am getting in touch as we are in the process of filing %{end_date} GST returns and we can see from your Hnry account that you haven't received a payment through Hnry for a few months.",
+        "paragraph_2": "As you’re GST registered, it's really important that you let us know if there has been any change in your circumstances as this can have an impact on your GST filings. If your circumstances have changed you must let us know:",
+        "signature": "Kind regards,",
+        "signature_name": "The Hnry team"
+      }
+    }
+  },
+  "mid_year_transitions": {
+    "form": {
+      "has_salary_income": {
+        "content": "Salary/PAYE income",
+        "tooltip": "Income Tax paid for employees who earn a wage or salary (this applies to you if you get Annual Leave, Sick Leave and KiwiSaver contributions from your employer)"
+      },
+      "has_schedular_income": {
+        "content": "Schedular income",
+        "tooltip": "Schedular payments are a type of payment you have received as an independent contractor that have had a set percentage of tax deducted prior to payment. They are different to salary payments and you may have some tax left to pay from these earnings"
+      },
+      "has_self_employed_income": {
+        "tooltip": "IRD's definition of self-employed refers to anyone who conducts business activity on their own – as a freelancer, contractor, sole trader, or small business owner – rather than in a more traditional employer relationship. Anyone earning self-employed income is required to complete an IR3 tax return at the end of the financial year."
+      },
+      "prior_expenses_this_year": {
+        "accountant": "I used accounting software, e.g Xero, MYOB",
+        "manual": "I did it myself, e.g via a spreadsheet, bank statements",
+        "no_expenses": "I haven't done anything yet"
+      }
+    }
+  },
+  "onboarding_tour": {
+    "choose_an_id_document": {
+      "authority_to_verify_identity": "I give Hnry permission to verify my identity, which may involve sharing my information with authorised third parties."
+    },
+    "confirm_your_income": {
+      "income_tax_message_average": "Based on others in your field of work, your starting tax rates, according to IRD, are shown below. After your first few pays, Hnry will automatically adjust your tax rate based on your earnings.",
+      "income_tax_message_estimate": "Based on your estimated income, your starting tax rates, according to IRD, are shown below. After your first few pays, Hnry will automatically adjust your tax rate based on your earnings.",
+      "income_tax_percentage_tooltip_learn_more_link_html": "<a href='https://help.hnry.io/en/articles/3189201-how-does-hnry-ird-calculate-your-income-tax-rate' target='_blank'>Learn more</a>",
+      "income_tax_percentage_tooltip_paragraph_1_html": "<p>If you have other sources of income (e.g. PAYE/Salary job), your self-employed income will be taxed at a secondary rate. This is to ensure you have no tax owing at the end of the financial year.</p>"
+    },
+    "nz": {
+      "consent_to_act_agreement": {
+        "authority_to_act": "I grant Hnry the Authority to Act on my behalf"
+      }
+    },
+    "payment_confirmation": {
+      "fee_image_path": "tour/you-just-got-paid-fee.svg",
+      "taxes_image_path": "tour/you-just-got-paid-taxes.svg",
+      "transfer_image_path": "tour/you-just-got-paid-transfer.svg"
+    },
+    "verify_your_identity": {
+      "duplicate_user_html": "These details are already linked to a Hnry account. Contact <a href='mailto:%{support_email}'>%{support_email}</a> if you think this is an error.",
+      "has_tax_number": {
+        "content": "IRD Number",
+        "tooltip": {
+          "content": "Your IRD number is on letters and statements from IRD, in the MyIR online portal, in online banking, or on payslips from past employers."
+        }
+      }
+    },
+    "where_to_pay_you": {
+      "paragraph_1": "We’ll pay your taxes and transfer what’s yours to your chosen bank account, straight away. We won’t have access to your bank account or its data, we just need to know where to pay you."
+    }
+  },
+  "pay_lines": {
+    "index": {
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/3767844-understanding-your-payslip"
+    },
+    "payslip": {
+      "adaptive_sales_tax_tooltip": {
+        "link": "http://help.hnry.io/en/articles/11741594-how-does-hnry-manage-your-gst"
+      },
+      "income_tax_tooltip": {
+        "link": "https://help.hnry.io/en/articles/3189201-how-does-hnry-ird-calculate-your-income-tax-rate",
+        "text": "Please note that as you have received PAYE/Salary income this financial year, this will impact the tax rate required for your self-employed income. The higher rate is to ensure you have no tax owing at the end of the financial year. It’s important that your other sources of income information is kept up to date."
+      },
+      "levies": "ACC",
+      "levies_tooltip": {
+        "link": "https://help.hnry.io/en/articles/4417227-how-are-acc-levies-calculated",
+        "text": "ACC levy deductions are not required when you have reached the maximum income threshold for the financial year."
+      },
+      "sales_tax": "GST",
+      "sales_tax_overcollected": "GST overpaid to IRD",
+      "sales_tax_to_return": "GST you owe your client",
+      "sales_tax_undercollected": "GST owed directly to IRD by you",
+      "service_fee_description": " (incl. GST)"
+    },
+    "show": {
+      "deductions_info": "Want to know more about how Hnry calculates your tax rate and other deductions?",
+      "deductions_info_link": "https://help.hnry.io/en/articles/3767844-understanding-your-payslip"
+    }
+  },
+  "pre_hnry_expenses": {
+    "index": {
+      "intro_html": "<p>Use this section to tell us about any expenses you have from prior to joining us (excluding any expenses you have already uploaded to Hnry).</p> <p>You should enter the <b>total amount</b> for each Expense category per month.</p> <p><b>N.B.</b> Given that Hnry will not be reviewing receipts for these expenses, we are unable to warrant the validity of Expenses raised in this section. You will need to ensure you hold onto the receipts for 7 years should IRD ever require them. If you would like us to review and approve any expenses then you should raise these in the system as individual claims instead.</p> <p>If you're not sure what is claimable, check our <a href='https://help.hnry.io/en/articles/1979845-what-can-i-claim-as-a-business-expense' target='_blank''>Guide to Claiming Business Expenses</a>.</p>",
+      "title": "Pre-Hnry Expenses"
+    }
+  },
+  "quotes": {
+    "index": {
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/3150056-how-to-create-a-quote"
+    },
+    "update": {
+      "success_saved": "Quote draft updated"
+    }
+  },
+  "receipts": {
+    "show": {
+      "business_expense_auto_claim_comment": "We have automatically claimed this as a business expense for you.",
+      "hnry_fee_comment": "The Hnry fee shown in your pay summary is GST exclusive, this is because the GST relief is applied when the payment is processed."
+    }
+  },
+  "refer_a_friend": {
+    "invite_friends": {
+      "paragraph_1": "For every person who joins Hnry using your promo code, you'll both get $25 credit on your Hnry account when they start using the service. 🎉",
+      "title": "Get free credit!"
+    }
+  },
+  "reports": {
+    "health_check": {
+      "edit": {
+        "medical_amount_due": {
+          "direct_debit": "I will set up a direct debit payment plan with them.",
+          "do_what": "This ACC balance needs to be managed directly with ACC.",
+          "lump_sum": "I will pay this as a lump sum",
+          "more_info_html": "For further information, please follow this link to the <a href=\"https://www.acc.co.nz/for-business/received-an-invoice/ways-to-pay-levies/\" target='_blank'> ACC site</a> that should provide specific instructions on how to manage this balance .",
+          "title": "ACC"
+        },
+        "provisional_tax_outstanding": {
+          "content_1": "For the remainder of this Financial Year (until 31st March), any income tax payments you make via Hnry will contribute towards your Provisional Tax instalments but you may still be required to make additional payments to ensure you meet your full obligation for the year. Failure to do this may result in you being charged interest and penalties by IRD.",
+          "content_2": "If you have any questions or are unsure of what you need to do, please get in touch with us and we will gladly help you.",
+          "title": "Provisional Tax"
+        }
+      },
+      "edit_link": {
+        "label": {
+          "medical_amount_due": "Let us know what to do about your outstanding ACC",
+          "provisional_tax_outstanding": "Provisional Tax"
+        }
+      }
+    },
+    "payment_summary": {
+      "levies": "ACC"
+    },
+    "pnl_statement": {
+      "disclaimer_current_fy_html": "This statement has been prepared using income and expenditure data maintained by Hnry Limited on behalf of the named customer. It also incorporates income declared to Inland Revenue (IRD) on the customer's behalf. It excludes personal expenses, household bills, existing liabilities, and any other debts not disclosed to Hnry Limited. This data is accurate as at %{generated_at}. \n\nThis statement is provided for informational purposes only. Although Hnry has taken reasonable care to ensure the accuracy and completeness of the information, errors or omissions may occur. This statement should not be relied upon as the sole basis for making financial, tax, or legal decisions. \n\n%{user_generated_disclaimer}",
+      "disclaimer_prev_fy_html": "This statement has been prepared using income and expenditure data maintained by Hnry Limited on behalf of the named customer. It also incorporates income declared to Inland Revenue (IRD) on the customer's behalf. It excludes personal expenses, household bills, existing liabilities, and any other debts not disclosed to Hnry Limited. \n\nThis statement is provided for informational purposes only. Although Hnry has taken reasonable care to ensure the accuracy and completeness of the information, errors or omissions may occur. This statement should not be relied upon as the sole basis for making financial, tax, or legal decisions. \n\n%{user_generated_disclaimer}Document generated %{generated_at}",
+      "disclaimer_user_declared_html": "<em>* This income is declared directly by the customer. Hnry accepts no liability for the accuracy of such information.</em>"
+    }
+  },
+  "sales_tax": {
+    "short_name": "GST"
+  },
+  "services": {
+    "form": {
+      "gst_type_warning_paragraph_2_html": "If you are unsure if your services are exempt, IRD have more information. <a href=\"https://www.ird.govt.nz/gst/charging-gst/exempt-supplies\" target='_blank'> Learn more </a>",
+      "taxable_income_tooltip": "GST is passed to IRD and is not included in your income. This is the amount that will have tax deducted."
+    },
+    "index": {
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/2337839-how-to-add-a-service-with-hnry"
+    }
+  },
+  "shared": {
+    "financial_income_sources": {
+      "form": {
+        "hidden_input_explanation": {
+          "paye_salary": "You do not need to enter PAYE/Salary income here as we will automatically collect this data directly from IRD. Once you receive your first pay, you will then be sent a notification from us to confirm that the information we have received from IRD is correct."
+        }
+      }
+    },
+    "income_forecast": {
+      "fields": {
+        "salary_income": "Annual PAYE/Salary income"
+      }
+    },
+    "nz": {
+      "payor_declared_income_card": {
+        "fetch_payor_declared_income": "Retry IRD fetch",
+        "fetch_payor_declared_income_complete": "IRD fetch complete"
+      }
+    }
+  },
+  "suppliers": {
+    "account_number": {
+      "invalid_error": "Invalid account number, should be 16 digits",
+      "label": "Account number"
+    },
+    "bank_transactions": {
+      "notice": "If you want to edit your Supplier details, you'll need to make these changes from the <b><a href=\"%{suppliers_path}\"> Clients and Suppliers page</a></b> ."
+    },
+    "form": {
+      "account_name_error": "Bank account name is required",
+      "supplier_name_error": "Supplier name is required",
+      "supplier_payment_reference_error": "Payment reference is required"
+    },
+    "new": {
+      "code": "Code",
+      "particulars": "Particulars"
+    },
+    "particulars": {
+      "character_length_error": "Maximum length is 12 characters",
+      "error": "Particulars are required"
+    }
+  },
+  "tax_quotes": {
+    "form": {
+      "adjust_tax_rate_col_1_html": "Please note that we are only able to increase your tax rate to cover any income tax owing for your prior self-employed income. The maximum we will increase your rate to is %{rate}% so you may still have a balance owing at end of financial year if the top rate is not enough to catch you up on the shortfall.",
+      "adjust_tax_rate_col_2_html": "<strong>IMPORTANT:</strong> We are unable to increase your tax rate to account for any ACC amount so you will need to pay those directly when the amounts are due.",
+      "adjust_tax_rate_col_2_student_loan_html": "<strong>IMPORTANT:</strong> We are unable to increase your tax rate to account for any ACC and student loan amounts so you will need to pay those directly when the amounts are due."
+    },
+    "show": {
+      "income_tax": "Income tax",
+      "levies": "ACC",
+      "prior_tax": "Income tax paid outside of Hnry",
+      "student_loan": "Student loan"
+    }
+  },
+  "tour": {
+    "advanced_profile": {
+      "has_tax_number": {
+        "content": "What is your IRD number?",
+        "tooltip": {
+          "content": "You can find your IRD number on letters and statements from IRD, in the MyIR online portal, in online banking, or on payslips from past employers."
+        }
+      }
+    },
+    "create_client": {
+      "deducts_tax_prior": {
+        "paragraph_1": "Does this Client deduct tax prior to payment?",
+        "tooltip": {
+          "content": "Some Clients may be required to deduct part of your Income Tax before paying you. This is called 'Withholding Tax'"
+        }
+      },
+      "deducts_tax_prior_rate": {
+        "tooltip": {
+          "content": "What tax rate did you specify on your IR330C form? (e.g. 20 for 20%)"
+        }
+      },
+      "prior_deduction_percentage": "What tax rate did you specify on your IR330C form? (e.g. 20 for 20%)",
+      "sales_tax_exempt": {
+        "paragraph_1": "Is this Client outside of NZ or zero-rated for GST?",
+        "tooltip_html": "<p>GST will not be charged to zero-rated Clients.</p><p>Clients should be marked as zero-rated if they do not trade in your country.</p>"
+      }
+    },
+    "demonstration_pay_amount": "$1",
+    "salary_fields": {
+      "feedback": {
+        "yes": "After you get paid for the first time into your Hnry Account, we'll fetch the info about your PAYE/Salary job directly from IRD and then send it to you for review. 👍"
+      }
+    },
+    "salary_income": {
+      "feedback": {
+        "yes": "After you get paid for the first time into your Hnry Account, we'll fetch the info about your PAYE/Salary job directly from IRD and then send it to you for review. 👍"
+      },
+      "helper_text": "Enter an estimate to the nearest $1,000",
+      "label": "Annual PAYE/Salary income",
+      "paragraph_1": "A PAYE/Salary job is where you get paid holiday, sick leave, and your taxes are taken care of by your employer."
+    },
+    "sales_tax_registration": {
+      "paragraph_1_html": "You don’t need to be registered for GST to use Hnry, unless you’re earning more than $60,000/year of self-employed income.",
+      "paragraph_3": {
+        "content_html": "<strong>Are you currently registered for GST?</strong>",
+        "tooltip": {
+          "content": "You don’t need to be registered for GST to be a contractor, freelancer or sole trader. If you earn more than $60,000/year of self-employed income, you must be registered for Goods & Services Tax (GST) as per the IRD's legislation.",
+          "link": "https://help.hnry.io/en/articles/2000929-how-to-register-for-gst"
+        }
+      }
+    },
+    "sole_director_qualifying_questions": {
+      "company_structure": {
+        "label": "What is your company structure?",
+        "limited_liability_company": "Limited Liability Company",
+        "partnership_or_trust": "Partnership or Trust"
+      },
+      "danger_feedback_html": "Unfortunately the Hnry service is only available for <strong>Limited Liability Companies</strong> with <strong>no employees</strong> and only <strong>one company director</strong> at this stage. If you would like to speak to our team about your options, please click <a class=\"hui-link !tw-text-red-800\" href=\"%{intercom_link}\">here.</a>",
+      "number_of_directors": {
+        "label": "Do you have more than one company director?"
+      },
+      "number_of_employed_staff": {
+        "label": "Do you employ any staff?"
+      },
+      "success_feedback": "Great - Hnry is right for you! We'll take care of all of your tax and financial admin!"
+    },
+    "step_titles": {
+      "salary_income": "Do you have a PAYE/Salary job?",
+      "student_loan": "Do you have a Student Loan?"
+    },
+    "student_loan": {
+      "feedback": {
+        "yes": "We’ll deduct and pay your Student Loan as you get paid. If you don’t want us to deduct this, you can change it later."
+      }
+    }
+  },
+  "user_verifications": {
+    "alternative_passport": "Current Australian Passport",
+    "certified_documents": "If you don’t have a current New Zealand Passport or New Zealand Driver Licence",
+    "compulsory_documents": "A full birth or citizenship certificate issued by a New Zealand, Australian or foreign government"
+  },
+  "users": {
+    "financial": {
+      "account_details": {
+        "hnry_account_link": "https://help.hnry.io/en/articles/2775973-how-does-the-hnry-account-work",
+        "international_bsb_tooltip": "If a BSB field is required when making payment, use the first 6 digits of your Hnry account number.",
+        "international_payments_link": "https://help.hnry.io/en/articles/2331965-international-transfer-details"
+      },
+      "edit": {
+        "adaptive_sales_tax": {
+          "learn_more_link": "http://help.hnry.io/en/articles/11741594-how-does-hnry-manage-your-gst"
+        },
+        "business_number": {
+          "label": "My NZBN",
+          "title": "NZBN format is 13 digits e.g. 9451234567890",
+          "tooltip": "As a sole trader, having an NZBN is totally optional. If you have one and you add it here, it will appear on your Invoices and Quotes."
+        },
+        "has_sales_tax_exempt_services": {
+          "label": "Some of the goods/services I sell are exempt from GST",
+          "learn_more_link": "https://help.hnry.io/en/articles/6950470-gst-exempt-services",
+          "tooltip": "Only certain services are exempt from GST. You will be liable if GST should've been charged. Please get in touch with the team if you have GST exempt services."
+        },
+        "part_time": {
+          "label": "On average, I work less than 30 hours per week",
+          "tooltip": "Working less than 30 hours per week means you are considered to be working part time"
+        },
+        "sales_tax_registered": {
+          "label": "I am currently registered for GST as an individual",
+          "tooltip": {
+            "locked": {
+              "content": "If you need to change your GST Status please get in touch with the Hnry team."
+            },
+            "not_locked": {
+              "content": "If you earn more than $60,000/year of self-employed income, you must be registered for Goods & Services Tax (GST) as per the IRD's legislation.",
+              "link": "https://help.hnry.io/en/articles/2000929-how-to-register-for-gst"
+            }
+          }
+        },
+        "student_loan": {
+          "label": "I have a Student Loan",
+          "tooltip": {
+            "locked": {
+              "content": "If you no longer have a Student Loan then you need to get in contact with the Hnry team."
+            },
+            "not_locked": {
+              "content": "If you have a student loan we may need to deduct additional tax amounts to cover Student Loan repayments."
+            }
+          }
+        },
+        "tax_id_number": {
+          "label": "My IRD number",
+          "pattern": "[\\d\\-\\s]*",
+          "title": "must be digits with optional spaces or dashes",
+          "tooltip": {
+            "disabled": "If you need to change your IRD number please get in touch with the Hnry team."
+          }
+        }
+      },
+      "intro": {
+        "intro_p1": "Use the sections below to tell us about your financial information. We need to know your tax details like your IRD Number and GST registration, as well as the Bank Account you would like to be paid into."
+      }
+    },
+    "form": {
+      "tin": "What is your IRD Number?",
+      "tin_info": "You can find your IRD number on letters and statements from IRD, in the MyIR online portal, in online banking, or on payslips from past employers."
+    },
+    "security": {
+      "two_factor_toggle": {
+        "label": "Authenticator app (recommended)"
+      }
+    }
+  }
+}

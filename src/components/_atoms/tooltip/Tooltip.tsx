@@ -18,7 +18,7 @@ import {
 import classNames from "classnames";
 import { QuestionMarkCircleIcon } from "@heroicons/react/20/solid";
 import { sizeClasses, IconSizes } from "../icons/icon/Icon";
-import "./styles.scss";
+// import "./styles.scss";
 
 export type Placement = "top" | "bottom" | "left" | "right";
 export interface iTooltip {

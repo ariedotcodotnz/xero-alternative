@@ -6,7 +6,7 @@ import Avatar, { iAvatar } from "../../_atoms/avatar/Avatar";
 import NavigationMenuItem from "./NavigationMenuItem";
 import DropdownMenu from "../../_molecules/dropdown_menu/DropdownMenu";
 import NavigationSubmenu from "./NavigationSubmenu";
-import "./styles.scss";
+// import "./styles.scss";
 
 export interface iNavigationSidebar {
   items: navItemType[];

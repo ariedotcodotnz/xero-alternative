@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import Icon from "../../../_atoms/icons/icon/Icon";
-import "./styles.scss";
+// import "./styles.scss";
 
 const MoreActions = ({ children }) => (
   <Menu as="div" className="hnry-more-actions">

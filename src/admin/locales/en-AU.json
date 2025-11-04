@@ -1,0 +1,1568 @@
+{
+  "account_details_mailer": {
+    "template": {
+      "bsb": "BSB",
+      "line_2_html": "I've just started using <a href=\"https://hnry.com.au/\">Hnry</a> (who sort all my taxes for me), which means I need you to update my payment info on your end."
+    }
+  },
+  "activemodel": {
+    "attributes": {
+      "activity_statements/submit_user_declaration/payg_withholding_obligation": {
+        "tax_withheld": "Tax withheld from wages",
+        "wages": "Wages"
+      },
+      "users/financial/update_pay_id": {
+        "pay_id": "PayID"
+      }
+    }
+  },
+  "activity_statement_summary": {
+    "show": {
+      "bas_end": "Period end:",
+      "bas_start": "Period start:",
+      "final_outcome_main": " - Hnry has already paid this for you",
+      "final_outcome_preface": "No action required",
+      "from_ato_main": " (you need to pay this manually to the ATO as soon as possible)",
+      "from_ato_preface": "Currently owing to the ATO",
+      "gst_collected_on_income": "GST on income through Hnry",
+      "gst_collected_outside_hnry": "GST on income outside of Hnry",
+      "gst_collected_title": "GST collected on income",
+      "gst_collected_total": "GST collected on income total",
+      "gst_collected_undercollected": "Missing GST on income through Hnry",
+      "gst_outcome_subtitle_1": "Total GST ",
+      "gst_outcome_subtitle_2": " (GST collected less GST paid)",
+      "gst_paid_business": "GST on business expenses through Hnry",
+      "gst_paid_outside": "GST on business expenses outside of Hnry",
+      "gst_paid_purchases": "GST paid on business expenses total",
+      "gst_paid_title": "GST paid on business expenses",
+      "gst_row_title": "Total GST payable (GST collected less GST paid)",
+      "gst_title": "Goods and Services Tax",
+      "lodgement_date": "Lodgement date:",
+      "paragraph": "This statement has been prepared using Income and Expenditure data held and maintained by Hnry (Australia) Pty Ltd on behalf of the named customer. The information declared is a true and accurate record of the self-employed income received via Hnry (Australia) Pty Ltd, and is unable to be amended or manipulated. This statement does not include any personal expenditure, household bills, existing personal liabilities, or other debts not known to Hnry (Australia) Pty Ltd.",
+      "payg_instalment_estimated_tax": "Estimated tax for the year",
+      "payg_instalment_outcome_title": "PAYG tax instalment",
+      "payg_instalment_payments_made": "Tax instalment amount (varied)",
+      "payg_instalment_title": "Pay As You Go Tax Instalment",
+      "payg_withholding_outcome_title": "PAYG withheld from wages",
+      "payg_withholding_title": "Pay As You Go Withholding",
+      "payg_withholding_wages_paid": "Total wages paid",
+      "period": "Period: ",
+      "result": {
+        "false": "payable",
+        "true": "refundable"
+      },
+      "statement_total_row": "Total Activity Statement ",
+      "statement_total_title": "Activity Statement Outcome",
+      "title": "Activity Statement",
+      "to_ato_main": "(you need to pay this manually to the ATO as soon as possible)",
+      "to_ato_preface": "Currently owing to the ATO",
+      "total": "Total"
+    }
+  },
+  "activity_statements": {
+    "edit": {
+      "bas_confirmation": "I confirm that the information presented is true and correct for the above date ranges and I give Hnry authorisation to lodge this with the ATO on my behalf.",
+      "header_content": "Please review your draft activity statement details below. After receiving your authorisation Hnry will lodge this statement on your behalf. Overdue lodgments may result in fines from the ATO.",
+      "page_title": "Review result of activity statement",
+      "tooltip_link": "https://help.hnry.io/en/articles/6888643-components-of-your-activity-statement"
+    },
+    "gst_obligation": {
+      "net_gst_tooltip": "As a Hnry customer there should be no action or payment required by you for your GST. If there is, we will let you know shortly.",
+      "title_tooltip": "These totals are calculated from the income received and expenses raised during this period in Hnry."
+    },
+    "payg_instalment_obligation": {
+      "decreased": "The PAYG instalment has been varied to ensure no payment is required by you now. This means some of the tax prepayments through Hnry have been allocated by the ATO towards your outstanding balance. The PAYG tax instalment below will be recognised in your %{fy_end_year} income tax return as tax already paid.",
+      "decreased_html": "<p>The PAYG instalment has been varied to ensure no payment is required by you now.</p><p>This means some of the tax prepayments through Hnry have been allocated by the ATO towards your outstanding balance. The PAYG tax instalment below will be recognised in your %{fy_end_year} income tax return as tax already paid.</p>",
+      "manual": "These tax prepayments will be recognised in your %{fy_end_year} income tax return. This amount has been entered based on your discussions with our team.",
+      "manual_html": "<p>These tax prepayments will be recognised in your %{fy_end_year} income tax return. This amount has been entered based on your discussions with our team.</p>",
+      "standard": "This is the tax prepayments through Hnry for the quarter. These tax prepayments will be recognised in your %{fy_end_year} income tax return. There is no payment required.",
+      "standard_html": "<p>This is the tax prepayments through Hnry for the quarter. These tax prepayments will be recognised in your %{fy_end_year} income tax return.</p><p>There is no payment required.</p>",
+      "title_tooltip": "Pay As You Go tax instalments are how any available tax prepayments made through Hnry are declared to the ATO.",
+      "washup": "This is the tax prepayments through Hnry for the quarter, along with any earlier prepayments from the financial year that haven't been included in a previous instalment. These tax prepayments will be recognised in your %{fy_end_year} income tax return. There is no payment required.",
+      "washup_html": "<p>This is the tax prepayments through Hnry for the quarter, along with any earlier prepayments from the financial year that haven't been included in a previous instalment.</p><p>These tax prepayments will be recognised in your %{fy_end_year} income tax return.</p><p>There is no payment required.</p>",
+      "zero": "The PAYG instalment has been varied to $0 to ensure no payment is required by you now for PAYG tax instalments. This means the tax prepayments through Hnry this quarter have been allocated by the ATO towards your outstanding balance. The tax prepayments made this quarter will not be recognised in your %{fy_end_year} income tax return.",
+      "zero_html": "<p>The PAYG instalment has been varied to $0 to ensure no payment is required by you now for PAYG tax instalments.</p><p>This means the tax prepayments through Hnry this quarter have been allocated by the ATO towards your outstanding balance. The tax prepayments made this quarter will not be recognised in your %{fy_end_year} income tax return.</p>"
+    },
+    "payg_withholding_obligation": {
+      "tax_withheld": "Tax withheld from wages",
+      "title_tooltip": "Pay As You Go withheld is only needed if you employ people to work for you. Please let us know if you don’t employ staff. Please ensure this is within the below date range.",
+      "wages": "Gross wages paid to employees during the period"
+    },
+    "submit_user_declaration": {
+      "invalid_transition": "Activity statement already submitted"
+    },
+    "success_modal": {
+      "done": "Return to dashboard",
+      "paragraph_1": "Thanks! Our team at Hnry will now review your information and submit this on your behalf to the ATO - no further action is required.",
+      "paragraph_2": "If you have any questions about your activity statement or reporting dates, please reach out to the team.",
+      "title": "Your activity statement has been submitted 🙌"
+    },
+    "update": {
+      "success": "Submitted! 🎉"
+    }
+  },
+  "allocation_preferences": {
+    "allocation_button": {
+      "card": {
+        "allocation_path": "hnry-card-au",
+        "body": "Auto-top-up my Hnry Card so I can purchase expenses on the go.",
+        "body_updated": "Automatically add funds to my Hnry Account so I can purchase expenses on the go.",
+        "heading": "Set aside funds for business expenses"
+      },
+      "custom": {
+        "allocation_path": "custom_au",
+        "body": "Send money to any AU bank account, repay someone or pay off my credit card.",
+        "heading": "Create a custom allocation"
+      },
+      "investment": {
+        "body": "Contribute to my existing investment funds.",
+        "heading": "Regularly pay into your Investments"
+      },
+      "suggestion": {
+        "body": "Can’t see the one you are looking for? Make a suggestion and we’ll consider it.",
+        "heading": "Make a suggestion"
+      },
+      "super": {
+        "body": "Send funds into my Super every time I get paid.",
+        "heading": "Contribute to your Super fund"
+      },
+      "tax_contribution": {
+        "body": "Regularly pay down my old tax debt or my student loan.",
+        "heading": "Make additional tax contributions"
+      },
+      "transacting_account": {
+        "allocation_path": "transacting-account-au",
+        "body": "Auto-top-up my Hnry Card so I can purchase expenses on the go.",
+        "body_updated": "Automatically add funds to my Hnry Account so I can purchase expenses on the go.",
+        "heading": "Set aside funds for business expenses"
+      }
+    },
+    "categories": {
+      "investment": "Contribute to Super or investment",
+      "super": "Contribute to Super or investment"
+    },
+    "did_you_know_card": {
+      "holiday": {
+        "body": "Setting aside a small portion of your income throughout the year is a great way to save for that next big trip or staycation.",
+        "title": "You can save for a holiday"
+      },
+      "sick_leave": {
+        "body": "Everyone gets sick, but don't get caught out by unexpected bills whilst you're not earning. Set up a rainy day fund.",
+        "title": "You can save for sick leave"
+      }
+    },
+    "errors": {
+      "invalid_bpay_fields": "could not be validated."
+    },
+    "form": {
+      "for_super_info": "You may be eligible to claim a deduction for your personal super contributions. If you’re eligible, you’ll need to give your fund Notice of Intent. <a href=\"https://www.ato.gov.au/Individuals/Super/In-detail/Growing-your-super/Claiming-deductions-for-personal-super-contributions/\" target=\"_blank\">Learn more</a>"
+    },
+    "index": {
+      "empty_state_subheading": "Allocate a portion of your income to your Super fund, a charity, savings accounts, investments and more!",
+      "intro_p1": "By default all income after taxes and deductions will be transferred to your personal bank account. Use Allocations to automatically transfer portions of your income to any Australian bank account.",
+      "learn_more_link": "<a href=\"https://help.hnry.io/en/articles/4278551-how-do-allocations-work\" target=\"_blank\">Learn more</a>",
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/4278551-how-do-allocations-work"
+    },
+    "overview_banner": {
+      "body": "Take the reins of your financial journey by allocating a percentage of your income to an account of your choosing every time you get paid. Whether it's boosting your Superannuation, building your savings, fuelling your investment dreams, or supporting a charity close to your heart.",
+      "heading": "Save like a pro with Allocations",
+      "learn_more_link": "https://help.hnry.io/en/articles/4278551-how-do-allocations-work"
+    },
+    "select_template": {
+      "default_caption": "Create an Allocation to any local Bank Account, or select from one of our preset Allocations from our list below."
+    }
+  },
+  "ato": {
+    "attachment": "Tax Return",
+    "bank_account": "Refund bank account",
+    "business_address": "Business address",
+    "business_contact": "Contact details",
+    "capital_gains_summary": "Capital gains",
+    "car_expenses": "Car expenses",
+    "clothing_expenses": "Clothing expenses",
+    "cost_of_tax_affairs_summary": "Cost of managing tax affairs Summary",
+    "costs_of_tax_affairs": "Cost of managing tax",
+    "defaults": "Required defaults",
+    "deferred_loss_prior_year": "Deferred loss from a prior year",
+    "deferred_losses": "Deferred losses",
+    "dividend_expenses": "Dividend deductions",
+    "dividends": "Dividends",
+    "dividends_summary": "Dividends summary",
+    "donations": "Donation",
+    "donations_summary": "Donations summary",
+    "education_expenses": "Education expenses",
+    "employment_summary": "Employment summary",
+    "employments": "Employment",
+    "fringe_benefits_summary": "Fringe benefits summary",
+    "government_income_summary": "Government income",
+    "government_incomes": "Government payment",
+    "income": "Income",
+    "income_details_schedule": "Income details schedule",
+    "individual_true_declaration": "User's true and correct declaration signoff",
+    "integration": "ato_client gem integration",
+    "interest_summary": "Interest summary",
+    "interests": "Interest payment",
+    "intermediary_phone_number": "Hnry's phone number",
+    "intermediary_true_declaration": "Hnry's true and correct declaration signoff",
+    "listed_company_share": "Listed company share",
+    "loss_per_work_type_summary": "Loss per work type summary",
+    "loss_per_work_types": "Loss per worktypes",
+    "losses_claimed": "Losses claimed",
+    "lump_sum_arrears_payments": "Lump sum E arrears payment",
+    "lump_sum_arrears_summaries": "Lump sum E arrears payments",
+    "managed_funds_distributions": "Managed funds distributions",
+    "managed_funds_summary": "Managed funds distributions summary",
+    "medicare": "Medicare",
+    "non_primary_production_income": "Non-primary production income",
+    "other": "Miscellaneous",
+    "other_capital_gain": "Other capital gain (inc crypto)",
+    "other_expenses": "Other expenses",
+    "other_income_summary": "Other income",
+    "personal_services_business": "Personal services business",
+    "personal_services_description": "Description of main business or professional activity",
+    "personal_services_income": "Personal services income",
+    "postal_address": "Postal address",
+    "private_health_insurance_summary": "Private health insurance summary",
+    "private_health_insurances": "Private health insurance",
+    "real_estate": "Real estate",
+    "rental_property_income_summary": "Rental property income summary",
+    "rental_property_incomes": "Rental property incomes & expenses",
+    "residency": "Tax residency",
+    "residential_address": "Residential address",
+    "spouse": "Spouse",
+    "spouse_income": "Spouse income",
+    "summary": "Personal information",
+    "super_deductions": "Superannuation contribution deduction",
+    "super_deductions_summary": "Superannuation contribution deductions with NOI",
+    "tax_totals": "Tax totals",
+    "travel_expenses": "Travel expenses",
+    "trust_distribution": "Trust distribution",
+    "work_expenses_summary": "Work expenses summary"
+  },
+  "bulk_expenses": {
+    "modal_form": {
+      "depreciation_rental_warning_p2_html": "",
+      "depreciation_warning_p1": "In accordance with ATO policy, the full cost of this item cannot be claimed in a single year and must be depreciated instead.",
+      "depreciation_warning_p2": "Please save your progress on this form and add this item as an Expense on your Hnry profile and wait for the Hnry team to review and approve before proceeding with your Year End form submission.",
+      "mileage_cap_warning": "Under the cents per km method, you can only claim a maximum of 5,000 kms at a rate of %{rate} cents per km, for a maximum deduction of $%{cap}."
+    }
+  },
+  "cards": {
+    "card_transactions": {
+      "card_audit": {
+        "card_audit": "CARD AUDIT",
+        "cards_file_balance": "Cards File Balance",
+        "hnry_balance": "Hnry Balance",
+        "latest_cards_file_name": "Latest Cards Filename",
+        "pending_count": "Pending Count",
+        "pending_provider_balance": "Novatti Pending Balance",
+        "pending_tx_sum": "Hnry Pending TX Sum",
+        "provider_balance": "Novatti Balance",
+        "settled_count": "Settled Count",
+        "settled_sum": "Settled Sum"
+      }
+    }
+  },
+  "clients": {
+    "convert_quote": {
+      "has_prior_deduction_percentage": "Does this client deduct tax prior to payment?",
+      "prior_deduction_percentage": "What tax rate do they deduct? (e.g. 20 for 20%)"
+    },
+    "form": {
+      "business_number": "Client ABN",
+      "errors": {
+        "zero_rated_or_directors_drawings": "Client cannot be GST-free and pay director's drawings"
+      },
+      "has_prior_deduction_percentage": "This Client deducts tax prior to payment",
+      "has_superannuation_guarantee": "This Client pays me Superannuation Guarantee payments",
+      "outside_country": {
+        "sales_tax_registered": {
+          "false": {
+            "label": "This Client is outside Australia"
+          },
+          "true": {
+            "label": "This Client is outside Australia or Services for this Client are exempt from GST"
+          }
+        }
+      },
+      "per_diems": {
+        "tooltip": {
+          "link": "https://help.hnry.io/en/articles/4275585-how-to-add-per-diems-with-hnry"
+        }
+      },
+      "prior_deductions": {
+        "percentage_label": "What tax rate do they deduct? (e.g. 20 for 20%)",
+        "tooltip": {
+          "link": "https://help.hnry.io/en/articles/3945849-should-you-raise-fees-as-a-business-expense"
+        },
+        "variable_alert_text": "If your Client deducts expenses prior to payment, you will need to send us your payment remittance to support@hnry.com.au before your payment can be processed."
+      },
+      "raise_invoices": {
+        "reminders": {
+          "tooltip": {
+            "link": "https://help.hnry.io/en/articles/2770119-invoice-reminders"
+          }
+        }
+      },
+      "sales_tax_settings_warning_html": "<p>By turning on this toggle, GST will not be charged for services done for this client. Only certain services are exempt from GST. You will be liable if GST should’ve been charged. </p><p>If your client is outside of Australia, please read our <a href=\"https://help.hnry.io/en/articles/4279111-international-transfer-details\" target=\"_blank\">International payments guide</a>. If you have any questions <a href=\"%{intercom_link}\">get in touch</a> with our team.</p>",
+      "superannuation_guarantee": {
+        "account_name": "Fund account name",
+        "account_number": "Fund account number",
+        "bsb": "Fund BSB",
+        "fund_abn": "Fund ABN",
+        "fund_name": "Fund name",
+        "percentage": "Percentage",
+        "tooltip": "superannuation_guarantee_tooltip TOOLTIP",
+        "usi": "Unique Superannuation Identifier (USI)"
+      },
+      "withholding_tax": {
+        "tooltip": {
+          "link": null,
+          "text": "Your client deducts and pays a percentage of your self-employed income tax (e.g. PAYG, ABN Withholding Tax) to the ATO before paying you"
+        }
+      }
+    },
+    "index": {
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/4279131-how-to-add-a-client-with-hnry"
+    }
+  },
+  "currency": "AUD",
+  "depreciating_assets": {
+    "cta_existing_assets": "Send us your current asset details here",
+    "paragraph_1_html": "<span class=\"tw-font-bold\"> Equipment and Vehicle purchases that are over $20,000 must be depreciated. </span> You can read our article to <a href=\"http://help.hnry.io/en/articles/8412066-how-does-depreciation-work-with-hnry\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"hui-link\"> learn more about asset depreciation. </a>",
+    "short_title": "Asset pool",
+    "title": {
+      "default": "Asset depreciation pool"
+    }
+  },
+  "emoji": "🇦🇺",
+  "expense_creation": {
+    "salary": "This expense is related to my Salary/Casual income",
+    "salary_short": "Salary/Casual income",
+    "upload_receipt": {
+      "mileage_validation": "Please upload logged trips records"
+    },
+    "upload_receipt_title_mileage": "Upload Logged Trips Records"
+  },
+  "expenses": {
+    "bulk_job_categories": {
+      "modal_form": {
+        "claimable_amount": "Claimable amount",
+        "expense_category": "Expense category",
+        "expense_type_validation": "Please select a work type",
+        "job_category_label": "Work type for this expense?",
+        "total_amount": "Total amount"
+      }
+    },
+    "form": {
+      "client_reimbursement_notice_html": "Client Reimbursements cannot also be raised as a Business Expense. See <a href=\"http://help.hnry.io/en/articles/4279123-client-reimbursements\" target=\"_blank\" rel=\"noopener\">this article</a> for more details.",
+      "mileage_eoyf_text": "ATO rules specify you can only claim Motor Vehicle expenses using either the Logbook method or the Cents per Km method - but not both. By selecting this category, you won’t be able to raise any expenses in the other Motor Vehicle expense category for the remainder of this Financial Year.",
+      "mileage_link": "https://help.hnry.io/en/articles/3869986-motor-vehicle-expenses",
+      "mileage_text": "ATO rules specify you can only claim Motor Vehicle expenses using either the Logbook method or the Cents per Km method - but not both. By selecting this category, you won’t be able to raise any expenses in the other Motor Vehicle expense category for the remainder of this Financial Year.",
+      "motor_vehicle_link": "https://help.hnry.io/en/articles/3869986-motor-vehicle-expenses",
+      "motor_vehicle_text": "ATO rules specify you can only claim Motor Vehicle expenses using either the Logbook method or the Cents per Km method - but not both. By selecting this category, you won’t be able to raise any expenses in the other Motor Vehicle expense category for the remainder of this Financial Year.",
+      "motor_vehicles": {
+        "validations": {
+          "vehicle_type": "Please choose a fuel type"
+        },
+        "vehicle_type": "Fuel type",
+        "vehicle_type_default": "Select a fuel type"
+      }
+    },
+    "index": {
+      "intro_october_html": "We've made some changes to Expenses! <a href=\"https://app.hnry.io/app/sign_in?redirect_to=https://help.hnry.io/en/articles/5659878-changes-to-business-deductions\" target=\"_blank\">Please see here for more info</a>.",
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/3848376-what-can-i-claim-as-a-deduction"
+    },
+    "learn_more": {
+      "link": "https://help.hnry.io/en/articles/3848376-what-can-i-claim-as-a-deduction"
+    },
+    "rejection_accept_modal": {
+      "reject_acceptance_terms": "I accept full liability for this expense and want Hnry to claim this for me",
+      "warning_text": "This expense has been declined as it is not claimable according to ATO policy. By resubmitting this expense, you are accepting full liability and, in the event of an ATO audit, you will be required to provide proof of the validity of this claim."
+    },
+    "self_reviews": {
+      "reasons": {
+        "just_under": {
+          "consent": "I understand",
+          "p1_html": "We have noticed the amount you have claimed for this category is now in excess of what others in the same industry are claiming. Please continue to raise your expenses however, be aware that the ATO may require additional documentation to support the expenses you have claimed.",
+          "p2_html": "If you have any concerns please get in touch with the team."
+        },
+        "over": {
+          "consent": "I understand",
+          "p1_html": "We have noticed the amount you have claimed for this category is now in excess of what others in your industry are claiming. You may still submit this but please be aware that this may flag you for further review by the ATO once your Income Tax return is lodged. In this case, the ATO will need to be satisfied that all expenses you have claimed were legitimately required for your business.",
+          "p2_html": "If you have any concerns please get in touch with the team."
+        }
+      }
+    },
+    "table": {
+      "delete_filed": "Cannot be deleted because this expense has already been lodged in ATO. Please get in touch with the team if it is no longer valid."
+    }
+  },
+  "filing_obligations": {
+    "au": {
+      "prefill_income_sources": {
+        "annuities_and_superannuation": {
+          "payg_withholding_tax_withheld_income_stream_amount": "PAYG tax withheld",
+          "tax_free_component_amount": "Tax free component",
+          "tax_offset_claim_superannuation_income_stream_amount": "Tax offset amount",
+          "taxed_element_amount": "Taxed element",
+          "type": "Annuities and superannuation",
+          "untaxed_element_amount": "Untaxed element"
+        },
+        "ato_interest": {
+          "delayed_refund_interest": "DRI amount",
+          "exclusion_reason_code": "Exclusion reason code",
+          "gic_sic_lpi_credit": "GIC SIC LPI credit amount",
+          "gic_sic_lpi_debit": "GIC SIC LPI debit amount",
+          "interest_on_early_payments": "IEP amount",
+          "interest_on_overpayments": "IOP amount",
+          "type": "ATO interest"
+        },
+        "bank_interests": {
+          "account_name": "Account name",
+          "account_number": "Account number",
+          "bank_name": "Financial institution name",
+          "gross_interest": "Gross interest",
+          "tfn_amounts_withheld": "TFN amounts withheld",
+          "title": "Confirm refund bank account details",
+          "type": "Bank interest"
+        },
+        "dividends": {
+          "company_name": "Company name",
+          "franked_amount": "Franking dividend",
+          "franking_credit": "Franking credit",
+          "no_of_investors": "Account holders",
+          "tfn_amounts_withheld": "TFN amounts withheld for dividends",
+          "type": "Dividends",
+          "unfranked_amount": "Unfranked dividend"
+        },
+        "employment_termination_payment": {
+          "payer_organisation_name": "Payer name",
+          "payg_tax_withheld_amount": "Tax withheld",
+          "payment_date": "Payment date",
+          "tax_free_amount": "Tax free amount",
+          "taxable_amount": "Taxable amount",
+          "type": "Employment termination payment"
+        },
+        "first_home_super_saver": {
+          "released_amount": "Released amount",
+          "tax_withheld_amount": "Tax withheld",
+          "type": "First home super saver"
+        },
+        "government_payments": {
+          "allowance": "Allowance amount",
+          "benefit_type": "Benefit type description",
+          "tax_exempt": "Tax exempt amount",
+          "tax_withheld": "Tax withheld amount",
+          "taxable_income": "Taxable income amount",
+          "type": "Government payments"
+        },
+        "managed_funds_distribution": {
+          "account_reference_number": "Investment reference number",
+          "fund_name": "Managed fund name",
+          "type": "Managed funds distribution"
+        },
+        "salary_and_wages": {
+          "annuity_undeducted_amount": "Annuity undeducted amount",
+          "community_development_employment_project_amount": "CDEP amount",
+          "employer_super_contribution": "Employer super contributions",
+          "exempt_foreign_employment_amount": "Exempt foreign employment amount",
+          "fringe_benefits": "Employer fringe benefits",
+          "gross_payment": "Gross payment",
+          "income_other_amount": "Other income amount",
+          "income_type_code": "Income type code",
+          "lump_sum_a_amount": "Lump sum A amount",
+          "lump_sum_a_code": "Lump sum A code",
+          "lump_sum_b_amount": "Lump sum B amount",
+          "lump_sum_d_amount": "Lump sum D amount (tax free)",
+          "lump_sum_e_amount": "Lump sum E total",
+          "payor_name": "Payer name",
+          "tax_withheld": "Tax withheld",
+          "total_allowance": "Total allowance",
+          "type": "Salary & wages",
+          "union_fees": "Union/Professional Association Fees",
+          "withholding_payer_number": "Withholding payer number",
+          "workplace_giving": "Workplace Giving"
+        },
+        "super_lump_sum_payments": {
+          "fund_name": "Organisation",
+          "payg_tax_withheld_amount": "Tax withheld",
+          "payment_date": "Payment date",
+          "tax_free_amount": "Tax-free amount",
+          "taxable_component_taxed_amount": "Taxable component taxed amount",
+          "taxable_component_untaxed_amount": "Taxable component untaxed amount",
+          "type": "Superannuation lump sum payments"
+        }
+      },
+      "prefill_refreshing": "Fetching your data from the ATO, one moment please...",
+      "salary_and_wages": {
+        "lump_sum_arrears_payments": {
+          "add_item": "Add line",
+          "income": "Income earned",
+          "link": "https://www.ato.gov.au/businesses-and-organisations/hiring-and-paying-your-workers/single-touch-payroll/in-detail/single-touch-payroll-phase-2-employer-reporting-guidelines/reporting-the-amounts-you-have-paid/back-pays",
+          "lump_sum_e_para_1_html": "<strong>Lump Sum E payments</strong> are back payments of your employment income - for example, pay that you've received now for work done in previous years.",
+          "lump_sum_e_para_2": "Your employer should give you documentation showing which year or years the payment relates to.",
+          "lump_sum_e_para_3": "Please enter the year(s) and the amount earned in each year, based on what your employer has told you.",
+          "lump_sum_e_para_4_html": "You can find more information about Lump Sum E payments <a target=\"_blank\" href=\"%{link}\">here</a>.",
+          "year": "Year of income"
+        }
+      },
+      "self_employed_income_details": {
+        "create": {
+          "success": "Income source details updated!"
+        },
+        "income_details": {
+          "paid_fixed_amount_question": "I am paid a specific amount for a specific job (not paid hourly)",
+          "pays_own_mistakes_question": "I fix my own mistakes at my own cost",
+          "provide_own_equipment_question": "I provide my own equipment (e.g. laptop)"
+        },
+        "update": {
+          "success": "Income source details updated!"
+        }
+      }
+    },
+    "duplicate": {
+      "user_filed": "The user lodged this return outside of Hnry",
+      "user_filed_in_ato": "Found after we lodged the return in ATO",
+      "user_filed_on_create": "Found when we created the form",
+      "user_submitted": "Found after the user submitted the form to us"
+    },
+    "filing_obligation_income_sources": {
+      "au": {
+        "managed_funds": {
+          "capital_gains": {
+            "capital_gains_net_amount": "18A: Net Capital Gain",
+            "capital_gains_total_amount": "18H: Total Current Year Capital Gains",
+            "foreign_resident_capital_gains_payg_withheld_credit_amount": "18X: Credit for Foreign Resident Capital Gains Withholding Amounts",
+            "title": "Capital Gains (18)"
+          },
+          "dividends": {
+            "franked_amount": "11T: Franked amount",
+            "franking_credit": "11U: Franking credit",
+            "tfn_amounts_withheld": "11V: TFN amounts withheld",
+            "title": "Dividends (11)",
+            "unfranked_amount": "11S: Unfranked amount"
+          },
+          "errors": {
+            "mismatched_foreign_income_values": "20E: Assessable foreign source income and 20M: Other net foreign source income should have the same value",
+            "negative_values": "These fields should not have negative values: %{fields}"
+          },
+          "foreign_entities": {
+            "controlled_foreign_company_income_amount": "19K: CFC Income",
+            "foreign_transferor_trust_income_amount": "19B: Transferor trust income",
+            "title": "Foreign Entities (19)"
+          },
+          "foreign_source_income": {
+            "foreign_income_gross_amount": "20E: Assessable foreign source income",
+            "foreign_income_net_amount": "20M: Other net foreign source income",
+            "foreign_rental_income_net_amount": "20R: Net foreign rent",
+            "foreign_tax_offset_amount": "20O: Foreign income tax offset",
+            "franking_credits_from_nz_amount": "20F: Australian franking credit from NZ company",
+            "title": "Foreign Source Income (20)"
+          },
+          "gross_interest": {
+            "gross_interest": "10L Gross Interest",
+            "tfn_amounts_withheld": "10M TFN amounts withheld",
+            "title": "Gross Interest (10)"
+          },
+          "other_australian_income": {
+            "income_not_included_in_assessable_income_amount": "24V: Total other income from managed fund",
+            "title": "Other Non-Assessable Income (24)"
+          },
+          "partnerships_and_trusts": {
+            "credits_from_income_and_tax_offsets": {
+              "credit_foreign_resident_withholding_amount": "13A: Share of credit for foreign resident withholding amounts (excluding capital gains)",
+              "credit_tax_paid_by_trustee_amount": "13S: Share of credit for tax paid by trustee",
+              "franking_credits_amount": "13Q: Share of franking credit from franked dividends",
+              "rental_affordability_scheme_tax_offset_amount": "13B: Share of National rental affordability scheme tax offset",
+              "tax_withheld_abn_unquoted_amount": "13P: Share of credit for tax withheld where Australian business number not quoted",
+              "tax_withheld_tfn_unquoted_amount": "13R: Share of credit for TFN amounts withheld from interest, dividends and unit trust distributions",
+              "title": "Share of credits from income and tax offsets"
+            },
+            "non_primary_production": {
+              "non_primary_production_net_amount": "13U: Share of net income from trusts less capital gains, foreign income and franked distributions",
+              "other_deductions_amount": "13Y: Other deductions relating to amounts shown at O, U and C",
+              "title": "Non-primary production",
+              "trusts_franked_distributions_amount": "13C: Franked distributions from trusts"
+            },
+            "primary_production": {
+              "primary_production_other_deductions_amount": "13X: Deductions relating to amounts shown at Distribution from partnerships and Share of net income from trusts",
+              "primary_production_trusts_net_income_amount": "13L: Share of net income from trusts",
+              "title": "Primary production"
+            },
+            "title": "Partnerships and Trusts (13)"
+          },
+          "prompt_html": "Please <a href=\"%{intercom_link}\" id=\"au-managed-funds-prompt\">click here</a> to send through the Tax Distribution Statement received from your managed fund.",
+          "supported_html": "Please fill in the following fields using the Tax Distribution Statement received from your managed fund.",
+          "title": "We'll need more information from you."
+        },
+        "overseas": {
+          "overseas_income_jurisdiction": "What was the jurisdiction of this income?",
+          "overseas_income_source": "What was the source of this income?",
+          "tax_paid": "Overseas tax paid (in AUD)"
+        },
+        "rental_income": {
+          "address_line_1": "Property Address",
+          "income_share_warning_html": "Please ensure that the amount you have entered <strong>above</strong> is <strong>your share</strong> of the gross income received from this property.",
+          "rental_property_available_weeks": "How many weeks was this property available for renting?",
+          "rental_property_income_start_date": "Date property first earned rental income",
+          "rental_property_ownership_percentage": "Percentage ownership of property",
+          "rental_property_purchase_date": "Date of property purchase",
+          "rental_property_rented_weeks": "How many weeks was this property rented out for?",
+          "rental_property_sale_date": "Date of property sale",
+          "rental_property_sale_profit_loss": "Profit or loss from property sale"
+        },
+        "share_disposal": {
+          "prompt_html": "Please provide the <strong>total</strong> amount paid and received for the shares sale; not the price per share."
+        },
+        "super_lump_sum": {
+          "prompt_html": "Please <a href=\"%{intercom_link}\" id=\"au-super-lump-sum-prompt\">click here</a> to send through documentation relating to this superannuation lump sum payment.",
+          "title": "We'll need more information from you."
+        }
+      },
+      "form": {
+        "income_amount_overseas": "Total gross income received from this income source (in AUD)",
+        "warning": {
+          "paragraph_3_html": "<strong> Do not add self-employed income as other income</strong>. If you earned any self-employed income outside of Hnry, please use the 'Self-employed income' type instead."
+        }
+      }
+    },
+    "filings": {
+      "additional_expense_warning_modal": {
+        "number_of_years": 5
+      },
+      "additional_income_warning_modal": {
+        "paragraph_1_html": "Adding an income source directly to your Annual Review form may result in a <strong>tax amount to pay</strong> once we lodge your Income Tax Return."
+      },
+      "au": {
+        "expense_table": {
+          "categories": {
+            "ato_deductions": "Superannuation deductions"
+          },
+          "mileage_auto_updated": "We have updated the claimable total based on the ATO maximum deduction for the financial year. If you have multiple vehicles, you can add expenses for these in the 'additional expense' section below."
+        },
+        "private_health_insurance_details": {
+          "content": "Private patient hospital cover is provided by registered health insurers for hospital treatment provided in an Australian hospital. General cover, commonly known as 'extras', is <strong>not</strong> private patient hospital cover. Please refer to your Health Insurance statement for confirmation of your coverage.",
+          "end_date": "Policy end date",
+          "insurer_name": "Fund name",
+          "label": "I (and my dependants) were covered by Private Health Insurance cover this financial year",
+          "membership_no": "Membership number",
+          "premium_eligible_for_rebate": "Health premiums eligible for rebate",
+          "rebate_received": "Aust Govt rebate received",
+          "start_date": "Policy start date",
+          "total_days_covered_html": "Total days covered by private hospital cover this financial year (enter 0 if not applicable)"
+        }
+      },
+      "child_support": {
+        "child_support_amount": "Total child support paid",
+        "number_of_dependants": "Number of dependant children"
+      },
+      "confirm_details": {
+        "complete": "This review is now complete.",
+        "pending_review": "The information you provided is being reviewed by our team, we will be in touch if any further detail is required.",
+        "self_employed": "Have you previously declared self-employed income to the ATO?",
+        "terms": "I acknowledge that Hnry relies on me to provide all relevant information to complete my tax return and the responsibility is on me to read all questions in the form. It is my responsibility to contact the team if there is any other information I am aware of that should be included in my tax return."
+      },
+      "confirm_income_modal": {
+        "capital_gains": {
+          "title": "Capital gains",
+          "type": "capital"
+        },
+        "checkbox_label": "I confirm I didn't have any %{type} gains or losses during the %{fin_year} financial year.",
+        "heading": "Confirm income",
+        "paid_direct_warning": "You have invoices for this period that have been paid direct. Please be aware that this may result in a tax amount owing.",
+        "paragraph_1": "Please confirm your total income for the %{fin_year} financial year:"
+      },
+      "draft_return_modal": {
+        "annuities_and_superannuation": "Annuities and Superannuation",
+        "capital_gains": "Capital gains",
+        "confirm": "I confirm the above information is true & correct",
+        "deferred_loss_from_prior_year": "Deferred loss from prior year",
+        "dividend_expenses": "Dividends",
+        "dividends": "Dividends",
+        "dividends_tax_credit": "Tax credit from dividends",
+        "donations_expenses": "Donations",
+        "estimated_payable": "Estimated amount payable to the ATO",
+        "estimated_refundable": "Estimated amount refundable",
+        "expenses": "Expenses",
+        "expenses_claimed_this_year": "Self employed deductions claimable",
+        "explainer": "This is the final chance to review your information before we lodge your Income Tax Return with the ATO.",
+        "government_tax_credits": "Government tax credits",
+        "hnry_fees": "Accounting fees",
+        "hnry_tax_paid": "Hnry tax paid to ATO",
+        "income": "Income",
+        "income_tax": "Income tax",
+        "interest": "Interest",
+        "losses_deferred_disclaimer": "Losses deferred to future years for -",
+        "managed_funds_distributions": "Managed funds distributions",
+        "managed_funds_distributions_tax_credit": "Tax credit from managed funds",
+        "medicare_levy": "Medicare levy",
+        "medicare_levy_surcharge": "Medicare levy surcharge",
+        "medicare_levy_surcharge_warning": "Due to not having Private Patient Hospital Health Insurance for the whole year, you are required to pay the Medicare Levy Surcharge.",
+        "other_income": "Other income",
+        "other_tax_credits": "Other tax credits",
+        "payg_instalments": "PAYG instalments",
+        "payg_on_employment_income": "PAYG on employment income",
+        "payg_on_prefill_annuities_and_superannuation": "Annuities and superannuation - PAYG tax withheld",
+        "payg_on_prefill_government_payments": "PAYG on government payments",
+        "payg_on_prefill_super_lump_sum_payments": "PAYG on superannuation lump sum payments",
+        "pre_hnry_tax_paid": "Hnry tax paid to ATO",
+        "rental_expenses": "Rental expenses",
+        "rental_income": "Rental income",
+        "salary": "Employment income",
+        "salary_expenses": "Salary expenses",
+        "self_employed_income": "Self employed income",
+        "student_loan": "Student loan",
+        "submit": "Submit",
+        "subtitle": "Draft income tax return",
+        "super_deductions_notice_provided": "Superannuation deductions",
+        "super_lump_sum_payments": "Superannuation lump sum payments",
+        "tax": "Tax",
+        "tax_offset_on_prefill_annuities_and_superannuation": "Annuities and superannuation - Tax offset",
+        "tax_paid": "Tax paid",
+        "taxable_income": "Taxable income",
+        "title": "Final Review",
+        "total_expenses": "Total expenses",
+        "total_income": "Total income"
+      },
+      "expense_table": {
+        "category": "Expense category"
+      },
+      "expenses": {
+        "excess_untaxed_deposits_html": "<strong>Please note that you have received untaxed deposits in excess of the expenses you have claimed and this could lead to a tax amount owing.</strong>",
+        "paragraph_1": "Once you submit this Annual Review we will begin the process of lodging your Income Tax Return with ATO and it will be too late to claim any more Expenses.",
+        "salary_expense_warning": {
+          "paragraph_1": "The expenses raised against your salary income exceed your total salary income.",
+          "paragraph_2": "This is unlikely to be accepted by the ATO and will likely trigger the ATO to audit your tax return.",
+          "paragraph_3": "Please revisit your salary expenses and remove any duplicate or invalid expenses."
+        }
+      },
+      "final_checks": {
+        "continue_income_averaging": {
+          "title": "I am still eligible and wish to continue income averaging."
+        },
+        "deferred_losses": {
+          "amount": "Total amount of loss deferred",
+          "toggle_title": "I have deferred business losses from a previous financial year",
+          "tooltip_html": "You can find if you have deferred business losses by looking in the business income section of your previous tax return",
+          "work_type": "Work type"
+        },
+        "medicare": {
+          "exemption": {
+            "0": "I have one of the Category 1 Medical Conditions that exempt me from paying the Medicare Levy",
+            "1": "I was a foreign resident for tax purposes during the year and not entitled to Medicare benefits",
+            "2": "I am not entitled to Medicare benefits and I have received a Medicare Entitlement Statement showing I was not entitled to Medicare benefits"
+          },
+          "exemption_warning": {
+            "foreign_tax_html": "For further information on being a foreign tax resident and not being entitled to Medicare benefits - please see this <a href=https://www.ato.gov.au/Individuals/Medicare-and-private-health-insurance/Medicare-levy/Medicare-levy-exemption/Foreign-residents-Medicare-levy-exemption/ target='_blank'>ATO article</a>",
+            "medical_html": "For further information on the Medical conditions that exempt you from the Medicare Levy - please see this <a href=https://www.ato.gov.au/Individuals/Medicare-and-private-health-insurance/Medicare-levy/Medicare-levy-exemption/Medical-exemption-from-Medicare-levy/ target='_blank'>ATO article</a>",
+            "not_entitled_html": "For further information on not being entitled to Medicare benefits and obtaining the <a href=https://www.ato.gov.au/Individuals/Medicare-and-private-health-insurance/Medicare-levy/Medicare-levy-exemption/Not-entitled-to-Medicare-benefits/#MES target='_blank'>Medicare Entitlement Statement</a> - please see this <a href=https://www.ato.gov.au/Individuals/Medicare-and-private-health-insurance/Medicare-levy/Medicare-levy-exemption/Not-entitled-to-Medicare-benefits/ target='_blank'>ATO article</a>"
+          },
+          "period_label": "Number of full days exempted from Medicare Levy",
+          "reason_default": "Reason for exemption",
+          "tooltip_html": "Further details regarding Medicare Levy Exemption, and how to obtain a Medicare Entitlement Statement, can be found <a href=https://www.ato.gov.au/Individuals/Medicare-and-private-health-insurance/Medicare-levy/medicare-levy-exemption/ target='_blank'>here</a>"
+        },
+        "regional_remote_zone": "I am eligible for the remote zone area offset for more than 183 days this year",
+        "tax_residency_end_date": "Tax residency end date",
+        "tax_residency_start_date": "Tax residency start date",
+        "toggle_title": "I am exempt from paying Medicare Levies"
+      },
+      "final_checks_modal": {
+        "hnry": {
+          "p1": "I understand Hnry makes every effort to prepare my tax return accurately and correctly, and I accept that Hnry relies on me to disclose all relevant information. I understand that the information I am submitting is considered final and complete, and will be used to lodge my Income Tax Return. If the information I have provided is later deemed to be incorrect, there may be a one-off fee for the Hnry Expert Services team to amend my Income Tax Return.",
+          "title": "Hnry"
+        },
+        "intercom_html": "<p>If these details are incorrect, message through to our team <a href=\"%{intercom_link}\">here</a>.</p>",
+        "lodgement_declaration": {
+          "p1": "I declare that:",
+          "p2": "All of the information I have provided to the tax agent for the preparation of this Income Tax Return, including any applicable schedules, is true and correct;",
+          "p3": "I authorise the agent to give this document to the Australian Taxation Office.",
+          "title": "Lodgement declaration"
+        },
+        "privacy": {
+          "p1": "The ATO is authorised by the Taxation Administration Act 1953 to request your tax file number (TFN). We will use your TFN to identify you in our records. It is not an offence not to provide your TFN. However, you cannot lodge your income tax form electronically if you do not quote your TFN. Taxation law authorises the ATO to collect information and to disclose it to other government agencies. For information about your privacy go to ato.gov.au/privacy.",
+          "title": "Privacy"
+        },
+        "refund_bank_account": {
+          "p1": "If you are due a refund from the ATO, this will be paid into your personal bank account listed in Hnry.",
+          "title": "Refund bank account"
+        },
+        "submit": "Authorise lodgement",
+        "substantiation_declaration": {
+          "p1": "I have declared all my assessable income from all sources, in and out of Australia, including capital gains received, for the year of income in my tax return.",
+          "p2": "I am aware that to claim a work-related, business or other expense deduction I must demonstrate that I have incurred the expense for income producing purposes. Where expenses are used for both business/work-related and private purposes I have kept appropriate apportionment records to verify my business usage claim.",
+          "p3": "I am aware of the need to substantiate or verify any income or expense item declared in my tax return and I will be able to produce such information to the satisfaction of the ATO in an audit situation. I understand that penalties, interest and possible legal action may be applied if incorrect income or claims are identified by an audit.",
+          "p4": "I further understand that if the return is not lodged by the due date specified, penalties may apply.",
+          "title": "Substantiation declaration"
+        },
+        "terms_accepted": "I %{name} acknowledge all of the above is true and correct",
+        "updated_terms_accepted_html": "I %{name} acknowledge that I have read and agree to the <a href=\"https://hnry.com.au/agreement/\" target=\"_blank\">Hnry Service Agreement</a> and <a href=\"https://hnry.com.au/agreement/#-section-b-authority-to-act\" target=\"_blank\">Authority to Act</a>",
+        "updated_terms_and_conditions": {
+          "p1_html": "Please see Hnry's updated <a href=\"https://hnry.com.au/au/agreement\">Service Agreement</a> including updated Authority to Act.",
+          "title": "Update to the Hnry Service Agreement and Authority to Act"
+        }
+      },
+      "form": {
+        "final_checks": {
+          "title": "Last questions"
+        },
+        "income": {
+          "title": "Income summary"
+        }
+      },
+      "income": {
+        "paragraph_1": "Below is a summary of your income for the Financial Year, based on your Hnry profile."
+      },
+      "shared_content": {
+        "draft_return": "Final review",
+        "final_checks": "Last questions",
+        "income": "Income summary",
+        "spouse_income": "Spouse income"
+      },
+      "show": {
+        "uncompleted_step_warning": {
+          "spouse_income": "Please complete the spouse income step"
+        }
+      },
+      "spouse": {
+        "any_spouse": "Have you had a spouse at any time between %{from} and %{to}?",
+        "definition": {
+          "paragraph_1": "Your spouse includes any person who:",
+          "paragraph_2": "you were in a relationship with that was registered under a prescribed state or territory law",
+          "paragraph_3": "although not legally married to you, lived with you on a genuine domestic basis in a relationship as a couple."
+        },
+        "died": "My spouse died during this financial year",
+        "full_year": "Were they your spouse for the full year?",
+        "gender": "What is your spouse's gender?",
+        "tax_resident": "Is your spouse a tax resident of Australia?"
+      },
+      "spouse_income": {
+        "child_support": "My spouse paid child support this financial year",
+        "child_support_amount": "Total child support paid",
+        "fhss_funds": "My spouse released funds from the FHSS this financial year",
+        "fhss_funds_amount": "Total amount released",
+        "foreign_income": "My spouse received foreign income this financial year",
+        "foreign_income_amount": "Total foreign income received",
+        "fringe_benefits": "My spouse received Fringe Benefits this financial year",
+        "fringe_benefits_amount": "Total reportable Fringe Benefit amount",
+        "investment_loss": "My spouse made investment losses this financial year",
+        "investment_loss_amount": "Investment losses",
+        "investment_loss_property_amount": "Rental property losses",
+        "pension": "My spouse received tax-free government pension amounts",
+        "pension_amount": "Total tax-free pension received",
+        "spouse_taxable_income_html": "What is your spouse's <strong>taxable income</strong> as declared in their <strong>%{financial_year}</strong> tax return?",
+        "super_employer": "My spouse has reportable superannuation contributions",
+        "super_employer_amount": "Total employer Super contributions",
+        "super_lump_sum": "My spouse received a superannuation lump sum",
+        "super_lump_sum_amount": "Total taxed element, where the tax rate is zero",
+        "super_personal_amount": "Total personal Super contributions"
+      },
+      "tax_codes": {
+        "full": {
+          "TAX_CODE_A": "You are a single adult on 30 June.",
+          "TAX_CODE_B": "You are a single adult on 30 June and you have a dependent child or children.",
+          "TAX_CODE_C": "You have a spouse on 30 June (including if your spouse died during the tax year and you did not have another spouse before 30 June).",
+          "TAX_CODE_D": "You have a spouse on 30 June and they have agreed that you should claim their share of the rebate because they aren't claiming it themselves.",
+          "TAX_CODE_E": "You have a spouse on 30 June and you have agreed that they should claim your share of the rebate because you aren't going to claim it yourself.",
+          "TAX_CODE_F": "You are covered as a dependent child on a private health insurance policy and are not entitled to receive the rebate."
+        }
+      },
+      "win_message_modals": {
+        "modal_1_paragraph_html": "From the team at Hnry, congratulations on a fantastic year. Thank you for the support and letting us help you with your taxes. <br/><br/>We look forward to continue helping you for the year ahead.",
+        "modal_1_title": "Woohoo! 🎉",
+        "modal_2_paragraph": "This can take 4-6 weeks for the ATO to approve the lodgement. We will notify you of the outcome as soon as it has been processed at their end. Any refund owed to you will be paid directly into the personal bank account you have recorded in Hnry.",
+        "modal_2_title_html": "We will now lodge your Income <br/>Tax Return (ITR) with the ATO.",
+        "modal_3_paragraph": "This will likely result in your Income Tax Return needing to be relodged, at an additional cost (and/or you possibly needing to return your refund to the ATO).",
+        "modal_3_title": "Please do not submit anything directly to the ATO yourself."
+      }
+    },
+    "unsupported_situations": {
+      "amendment": "Amendment/Refiling",
+      "annuities_and_superannuation": "Annuities and superannuation",
+      "annuities_and_superannuation_in_arrears": "Annuities and superannuation in arrears",
+      "australian_annuities_superannuation_income_data_limit": "ATO prefill is missing some australian annuities superannuation income records",
+      "business_transaction_data_limit": "ATO prefill is missing some business transaction records",
+      "business_transactions_through_payment_systems": "BTTPS",
+      "capital_gain": "Legacy capital gain income source added",
+      "capital_gain_tax_data_limit": "ATO prefill is missing some capital gain tax records",
+      "capital_gain_tax_property_transfers_data_limit": "ATO prefill is missing some capital gain tax property transfers records",
+      "cryptocurrency": "Cryptocurrency",
+      "deceased": "Deceased",
+      "deductions": "User raised expenses directly with ATO via myDeductions",
+      "deferred_losses": "Deferred losses from a prior year",
+      "dividend_data_limit": "ATO prefill is missing some dividend records",
+      "dividends": "Dividends",
+      "donations": "Donations deductions",
+      "early_stage_innovation_companies": "Early stage innovation companies",
+      "early_stage_innovation_company_data_limit": "ATO prefill is missing some early stage innovation company records",
+      "employee_share_schemes": "Employee share schemes",
+      "employee_termination_payment_data_limit": "ATO prefill is missing some employee termination payment records",
+      "employment_termination_payment_no_code": "Employment termination payments with no payment type code",
+      "employment_termination_payments": "Employment termination payments",
+      "excess_lump_sum_arrears_payments": "Excess number of lump sum arrears payments for PAYGW Lump Sum E",
+      "farm_management_deposits": "Farm management deposits",
+      "first_home_saver": "First home saver",
+      "foreign_address": "Non-AU or -NZ address",
+      "foreign_employment_payment": "Foreign employment payment",
+      "foreign_income": "Foreign income",
+      "foreign_source_investment_income": "Foreign source investment income",
+      "government_allowance": "Government allowance",
+      "government_allowance_data_limit": "ATO prefill is missing some government allowance records",
+      "government_payments": "Government payments",
+      "government_pension_data_limit": "ATO prefill is missing some government pension records",
+      "income_averaging": "Income averaging",
+      "income_outside_hnry": "Income outside Hnry",
+      "info": "We need to lodge this return via XPM due to some unsupported scenarios:",
+      "interest_data_limit": "ATO prefill is missing some interest records",
+      "interest_limit_exceeded": "Number of bank and ATO interest records exceeds limit of 20",
+      "jobkeeper": "Jobkeeper",
+      "loss": "Loss on per work type basis or overall loss",
+      "loss_last_year": "Hnry lodged a return last year that might have included a loss",
+      "loss_on_salary": "Loss on salary income",
+      "lump_sum_arrears_payments_data_limit": "User has more than 5 lump sum e arrears payments",
+      "managed_fund_data_limit": "ATO prefill is missing some managed fund records",
+      "managed_funds_capital_loss": "Managed funds distributions with capital loss",
+      "managed_funds_distributions": "User-declared managed funds distributions",
+      "medicare_exemption": "Medicare exemption",
+      "motor_vehicle_limit": "Number of motor vehicles with mileage expenses exceeds limit of 10",
+      "multiple_work_types_and_loss": "Multiple work types and losses",
+      "novated_lease": "Novated lease",
+      "other_ato_interest": "Other ATO interest",
+      "other_income": "Other income",
+      "outstanding_payg": "Outstanding PAYG instalment",
+      "part_year_tax_resident": "Part year tax registered",
+      "partnership_distributions": "Partnership distributions",
+      "partnership_income": "Partnership income",
+      "pay_as_you_go_withholding_data_limit": "ATO prefill is missing some pay as you go withholding records",
+      "paygw": "Individual non business income",
+      "personal_services_income": "Business/PSI Payment Summary",
+      "primary_production_income": "Primary production",
+      "prior_year_cgt_losses_carried_forward": "Prior year CGT losses carried forward",
+      "private_health_insurance_data_limit": "ATO prefill is missing some private health insurance records",
+      "property_transfers": "Property transfers",
+      "remote_area": "Remote area",
+      "rental_property_income": "Rental property income",
+      "rental_property_income_limit": "More than 1 rental property",
+      "rental_property_outside_australia": "Rental property address outside of Australia",
+      "salary_and_wages": "Salary and wages",
+      "share_disposals": "Share disposals",
+      "shareholder_income": "Shareholder income",
+      "spouse_died": "Spouse died",
+      "spouse_excessive_fhss": "Spouse's FHSS claim exceeds their estimated total income",
+      "superannuation_contribution_deductions": "Superannuation contribution deductions",
+      "superannuation_lump_sum_data_limit": "ATO prefill is missing some superannuation lump sum records",
+      "superannuation_lump_sum_payments": "Superannuation lump sum payments",
+      "superannuation_personal_contribution_deduction_data_limit": "ATO prefill is missing some superannuation personal contribution deduction records",
+      "tax_free_gov_pension_income": "Untaxed government pension",
+      "taxable_payments": "Taxable payments",
+      "taxable_payments_annual_report": "Taxable payments annual report",
+      "taxed_gov_pension_income": "Taxed government pension",
+      "trust_income": "Estate trust income",
+      "under_eighteen": "User is under eighteen",
+      "working_holiday": "Working holiday"
+    }
+  },
+  "financial_income_sources": {
+    "index": {
+      "empty_state_subheading": "Add your other sources of income to make sure that your tax rate is correct.",
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/4343936-updating-your-income-sources"
+    }
+  },
+  "global": {
+    "app_stores": {
+      "apple_app": "apple_app",
+      "apple_app_store_link": "https://apps.apple.com/au/app/hnry/id1451761596",
+      "google_play": "google_play",
+      "google_play_link": "https://play.google.com/store/apps/details?id=io.hnry.hnry"
+    },
+    "app_urls": {
+      "development": "http://localhost:3000",
+      "production": "https://app.hnry.io",
+      "staging": "https://staging.hnry.io",
+      "test": "http://localhost:3000",
+      "uat": "https://uat.hnry.io"
+    },
+    "bank_branch_code_mask": "000-000",
+    "business_address": {
+      "address_line_1": "Suite 2501, Westfield Tower, 1/520 Oxford St,",
+      "address_line_2": "Bondi Junction NSW 2022, Australia"
+    },
+    "business_number": "ABN",
+    "company_name": "Hnry (Australia) Pty Limited",
+    "contact": {
+      "email": {
+        "accounts": "accounts@hnry.com.au",
+        "members": "members@hnry.com.au",
+        "no_reply": "no-reply@hnry.com.au",
+        "post": "post@hnry.com.au",
+        "support": "support@hnry.com.au"
+      },
+      "phone": {
+        "concise_formatted": "02 7908 7898"
+      }
+    },
+    "currency_name": "dollar",
+    "currency_symbol": "$",
+    "footer": {
+      "social_network": {
+        "facebook": "https://facebook.com/hnryau/",
+        "facebook_short": "facebook.com/hnryau",
+        "instagram": "https://www.instagram.com/hnryau",
+        "linkedin": "https://nz.linkedin.com/company/hnry",
+        "twitter": "https://twitter.com/hnry_aus",
+        "twitter_short": "@hnry_au"
+      }
+    },
+    "hnry_sales_tax_number": "88 637 624 072",
+    "hnry_tax_agent_number": "Tax agent No. 26030966",
+    "links": {
+      "account_closure": "https://hnry.com.au/au/account-closure",
+      "agreement": "https://hnry.com/agreement/",
+      "facebook": "https://facebook.com/hnryau",
+      "instagram": "https://www.instagram.com/hnryau",
+      "legal_documents": "https://hnry.com.au/legal-documents",
+      "marketing_site": "https://hnry.com.au",
+      "marketing_site_short": "hnry.com.au",
+      "tax_agency_admin": "https://onlineservices.ato.gov.au/onlineservices/login.html",
+      "twitter": "https://twitter.com/hnry_aus"
+    },
+    "medical_agency_short": "Medicare",
+    "phone": {
+      "concise_formatted": "02 7908 7898"
+    },
+    "sales_tax": "GST",
+    "sales_tax_filing_name": "GST return",
+    "tax_collection_authority": "Australian Tax Office",
+    "tax_collection_authority_short": "ATO",
+    "tin": "TFN"
+  },
+  "home": {
+    "articles": {
+      "active": {
+        "false": {
+          "num_1": {
+            "id": 4272022,
+            "url": "https://help.hnry.io/en/articles/4272022-what-is-hnry-and-how-does-it-work"
+          },
+          "num_2": {
+            "id": 4334146,
+            "url": "https://help.hnry.io/en/articles/4334146-setting-up-your-hnry-profile"
+          },
+          "num_3": {
+            "id": 8067906,
+            "url": "https://help.hnry.io/en/articles/8067906-how-to-get-paid-through-hnry"
+          },
+          "num_4": {
+            "id": 4272147,
+            "url": "https://help.hnry.io/en/articles/4272147-how-do-i-switch-to-using-hnry"
+          }
+        },
+        "true": {
+          "num_1": {
+            "id": 3848376,
+            "text": "Our detailed guide, listing the expenses you can claim",
+            "title": "What can I claim as a business expense?",
+            "url": "https://help.hnry.io/en/articles/3848376-what-can-i-claim-as-a-deduction"
+          },
+          "num_2": {
+            "id": 5378471,
+            "text": "What you can expect for your year-end tax filing",
+            "title": "Financial Year-end: What do I need to know?",
+            "url": "https://help.hnry.io/en/articles/5378471-financial-year-end-what-do-i-need-to-know"
+          },
+          "num_3": {
+            "id": 4337845,
+            "text": "Allocate a percentage of your income to an account of your choosing every time you get paid.",
+            "title": "How to set up an Allocation",
+            "url": "https://help.hnry.io/en/articles/4337845-how-to-set-up-an-allocation"
+          },
+          "num_4": {
+            "id": 4337080,
+            "text": "How we ensure you do not end up owing tax",
+            "title": "How does Hnry (& ATO) calculate your income tax rate?",
+            "url": "http://help.hnry.io/en/articles/4337080-how-does-hnry-ato-calculate-your-income-tax-rate"
+          }
+        }
+      }
+    },
+    "call_to_action": {
+      "activity_statement_processing_banner": {
+        "paragraph": "Thank you for submitting your activity statement. Annual Review forms for your Income Tax Return will be available on your dashboard after your activity statement has been finalised by the ATO.",
+        "title": "Your activity statement is currently being processed"
+      },
+      "activity_statements": {
+        "agro_title": "Your activity statement review for the period end %{date} is now overdue ⚠️",
+        "due_date_approaching_paragraph_html": "Please review and confirm your activity statement now. The ATO deadline of <strong>%{due_date}</strong> is approaching and we require your confirmation prior to lodging. Overdue lodgments may result in fines.",
+        "link": "Review now",
+        "note_html": "<strong>Note:</strong> This is <strong>not</strong> your Income Tax Return. Annual Review forms for your Income Tax Return will be sent after ATO data is finalised.",
+        "overdue_paragraph": "Please review and confirm your activity statement now. Confirmation is required before we lodge this with the ATO and overdue lodgments may result in fines.",
+        "paragraph_html": "We need you to review and confirm your activity statement details before the <strong>%{due_date}</strong> in order to ensure we can lodge this with the ATO by the deadline. Overdue lodgments may result in fines.",
+        "period_ending_june_html": "Please review and confirm your activity statement for the period ending %{period_end_date} by <strong>%{due_date}</strong>, so we can lodge it with the ATO by the deadline. Late submissions may incur penalties.",
+        "title": "Review your activity statement for the period ending %{date}"
+      },
+      "filing_obligation_coming_soon": {
+        "content_html": "We're getting ready to lodge your Income Tax Return (ITR), but we just need the %{tax_agency} to finalise all their information before we can send it to you for review. Please <strong>do not</strong> lodge your own tax return."
+      },
+      "filing_obligation_submitted": {
+        "paragraph": "Thank you for submitting your %{financial_year} annual review! It'll be processed within approximately 4-6 weeks from the date we received it. So for now, just sit back and relax, we've got it from here!",
+        "title": "It's time to sit back and relax!"
+      },
+      "filing_obligations": {
+        "description": "Your Annual Review form is ready for review! Please double-check your income and expense details (just 5 minutes!), make sure everything is correct, then sit back and we will lodge your Income Tax Return. You can save and come back later if needed."
+      },
+      "welcome": {
+        "profile_list": {
+          "date_of_birth": "Your Tax File Number"
+        }
+      }
+    },
+    "cards": {
+      "more_info": {
+        "link": "https://hnry.com.au/the-new-hnry-debit-card/"
+      }
+    },
+    "index": {
+      "business_expenses_savings": "Business Expenses work to reduce the amount of Income Tax (and GST) you need to pay. Make sure to raise your Business Expenses using the correct categories and we will calculate the Claimable Amount for you.",
+      "business_expenses_savings_link": "https://help.hnry.io/en/articles/4279040-how-do-business-expenses-work",
+      "income_and_expenditure_tooltip_link": "http://help.hnry.io/en/articles/9195136-understanding-the-income-and-expenses-graph",
+      "self_reconcile": {
+        "client_payment_modal": {
+          "success_alert": "Your payment should arrive in your personal bank account within standard bank processing times."
+        },
+        "multiple_clients_modal": {
+          "disclaimer": "Please note that you only need to assign a payment to multiple clients if some have GST included, and others do not.",
+          "instruction": "To make sure this payment is processed correctly, please include each client's name and the amount they paid."
+        }
+      }
+    }
+  },
+  "income_sources": {
+    "consent_modal": {
+      "learn_more_url": "https://help.hnry.io/en/articles/3189201-how-does-hnry-ird-calculate-your-income-tax-rate"
+    }
+  },
+  "invoice_quotes": {
+    "business_number_prompt": "Otherwise you've indicated you're GST registered, but have not provided your ABN"
+  },
+  "invoices": {
+    "convenience_fee": "Credit card payments incur a %{surcharge}% convenience fee to cover the costs of processing charged by our provider Tyro.",
+    "index": {
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/4279062-how-do-i-send-an-invoice-using-hnry"
+    }
+  },
+  "levies": {
+    "short_name": "Medicare"
+  },
+  "mid_year_transitions": {
+    "form": {
+      "has_salary_income": {
+        "content": "Salary income",
+        "tooltip": "Income tax paid for employees who earn a wage or salary (this applies to you if you get annual leave, sick leave and superannuation contributions from your employer)"
+      },
+      "has_self_employed_income": {
+        "tooltip": "ATO's definition of self-employed refers to anyone who conducts business activity on their own – as a freelancer, contractor, sole trader, or small business owner – rather than in a more traditional employer relationship. Anyone earning self-employed income is required to complete a tax return at the end of the financial year."
+      },
+      "prior_expenses_this_year": {
+        "accountant": "I used accounting software, e.g Xero, MYOB",
+        "manual": "I did it myself, e.g via a spreadsheet, bank statements",
+        "no_expenses": "I haven't done anything yet"
+      }
+    }
+  },
+  "onboarding_tour": {
+    "au": {
+      "consent_to_act_agreement": {
+        "authority_to_act": "I grant Hnry the Authority to Act on my behalf"
+      }
+    },
+    "choose_an_id_document": {
+      "authority_to_verify_identity": "I confirm that I am authorised to provide the personal details presented and I consent to my information being passed to and checked with the document issuer, official record holder, a credit bureau and authorised parties for the purpose of verifying my identity and address."
+    },
+    "confirm_your_income": {
+      "income_tax_message_average": "Based on others in your field of work, your starting tax rates, according to the ATO, are shown below. After your first few pays, Hnry will automatically adjust your tax rate based on your earnings.",
+      "income_tax_message_estimate": "Based on your estimated income, your starting tax rates, according to the ATO, are shown below. After your first few pays, Hnry will automatically adjust your tax rate based on your earnings.",
+      "income_tax_percentage_tooltip_learn_more_link_html": "<a href='https://help.hnry.io/en/articles/4337080-how-does-hnry-ato-calculate-your-income-tax-rate' target='_blank'>Learn more</a>",
+      "income_tax_percentage_tooltip_paragraph_1_html": "<p>If you have other sources of income (e.g. Salary or Casual job), your self-employed income will be taxed at a secondary rate. This is to ensure you have no tax owing at the end of the financial year.</p>"
+    },
+    "payment_confirmation": {
+      "fee_image_path": "tour/you-just-got-paid-fee.svg",
+      "taxes_image_path": "tour/you-just-got-paid-taxes.svg",
+      "transfer_image_path": "tour/you-just-got-paid-transfer.svg"
+    },
+    "step_titles": {
+      "where_to_pay_you": "We want to show you how Hnry works with $1 free! Tell us where to pay you?"
+    },
+    "verify_your_identity": {
+      "duplicate_user_html": "These details are already linked to a Hnry account. Contact <a href='mailto:%{support_email}'>%{support_email}</a> if you think this is an error.",
+      "full_year_tax_resident_prompt": "Have you been a tax resident of Australia for all of the current financial year?",
+      "has_tax_number": {
+        "content": "Tax File Number (TFN)",
+        "tooltip": {
+          "content": "You can find your tax file number on letters and statements from ATO, in the myGov online portal, or on payslips from past employers."
+        }
+      },
+      "working_holiday": {
+        "question": "Are you on a Working Holiday Maker visa (subclass 417) or a Work and Holiday visa (subclass 462)?"
+      }
+    },
+    "where_to_pay_you": {
+      "helper_text": "Don’t worry - we will never have access to your bank account or its data, we just need this so we can pay you your income.",
+      "paragraph_1": "We need your bank details in order to pay you once we’ve calculated and deducted your taxes."
+    }
+  },
+  "pay_lines": {
+    "index": {
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/4281652-understanding-your-payslip"
+    },
+    "payslip": {
+      "adaptive_sales_tax_tooltip": {
+        "link": "http://help.hnry.io/en/articles/11742870-how-does-hnry-manage-your-gst"
+      },
+      "income_tax_tooltip": {
+        "link": "https://help.hnry.io/en/articles/4337080-how-does-hnry-ato-calculate-your-income-tax-rate",
+        "text": "Please note that as you have received Salary income this financial year, this will impact the tax rate required for your self-employed income. The higher rate is to ensure you have no tax owing at the end of the financial year. It’s important that your other sources of income information is kept up to date."
+      },
+      "international_fee_tooltip": "Any international payments will incur a %{fee} fee to cover the cost of processing charged by our payments partner.",
+      "levies": "Medicare levy",
+      "levies_tooltip": {
+        "link": "https://www.ato.gov.au/Individuals/Medicare-and-private-health-insurance/Medicare-levy",
+        "text": "The Medicare Levy is paid by all taxpayers. This is different from the end of year ‘Medicare Levy Surcharge’, which you may be exempt from if you meet certain criteria."
+      },
+      "levy_surcharges": "Medicare levy surcharge",
+      "monoova_international_fee": "International payment fee",
+      "npp_outbound_fee": "Opt-in instant processing fee",
+      "sales_tax": "GST",
+      "sales_tax_overcollected": "GST overpaid to ATO",
+      "sales_tax_to_return": "GST you owe your client",
+      "sales_tax_undercollected": "GST owed directly to ATO by you",
+      "service_fee_description": " (incl. GST)",
+      "superannuation_guarantee": "Super guarantee contribution",
+      "superannuation_guarantee_tooltip": {
+        "link": "https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee#ato-Aboutthesuperguarantee",
+        "text": "The superannuation guarantee (SG) is the percentage of your ordinary time earnings (in addition to your wages) paid into your super fund by your employer."
+      }
+    },
+    "show": {
+      "deductions_info": "Want to know more about how Hnry calculates your tax rate and other deductions?",
+      "deductions_info_link": "https://help.hnry.io/en/articles/4281652-understanding-your-payslip"
+    }
+  },
+  "pre_hnry_expenses": {
+    "index": {
+      "intro_html": "<p>Use this section to tell us about any expenses you have from prior to joining us (excluding any expenses you have already uploaded to Hnry).</p> <p>You should enter the <b>total amount</b> for each Expense category per month.</p> <p><b>N.B.</b> Given that Hnry will not be reviewing receipts for these expenses, we are unable to warrant the validity of Expenses raised in this section. You will need to ensure you hold onto the receipts should they be required by the Australian Tax Office. If you would like us to review and approve any expenses then you should raise these in the system as individual claims instead.</p> <p>If you're not sure what is claimable, check our <a href='https://help.hnry.io/en/articles/4279040-how-do-deductions-work' target='_blank''>Guide to Claiming Business Expenses</a>.</p>",
+      "title": "Pre-Hnry Expenses"
+    }
+  },
+  "quotes": {
+    "index": {
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/4279072-how-to-create-a-quote"
+    },
+    "update": {
+      "success_saved": "Quote draft updated"
+    }
+  },
+  "receipts": {
+    "show": {
+      "business_expense_auto_claim_comment": "We have automatically claimed this as a business expense for you.",
+      "hnry_fee_comment": "The Hnry fee shown in your pay summary is GST exclusive, this is because the GST relief is applied when the payment is processed."
+    }
+  },
+  "refer_a_friend": {
+    "invite_friends": {
+      "paragraph_1": "For every person who joins Hnry using your promo code, you'll both get $25 credit on your Hnry account when they start using the service. 🎉",
+      "title": "Get free credit!"
+    }
+  },
+  "reports": {
+    "health_check": {
+      "edit": {
+        "income_tax_outstanding": {
+          "quote": "I would like a quote for a one off amount for Hnry to lodge my outstanding returns",
+          "self_filing": "I will lodge my outstanding returns myself"
+        },
+        "sales_tax_amount_due": {
+          "do_what": "What would you like to do about your BAS amount due?",
+          "title": "BAS amount due"
+        },
+        "sales_tax_outstanding": {
+          "do_what": "What would you like to do about your outstanding BAS returns?",
+          "quote": "I would like a quote for a one off amount for Hnry to lodge my outstanding returns",
+          "self_filing": "I will lodge my outstanding returns myself",
+          "title": "BAS returns"
+        }
+      },
+      "edit_link": {
+        "label": {
+          "sales_tax_amount_due": "Let us know what to do about your outstanding BAS",
+          "sales_tax_outstanding": "Let us know what to do about your outstanding BAS returns"
+        }
+      },
+      "show": {
+        "sales_filing": {
+          "label": "BAS"
+        }
+      }
+    },
+    "payment_summary": {
+      "levies": "Medicare",
+      "superannuation_guarantee": "Super guarantee"
+    },
+    "sales_tax_filings": {
+      "index": {
+        "title": "Activity Statements"
+      }
+    },
+    "statement_of_account": {
+      "sole_director": {
+        "disclaimer_p1": "This Statement of Account has been prepared based on the information held and maintained by %{company_name} on behalf of the named proprietary limited company (Pty Ltd). The information declared is a true and accurate record of the business income received via %{company_name} and cannot be amended or manipulated. This statement excludes any personal expenditure of directors or shareholders, non-business-related expenses, existing company liabilities, or other financial obligations not known to %{company_name}."
+      }
+    }
+  },
+  "sales_tax": {
+    "short_name": "GST"
+  },
+  "services": {
+    "form": {
+      "gst_type_warning_paragraph_2_html": "If you are unsure if your services are exempt, the ATO have more information. <a href=\"https://www.ato.gov.au/business/gst/when-to-charge-gst-(and-when-not-to)/gst-free-sales/\" target='_blank'> Learn more </a>",
+      "taxable_income_tooltip": "GST is passed to the ATO and is not included in your income. This is the amount that will have tax deducted."
+    },
+    "index": {
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/4279121-how-to-add-a-service-with-hnry"
+    }
+  },
+  "shared": {
+    "income_forecast": {
+      "fields": {
+        "salary_income": "Annual Salary or Casual job income"
+      }
+    },
+    "sidebar": {
+      "depreciating_assets": {
+        "default": "Asset pool"
+      }
+    }
+  },
+  "suppliers": {
+    "account_number": {
+      "invalid_error": "Invalid account number, should be 6-9 digits",
+      "label": "Account number"
+    },
+    "account_number_and_sort_code": {
+      "account_number": "Account number",
+      "branch_code": "BSB",
+      "invalid_sort_code_error": "Invalid BSB, should be 6 digits"
+    },
+    "bank_transactions": {
+      "notice": "If you want to edit your Supplier details, you'll need to make these changes from the <b><a href=\"%{suppliers_path}\"> Clients and Suppliers page</a></b> ."
+    },
+    "form": {
+      "account_name_error": "Bank account name is required",
+      "bank_account_number_error": "Bank account number is invalid",
+      "sort_code_error": "BSB is invalid",
+      "supplier_name_error": "Supplier name is required",
+      "supplier_payment_reference_error": "Payment reference is required"
+    },
+    "new": {
+      "bsb": "BSB"
+    },
+    "reference": {
+      "character_length_error": "Maximum length is 18 characters",
+      "error": "Payment reference is required"
+    }
+  },
+  "tax_quotes": {
+    "form": {
+      "adjust_tax_rate_col_1_html": "Please note that we are only able to increase your tax rate to cover any income tax owing for your prior self-employed income. The maximum we will increase your rate to is %{rate}% so you may still have a balance owing at end of financial year if the top rate is not enough to catch you up on the shortfall.",
+      "adjust_tax_rate_col_2_html": "<strong>IMPORTANT:</strong> We are unable to increase your tax rate to account for any Medicare amount so you will need to pay those directly when the amounts are due.",
+      "adjust_tax_rate_col_2_student_loan_html": "<strong>IMPORTANT:</strong> We are unable to increase your tax rate to account for any Medicare and student loan amounts so you will need to pay those directly when the amounts are due."
+    },
+    "show": {
+      "income_tax": "Income tax",
+      "levies": "Medicare levy",
+      "levy_surcharges": "Medicare levy surcharge",
+      "prior_tax": "Income tax paid outside of Hnry",
+      "student_loan": "Student loan"
+    }
+  },
+  "tour": {
+    "advanced_profile": {
+      "has_tax_number": {
+        "content": "What is your Tax File Number?",
+        "tooltip": {
+          "content": "Your TFN number is on letters and statements from ATO, in the ATO online portal, in online banking, or on payslips from past employers."
+        }
+      }
+    },
+    "business_registration": {
+      "feedback_yes_html": "<div class=\"alert alert-danger\">Unfortunately the Hnry service is only for ABN Sole Traders in Australia and is not designed to cater for Pty Limited Companies. If you are trading as a Pty Limited Company and would like to speak to our team about your options, please click <a href=\"%{intercom_link}\">here.</a></div>"
+    },
+    "create_client": {
+      "deducts_tax_prior": {
+        "paragraph_1": "Does this Client deduct some income tax prior to payment?"
+      },
+      "deducts_tax_prior_rate": {
+        "tooltip": {
+          "content": "What tax rate do they deduct? (e.g. 20 for 20%)"
+        }
+      },
+      "prior_deduction_percentage": "What tax rate do they deduct? (e.g. 20 for 20%)",
+      "sales_tax_exempt": {
+        "paragraph_1": "Is this Client outside Australia or are Services for this Client exempt from GST?",
+        "tooltip_html": "<p>By choosing 'Yes', GST will not be charged for services done for this client. Only certain services are exempt from GST. You will be liable if GST should’ve been charged. </p><p>If your client is outside of Australia, please read our <a href=\"https://help.hnry.io/en/articles/4279111-international-transfer-details\" target=\"_blank\">International payments guide</a>.</p>"
+      }
+    },
+    "demonstration_pay_amount": "$1",
+    "salary_fields": {
+      "feedback": "To help get you on the correct tax rate, we'll ask for more details about this income before you get paid for the first time. 👍",
+      "label": "Estimated salary income this year"
+    },
+    "salary_income": {
+      "feedback": {
+        "yes": "To help get you on the correct tax rate, we'll ask for more details about this income before you get paid for the first time. 👍"
+      },
+      "helper_text": "A rough estimate to the nearest $5,000-$10,000 is fine",
+      "label": "Total Salary or Casual income you'll earn between %{financial_year_start} - %{financial_year_end} (excluding Superannuation)",
+      "paragraph_1": "Salary or Casual income is where your taxes are taken care of by your employer. We need to know this so we can calculate your tax rate accurately."
+    },
+    "sales_tax_registration": {
+      "paragraph_1": "You'll need to register if your self-employed income exceeds $75,000/year, or if you're an Uber/taxi driver.",
+      "paragraph_2": "If you are registered for GST, we'll lodge your BAS for you at no extra cost.",
+      "paragraph_3": "If you're not registered for GST, our team can register you or will let you know if you need to be in future!"
+    },
+    "sole_director_qualifying_questions": {
+      "company_structure": {
+        "label": "What is your company structure?",
+        "partnership_or_trust": "Partnership or Trust",
+        "pty_limited_company": "Pty Limited Company"
+      },
+      "danger_feedback_html": "Unfortunately the Hnry service is only available for <strong>Pty Limited Companies</strong> with <strong>no employees</strong> and only <strong>one company director</strong> at this stage. If you would like to speak to our team about your options, please click <a class=\"hui-link !tw-text-red-800\" href=\"%{intercom_link}\">here.</a>",
+      "number_of_directors": {
+        "label": "Do you have more than one company director?"
+      },
+      "number_of_employed_staff": {
+        "label": "Do you employ any staff?"
+      },
+      "success_feedback": "Great - Hnry is right for you! We'll take care of all of your tax and financial admin!"
+    },
+    "step_titles": {
+      "business_registration": "Find out if Hnry’s right for you",
+      "salary_income": "Have you earned any Salary or Casual income since %{financial_year_start}?",
+      "student_loan": "Do you have a Student Loan/Trade Support Loan?"
+    },
+    "student_loan": {
+      "feedback": {
+        "yes": "We’ll deduct and pay your Student Loan/Trade Support Loan as you get paid. If you don’t want us to deduct this, you can change it later."
+      },
+      "paragraph_1": "If you're unsure, we can check with the ATO for you. Select NO and we'll check with the ATO when you receive your first pay in your Hnry account."
+    }
+  },
+  "user_verifications": {
+    "alternative_passport": "Current New Zealand Passport",
+    "certified_documents": "If you don’t have a current Australian Passport or Australian Driver Licence",
+    "compulsory_documents": "A full birth or citizenship certificate issued by an Australian, New Zealand or foreign government"
+  },
+  "users": {
+    "financial": {
+      "account_details": {
+        "bank_code_name": "BSB",
+        "domestic_help_link": "https://help.hnry.io/en/articles/4275107-how-does-the-hnry-account-work",
+        "domestic_help_text": "Learn more about your account.",
+        "international_help_link": "https://help.hnry.io/en/articles/4279111-international-transfer-details",
+        "international_help_text": "Learn more about International payments."
+      },
+      "edit": {
+        "adaptive_sales_tax": {
+          "learn_more_link": "http://help.hnry.io/en/articles/11742870-how-does-hnry-manage-your-gst"
+        },
+        "business_number": {
+          "label": "My ABN",
+          "title": "ABN format is 11 digits with optional spaces e.g. 12 345 678 901",
+          "tooltip": "As a sole trader, having an ABN is optional. If you have one and you add it here, it will appear on your Invoices and Quotes."
+        },
+        "has_sales_tax_exempt_services": {
+          "label": "Some of the goods/services I sell are GST free",
+          "learn_more_link": "https://help.hnry.io/en/articles/6950495-gst-free-services",
+          "tooltip": "Only certain services are GST free. You will be liable if GST should've been charged. Please get in touch with the team if you have GST free services."
+        },
+        "part_time": {
+          "label": "On average, I work less than 30 hours per week",
+          "tooltip": "Working less than 30 hours per week means you are considered to be working part time"
+        },
+        "sales_tax_registered": {
+          "label": "I am currently registered for GST as an individual",
+          "tooltip": {
+            "locked": {
+              "content": "If you need to change your GST Status please get in touch with the Hnry team."
+            },
+            "not_locked": {
+              "content": "If you earn more than $75,000/year of self-employed income, you must be registered for Goods & Services Tax (GST) as per the ATO's legislation."
+            }
+          }
+        },
+        "student_loan": {
+          "label": "I have a Student Loan/Trade Support Loan",
+          "tooltip": {
+            "locked": {
+              "content": "If you no longer have a Student Loan then you need to get in contact with the Hnry team."
+            },
+            "not_locked": {
+              "content": "If you have a student loan we may need to deduct additional tax amounts to cover Student Loan repayments."
+            }
+          }
+        },
+        "tax_id_number": {
+          "label": "My TFN",
+          "pattern": "[\\d\\s]*",
+          "title": "must be digits with optional spaces",
+          "tooltip": {
+            "disabled": "If you need to change your TFN please get in touch with the Hnry team."
+          }
+        }
+      },
+      "faster_payments_radio": {
+        "false_info_text": "Typically 1-3 business days.",
+        "false_label": "Regular bank processing times",
+        "paragraph_1": "Opt in for fast payments and get your money sooner!",
+        "title": "How fast do you want to get paid?",
+        "true_info_text": "Less than 24 hours from receiving your payment - we’ll raise the 50c fee as an expense for you!",
+        "true_label": "Lightning fast payments (additional 50c per Payment Summary)"
+      },
+      "faster_payments_toggle": {
+        "tooltip_html": "<p>For 50c per Payment Summary, net funds are sent to your personal bank account faster than standard AU bank processing times. This doesn't apply to your Allocations you have set up, or any International payments from outside Australia.</p> <p>We'll send $0.01 to your bank account to test if it supports faster payments.</p>"
+      },
+      "gst_registered_warning_modal": {
+        "tell_clients_and_recruiters": "You may only select this option if you are trading under an ABN. ﻿If you are unsure if you have an ABN, please get in touch with the Hnry team."
+      },
+      "intro": {
+        "intro_p1": "Use the sections below to tell us about your financial information. We need to know your tax details like your TFN and GST registration, as well as the bank account you would like to be paid into."
+      },
+      "invoice_quote_financial_field_modal": {
+        "input_id": "user_financial_attributes_business_number",
+        "input_length": 11,
+        "input_name": "user[financial_attributes][business_number]",
+        "input_pattern": "^\\d{2}\\s?\\d{3}\\s?\\d{3}\\s?\\d{3}$",
+        "input_pattern_title": "must be 11 digits with optional spaces e.g. 12 345 678 912",
+        "label": "My ABN",
+        "label_tooltip": "As a sole trader, having an ABN is optional. If you have one and you add it here, it will appear on your Invoices and Quotes.",
+        "paragraph_clients": "Since you are GST registered we need to know your ABN before you can create an Invoice.",
+        "paragraph_invoices": "Since you are GST registered we need to know your ABN before you can create an Invoice.",
+        "paragraph_quotes": "Since you are GST registered we need to know your ABN before you can create a Quote.",
+        "title": "My ABN"
+      },
+      "manual_reconciliation": {
+        "working_holiday_note": "User has been flagged for manual reconciliation due to indicating they are on a working holiday."
+      }
+    },
+    "form": {
+      "hide_legal_name_subcopy": "This is only available if you have an ABN Business Name",
+      "tin": "What is your tax file number?",
+      "tin_info": "You can find your tax file number on letters and statements from ATO, in the myGov online portal, or on payslips from past employers.",
+      "trading_name": "ABN Business Name"
+    },
+    "security": {
+      "two_factor_toggle": {
+        "label": "Authenticator app"
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import Icon, { IconType } from "../icons/icon/Icon";
-import "./styles.scss";
+// import "./styles.scss";
 
 const allowedIconChars = ["%"];
 

@@ -7,7 +7,7 @@ import Button from "@hui/_atoms/button/Button";
 import SearchInput from "@hui/_atoms/input/SearchInput";
 import * as Dialog from "@radix-ui/react-dialog";
 import areOptionsDifferent from "./helpers";
-import "./styles.scss";
+// import "./styles.scss";
 
 export interface iMultiSelectModal {
   confirmCTA?: string;

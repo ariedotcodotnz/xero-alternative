@@ -1,6 +1,6 @@
 
 import React from "react";
-import "./lists.scss";
+// import "./lists.scss";
 
 export function StackedList<T extends {[identifier: string]: string | number | Date }>({items, containerClasses, itemPadding}: {items: T[], containerClasses?: string, itemPadding?: string }) {
 

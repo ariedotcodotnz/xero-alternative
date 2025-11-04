@@ -7,7 +7,7 @@ import SCAFooter from "./SCAFooter";
 import consumer from "../../../wsConsumer";
 import { cancelChallenge } from "../../../API/sca_challenge.api";
 import { SCA_DEFAULT, SCA_FAILED, SCA_SUCCESS, confirmStatusType } from "./types";
-import "./styles.scss";
+// import "./styles.scss";
 
 interface iSCAConfirm {
   deviceName: string;

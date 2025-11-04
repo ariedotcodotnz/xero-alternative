@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import "./styles.scss";
+// import "./styles.scss";
 
 export type TabsLinkType = {
   name: string;

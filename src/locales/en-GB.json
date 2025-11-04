@@ -1,0 +1,1390 @@
+{
+  "account_details_mailer": {
+    "template": {
+      "bank_account_type": "Account type",
+      "bsb": "Sort code",
+      "line_2_html": "I've just started using <a href=\"https://hnry.co.uk/\">Hnry</a> (who sort all my taxes for me), which means I need you to update my payment info on your end."
+    }
+  },
+  "allocation_preferences": {
+    "allocation_button": {
+      "card": {
+        "allocation_path": "hnry-card-uk",
+        "body": "Auto-top-up my Hnry Card so I can purchase expenses on the go.",
+        "body_updated": "Automatically add funds to my Hnry Account so I can purchase expenses on the go.",
+        "heading": "Set aside funds for business expenses"
+      },
+      "custom": {
+        "allocation_path": "custom_uk",
+        "body": "Start from scratch, donate to charity or pay to friends or family.",
+        "heading": "Create a custom allocation"
+      },
+      "investment": {
+        "body": "Contribute to my existing investment funds.",
+        "heading": "Regularly pay into your Investments"
+      },
+      "pension": {
+        "body": "Send funds into my Pension every time I get paid.",
+        "heading": "Contribute to your Pension fund"
+      },
+      "suggestion": {
+        "body": "Tell us which pension schemes, investment accounts, or charities you'd like to set up automatic contributions to.",
+        "heading": "Make a suggestion"
+      }
+    },
+    "categories": {
+      "investment": "Contribute to Pension or investment",
+      "pension": "Contribute to Pension or investment"
+    },
+    "create": {
+      "not_allowed": "Not allowed to create Allocations.",
+      "success": "Allocation created successfully",
+      "title": "Create an Allocation"
+    },
+    "did_you_know_card": {
+      "holiday": {
+        "body": "Setting aside a small portion of your income throughout the year is a great way to save for that next big trip or staycation.",
+        "title": "You can save for a holiday with Hnry"
+      },
+      "sick_leave": {
+        "body": "Everyone gets sick, but don’t get caught out by unexpected bills whilst you are not earning. Set up your rainy-day fund.",
+        "title": "You can save for sick leave with Hnry"
+      }
+    },
+    "index": {
+      "empty_state_subheading": "Allocate a portion of your income to a charity, savings accounts, investments and more!",
+      "learn_more_link": "<a href=\"http://help.hnry.io/en/articles/9862560-how-do-allocations-work\" target=\"_blank\">Learn more</a>",
+      "tooltip_learn_more_link": "http://help.hnry.io/en/articles/9862560-how-do-allocations-work"
+    },
+    "overview_banner": {
+      "body": "Take the reins of your financial journey by allocating a percentage of your income to an account of your choosing every time you get paid. Whether it's boosting your Pension, building your savings, fuelling your investment dreams, or supporting a charity close to your heart.",
+      "heading": "Save like a pro with Allocations",
+      "learn_more_link": "http://help.hnry.io/en/articles/9862560-how-do-allocations-work"
+    },
+    "select_template": {
+      "default_caption": "Create an Allocation to any local Bank Account, or select from one of our preset Allocations from our list below.",
+      "uplift_caption": "Select from one of our preset Allocations from our list below."
+    },
+    "update": {
+      "not_allowed": "Not allowed to update Allocations."
+    }
+  },
+  "bulk_expenses": {
+    "modal_form": {
+      "depreciation_rental_warning_p2_html": "",
+      "depreciation_warning_p1": "",
+      "depreciation_warning_p2": "",
+      "mileage_cap_warning": ""
+    }
+  },
+  "cards": {
+    "card_transactions": {
+      "card_audit": {
+        "card_audit": "CARD AUDIT",
+        "cards_file_balance": "Cards File Balance",
+        "hnry_balance": "Hnry Balance",
+        "latest_cards_file_name": "Latest Cards Filename",
+        "pending_count": "Pending Count",
+        "pending_provider_balance": "Edenred Pending Balance",
+        "pending_tx_sum": "Hnry Pending TX Sum",
+        "provider_balance": "Edenred Balance",
+        "settled_count": "Settled Count",
+        "settled_sum": "Settled Sum"
+      }
+    }
+  },
+  "clients": {
+    "form": {
+      "errors": {
+        "zero_rated_or_directors_drawings": "Client cannot be VAT-free and pay director's drawings"
+      },
+      "has_prior_deduction_percentage_tooltip": "Some Clients may be required to deduct part of your Income Tax before paying you. This is called 'Tax deducted at source'.",
+      "international_client_warning_html": "<p>International payments need to be paid directly to your personal account or via a payment platform (eg. Wise) before coming through to the Hnry account. See more <a href='https://help.hnry.io/en/articles/11091492-what-if-i-get-paid-by-clients-outside-of-the-united-kingdom' target=\"_blank\">here</a>, or get in touch with us via the ‘Help’ button.</p>",
+      "outside_country": {
+        "sales_tax_registered": {
+          "false": {
+            "label": "This Client is outside the United Kingdom"
+          },
+          "true": {
+            "label": "This Client is outside the United Kingdom or Services for this Client are exempt from VAT"
+          }
+        }
+      },
+      "per_diems": {
+        "tooltip": {
+          "link": "https://help.hnry.io/en/articles/4275585-how-to-add-per-diems-with-hnry"
+        }
+      },
+      "prior_deductions": {
+        "invalid_messages": {
+          "greater_than": "Tax percentage must be less than or equal to 45%",
+          "less_than": "Tax percentage must be greater than or equal to 9.9%"
+        },
+        "percentage_label": "Percentage of tax deducted by client",
+        "tooltip": {
+          "link": "https://help.hnry.io/en/articles/3945849-should-you-raise-fees-as-a-business-expense"
+        },
+        "variable_alert_text": "If your Client deducts expenses prior to payment, you will need to send us your payment remittance to support@hnry.co.uk before your payment can be processed."
+      },
+      "raise_invoices": {
+        "reminders": {
+          "tooltip": {
+            "link": "https://help.hnry.io/en/articles/2770119-invoice-reminders"
+          }
+        }
+      },
+      "sales_tax_settings_warning_html": "<p>By turning on this toggle, VAT will not be charged for services done for this client. Only certain services are exempt from VAT. You will be liable if VAT should’ve been charged. </p><p>If your client is outside of the United Kingdom, please read our <a href=\"https://help.hnry.io/en/articles/4279111-international-transfer-details\" target=\"_blank\">International payments guide</a>. If you have any questions <a href=\"%{intercom_link}\">get in touch</a> with our team.</p>",
+      "withholding_tax": {
+        "tooltip": {
+          "link": null,
+          "text": "Your client deducts and pays a percentage of your self-employed income tax to the HMRC before paying you"
+        }
+      }
+    },
+    "index": {
+      "tooltip": "If you're working for a recruiter or company that deducts tax at source, you'll need to make sure you add them as a client.",
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/9027264-wip-how-to-add-a-client-with-hnry"
+    }
+  },
+  "confirmation_of_payee": {
+    "modal": {
+      "payee_account_number": "Payee Account Number",
+      "payee_account_type": "Account Type",
+      "payee_name": "Payee Name",
+      "payee_sort_code": "Sort Code"
+    }
+  },
+  "currency": "GBP",
+  "emoji": "🇬🇧",
+  "expense_creation": {
+    "upload_receipt": {
+      "mileage_validation": "Please upload logbook records"
+    },
+    "upload_receipt_title_mileage": "Upload Logbook Records"
+  },
+  "expenses": {
+    "form": {
+      "client_reimbursement_notice_html": "Client Reimbursements cannot also be raised as a Business Expense.",
+      "mileage_eoyf_text": "HMRC rules specify you can only claim either Mileage or Motor Vehicle Expenses - but not both. By creating a Motor Vehicle or Mileage Expense, you will only be able to use this category for the remainder of the financial year, and will be unable to switch.",
+      "mileage_link": "",
+      "mileage_text": "HMRC rules specify you can only claim either Mileage or Motor Vehicle Expenses - but not both. By creating a Motor Vehicle or Mileage Expense, you will only be able to use this category for the remainder of the financial year, and will be unable to switch.",
+      "motor_vehicle_link": "",
+      "motor_vehicle_text": "HMRC rules specify you can only claim either Mileage or Motor Vehicle Expenses - but not both. By creating a Motor Vehicle or Mileage Expense, you will only be able to use this category for the remainder of the financial year, and will be unable to switch.",
+      "motor_vehicles": {
+        "distance_travelled": "Distance travelled (miles)",
+        "validations": {
+          "vehicle_type": "Please choose a Vehicle Type"
+        },
+        "vehicle_type": "Vehicle Type",
+        "vehicle_type_default": "Select a Vehicle Type"
+      }
+    },
+    "index": {
+      "tooltip": ""
+    },
+    "rejection_accept_modal": {
+      "reject_acceptance_terms": "I accept full liability for this expense and wish to claim it against Hnry and HMRC guidelines",
+      "warning_text": "This expense has been declined as it is not claimable according to HMRC policy. By resubmitting this expense, you are accepting full liability and, in the even of an HMRC audit, you will be required to provide proof of the validity of this claim."
+    }
+  },
+  "filing_obligations": {
+    "filings": {
+      "expense_table": {
+        "category": "Category",
+        "claimable_amount": "Claimable amount",
+        "claimable_amount_info": "The claimable amount is calculated from information you have provided e.g. the size of your home office, and/or percentage of business usage, or an asset depreciation which may span several years. If you are VAT registered this will be the VAT exclusive amount."
+      },
+      "form": {
+        "income": {
+          "title": "Income summary"
+        }
+      },
+      "shared_content": {
+        "income": "Income summary"
+      }
+    }
+  },
+  "financial_income_sources": {
+    "index": {
+      "empty_state_subheading": "Add your other sources of income to make sure that your tax rate is correct.",
+      "tooltip_learn_more_link": ""
+    }
+  },
+  "global": {
+    "app_stores": {
+      "apple_app": "apple_app",
+      "apple_app_store_link": "https://apps.apple.com/gb/app/hnry/id1451761596",
+      "google_play": "google_play",
+      "google_play_link": "https://play.google.com/store/apps/details?id=io.hnry.hnry"
+    },
+    "app_urls": {
+      "development": "http://localhost:3000",
+      "production": "https://uk.hnry.com",
+      "staging": "https://uk.staging.hnry.com",
+      "test": "http://localhost:3000",
+      "uat": "https://uk.uat.hnry.com"
+    },
+    "bank_branch_code_mask": "00-00-00",
+    "business_address": {
+      "address_line_1": "5-41 Folgate St,",
+      "address_line_2": "London E1 6BX, England"
+    },
+    "company_name": "Hnry (UK) Limited",
+    "contact": {
+      "email": {
+        "accounts": "support@hnry.com",
+        "members": "members@hnry.com",
+        "no_reply": "no-reply@hnry.com",
+        "post": "post@hnry.com",
+        "support": "support@hnry.com"
+      }
+    },
+    "currency_name": "pound",
+    "currency_symbol": "£",
+    "footer": {
+      "social_network": {
+        "facebook": "https://facebook.com/hnry_uk/",
+        "facebook_short": "facebook.com/hnry_uk",
+        "instagram": "https://www.instagram.com/hnry_uk",
+        "linkedin": "https://nz.linkedin.com/company/hnry_uk",
+        "twitter": "https://twitter.com/hnry_uk",
+        "twitter_short": "@hnry_uk"
+      }
+    },
+    "hnry_sales_tax_number": 440672309,
+    "links": {
+      "account_closure": "https://hnry.co.uk/account-closure",
+      "agreement": "https://hnry.co.uk/service-agreement/",
+      "facebook": "https://facebook.com/hnry_uk",
+      "instagram": "https://www.instagram.com/hnry_uk",
+      "marketing_site": "https://hnry.co.uk",
+      "marketing_site_short": "hnry.co.uk",
+      "privacy": "https://hnry.co.uk/privacy",
+      "tax_agency_admin": "",
+      "twitter": "https://twitter.com/hnry_uk"
+    },
+    "medical_agency_short": "National Insurance",
+    "medical_id_number": "National Insurance Number (NI)",
+    "sales_tax": "VAT",
+    "sales_tax_filing_name": "VAT return",
+    "tax_collection_authority": "His Majesty's Revenue and Customs",
+    "tax_collection_authority_short": "HMRC",
+    "tin": "NI number",
+    "unique_taxpayer_reference": "UTR"
+  },
+  "home": {
+    "articles": {
+      "active": {
+        "false": {
+          "num_1": {
+            "id": 9019465,
+            "url": "https://help.hnry.io/en/articles/9019465-what-is-hnry-and-how-does-it-work"
+          },
+          "num_2": {
+            "id": 9817545,
+            "url": "https://help.hnry.io/en/articles/9817545-wip-setting-up-your-hnry-profile"
+          },
+          "num_3": {
+            "id": 11178190,
+            "url": "https://help.hnry.io/en/articles/11178190-how-to-get-paid-through-hnry"
+          },
+          "num_4": {
+            "id": 9018676,
+            "url": "https://help.hnry.io/en/articles/9018676-wip-how-do-i-switch-to-using-hnry"
+          }
+        },
+        "true": {
+          "num_1": {
+            "id": 8719210,
+            "text": "Deducting a business expense reduces the amount of your income you are required to pay tax on.",
+            "title": "How do business expenses work?",
+            "url": "http://help.hnry.io/en/articles/8719210-how-do-business-expenses-work"
+          },
+          "num_2": {
+            "id": 8682293,
+            "text": "What can you claim, and how do you raise a Business Expense in Hnry?",
+            "title": "What can I claim as a business expense?",
+            "url": "https://help.hnry.io/en/articles/8682293-what-can-i-claim-as-a-business-expense"
+          },
+          "num_3": {
+            "id": 8720488,
+            "text": "Bulk upload any pre-Hnry expenses",
+            "title": "How to provide us with Business Expenses incurred prior to joining Hnry",
+            "url": "https://help.hnry.io/en/articles/8720488-how-to-provide-us-with-business-expenses-incurred-prior-to-joining-hnry"
+          },
+          "num_4": {
+            "id": 8719180,
+            "text": "Raising Invoices through Hnry is easy and can all be done in a few short steps.",
+            "title": "How do I send an invoice using Hnry?",
+            "url": "https://help.hnry.io/en/articles/8719180-how-do-i-send-an-invoice-using-hnry"
+          }
+        }
+      }
+    },
+    "call_to_action": {
+      "enter_unique_taxpayer_reference": {
+        "enter_utr": "Enter UTR",
+        "feedback_no": "Until you enter your Unique Taxpayer Reference (UTR), you won’t be able to access the full Hnry service as we need your UTR in order to act as your accountant and automatically pay your tax. To receive a UTR, you’ll need to register for Self Assessment with HMRC. It can take up to 15 days for your UTR to arrive, so make sure to register if you haven’t already.",
+        "feedback_yes": "Until you enter your Unique Taxpayer Reference (UTR), you won’t be able to access the full Hnry service as we need your UTR in order to act as your accountant and automatically pay your tax. Your UTR can be found in your Personal Tax Account, or on a previous tax return.",
+        "title": "Your account is missing important information"
+      }
+    },
+    "hnry_card": {
+      "apple_wallet": {
+        "link": "http://help.hnry.io/en/articles/9940614-add-your-hnry-card-to-your-apple-wallet"
+      },
+      "google_wallet": {
+        "link": "http://help.hnry.io/en/articles/9940612-add-your-hnry-card-to-your-google-wallet"
+      },
+      "setup_allocation": {
+        "label_bsb": "Sort code"
+      }
+    },
+    "index": {
+      "business_expenses_savings": "Business Expenses work to reduce the amount of Income Tax (and VAT) you need to pay. Make sure to raise your Business Expenses using the correct categories and we will calculate the Claimable Amount for you.",
+      "business_expenses_savings_link": "https://help.hnry.io/en/articles/8719210-wip-how-do-business-expenses-work",
+      "income_and_expenditure_tooltip_link": "https://help.hnry.io/en/articles/9817236-understanding-the-income-and-expenses-graph",
+      "self_reconcile": {
+        "client_payment_modal": {
+          "success_alert": "Your payment should arrive in your personal bank account within the next few minutes, depending on bank processing times."
+        },
+        "multiple_clients_modal": {
+          "disclaimer": "Please note that you only need to assign a payment to multiple clients if some have VAT or withholding tax included, and others do not.",
+          "instruction": "To make sure this payment is processed correctly, please include each client's name and the amount they paid."
+        }
+      }
+    }
+  },
+  "invoices": {
+    "index": {
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/8719180-how-do-i-send-an-invoice-using-hnry"
+    },
+    "show": {
+      "edenred_blurb": "Edenred is our payment partner. You may see their name when making a payment."
+    }
+  },
+  "levies": {
+    "short_name": "NI"
+  },
+  "mid_year_transitions": {
+    "form": {
+      "has_salary_income": {
+        "content": "Salary/PAYE income",
+        "tooltip": "Salary/PAYE Income has Income Tax deductions and include entitlements to Annual Leave and Sick Leave provided by your employer."
+      },
+      "has_self_employed_income": {
+        "tooltip": "Self-employed refers to anyone who conducts business activity on their own."
+      },
+      "prior_expenses_this_year": {
+        "accountant": "I used accounting software",
+        "manual": "I did it myself, e.g via a spreadsheet, bank statements",
+        "no_expenses": "I haven't done anything yet"
+      }
+    }
+  },
+  "number": {
+    "currency": {
+      "format": {
+        "delimiter": ",",
+        "precision": 2,
+        "separator": ".",
+        "unit": "£"
+      }
+    }
+  },
+  "onboarding": {
+    "all": {
+      "demo_client_name": "£1 free"
+    },
+    "v2": {
+      "choose_an_id_document": {
+        "choose_an_id_document": {
+          "paragraph_1": "Before we can provision you with a Hnry account, we need to verify your identity so please provide us with a current form of ID.",
+          "paragraph_2_html": "If you don't have a passport or UK driving licence please <a href=\"%{intercom_link}\" class=\"hui-link hui-link--info\">send a message</a> through to the team."
+        }
+      },
+      "confirm_your_income": {
+        "confirm_your_income": {
+          "income_tax_percentage_tooltip_learn_more_link_html": "<a href='https://help.hnry.io/en/articles/3189201-how-does-hnry-ird-calculate-your-income-tax-rate' target='_blank'>Learn more</a>",
+          "income_tax_percentage_tooltip_paragraph_1_html": "<p>If you have other sources of income (e.g. PAYE/Salary job), your self-employed income will be taxed at a secondary rate. This is to ensure you have no tax owing at the end of the financial year.</p>"
+        }
+      },
+      "consent_to_act": {
+        "consent_to_act": {
+          "title": "Authority to verify identity"
+        },
+        "uk": {
+          "consent_to_act_agreement": {
+            "authority_to_act": "I grant Hnry the authority to verify my identity"
+          }
+        }
+      },
+      "create_client": {
+        "create_client": {
+          "sales_tax_exempt": {
+            "learn_more_link": "https://www.gov.uk/charge-reclaim-record-vat",
+            "paragraph_1": "Is this Client outside of the UK or zero-rated for VAT?",
+            "tooltip_html": "VAT will be set to 0% for zero-rated Clients.<p>Clients should be zero-rated if you are in Great Britain and they do not trade in the UK. Or you are in Northern Ireland and they do not trade in the UK and EU, or they are VAT registered in EU</p>"
+          }
+        }
+      },
+      "demonstration_pay_amount": "£1",
+      "enter_document_detail": {
+        "enter_document_detail": {
+          "has_tax_number": {
+            "content": "National Insurance Number (NI)",
+            "tooltip": {
+              "content": "Your NI number is on letters and statements from HMRC or on payslips from past employers."
+            }
+          }
+        }
+      },
+      "expectation_setting": {
+        "expectation_setting": {
+          "paragraph_1": "It should take about 5 minutes to complete these steps and get access to your Hnry account:",
+          "title": "Here's what you need to know"
+        },
+        "steps": {
+          "address": {
+            "description": "Upload a bank statement, council tax bill or mortgage statement",
+            "name": "Verify your address"
+          },
+          "details": {
+            "description": "We just need some basic personal information",
+            "name": "Enter your details"
+          },
+          "identity": {
+            "description": "Upload your passport, drivers licence or other identity document",
+            "name": "Verify your identity"
+          },
+          "income": {
+            "description": "Let us know how you earn your income",
+            "name": "Tell us about your income"
+          }
+        }
+      },
+      "payment_confirmed": {
+        "fee_image_path": "tour/GB_you-just-got-paid-fee.svg",
+        "taxes_image_path": "tour/GB_you-just-got-paid-taxes.svg",
+        "transfer_image_path": "tour/GB_you-just-got-paid-transfer.svg"
+      },
+      "proof_of_address": {
+        "proof_of_address": {
+          "title": "Submit proof of address"
+        }
+      },
+      "sales_tax_registration": {
+        "sales_tax_registration": {
+          "feedback_no": "No problem. 😊 If it looks like you may need to register for VAT, we'll automatically let you know.",
+          "paragraph_1_html": "You don't need to be registered for VAT to use Hnry, unless you're earning more than £90,000/year in self-employed income.",
+          "paragraph_3": {
+            "content_html": "<strong>Are you currently registered for VAT?</strong>",
+            "tooltip": {
+              "content": "You don't need to be registered for VAT to be a contractor, freelancer or sole trader. If you earn more than £90,000/year of self-employed income, you must be registered for Value Added Tax (VAT) as per HMRC's legislation.",
+              "link": "https://www.gov.uk/register-for-vat"
+            }
+          },
+          "title": "Are you registered for VAT?"
+        },
+        "value_added_tax_fields": {
+          "feedback_yes": "If you're not sure what your VAT number is, you can continue setting up your Hnry account and add your VAT number later. Once you start using your Hnry Account, we'll pay and file all your VAT for you.",
+          "warnings": {
+            "invalid_vat_registration_number": "VAT number must be nine digits long"
+          }
+        }
+      },
+      "self_assessment_registration": {
+        "self_assessment_registration": {
+          "feedback_no_html": "No problem, you can still continue setting up your Hnry account without a UTR number. Please note, you will need to register for Self Assessment and your UTR number can take up to 15 days to arrive. <u>%{href}</u>",
+          "learn_more_link": "https://app.intercom.com/a/apps/hl2pzvgv/articles/articles/8967710/show",
+          "paragraph": "A Unique Taxpayer Reference (UTR) is a number that you receive when you register for Self Assessment with HMRC.",
+          "title": "Do you have a UTR number?"
+        },
+        "unique_taxpayer_reference_fields": {
+          "feedback_yes_html": "If you’re not sure what your UTR is, you can continue setting up your Hnry account and add your UTR later. This can be found in your <u>%{href}</u>, or on a previous tax return.",
+          "hmrc_personal_tax_account_link": "https://www.gov.uk/personal-tax-account",
+          "warnings": {
+            "invalid_unique_taxpayer_reference": "Unique Taxpayer Reference (UTR) is invalid"
+          }
+        }
+      },
+      "student_loan": {
+        "student_loan": {
+          "feedback": {
+            "yes": "We’ll deduct and pay your Student Loan as you get paid. If you don’t want us to deduct this, you can change it later."
+          },
+          "title": "Do you have a Student Loan?"
+        }
+      },
+      "try_your_account": {
+        "paragraph": "Once you're finished, we'll pay you £1 free so you can try out your account.",
+        "steps": {
+          "step_1": {
+            "description": "Let us know the account you want to be paid into",
+            "name": "Enter your bank details",
+            "status": "current"
+          },
+          "step_2": {
+            "description": "Review your estimated total income and initial tax rate",
+            "name": "Confirm your starting tax rate",
+            "status": "incomplete"
+          },
+          "step_3": {
+            "description": "Learn how the Hnry service works with £1 free",
+            "name": "Receive £1 free to try your account",
+            "status": "incomplete"
+          }
+        },
+        "try_your_account": {
+          "title": "Complete these final steps to try your account"
+        }
+      },
+      "verify_your_identity": {
+        "verify_your_identity": {
+          "paragraph_1": "Before we can process your first pay, we need to run an identity check on your details."
+        }
+      },
+      "where_to_pay_you": {
+        "account_details": {
+          "title": "Bank account details"
+        }
+      }
+    },
+    "v3": {
+      "account_provisioned": {
+        "fail": {
+          "paragraph_1": "It usually takes around 24 hours to provision an account, and we'll let you know by email as soon as it's ready.",
+          "paragraph_2": "If you are still having issues, please reach out to our team 😊"
+        },
+        "success": {
+          "paragraph_1": "Complete the final step to automate your expenses and confirm your starting tax rate. We'll then pay you £1 so you can see how Hnry works."
+        },
+        "title_fail": "Your Hnry Account is now being provisioned",
+        "title_loading": "Getting your account details...",
+        "title_success": "Your Hnry Account is ready!"
+      },
+      "authority_to_verify_identity": {
+        "consent_label": "I grant Hnry the authority to verify my identity",
+        "error": "Failed to update authority to verify my identity",
+        "paragraph_1": "I confirm that I am authorised to provide the personal details presented and I consent to my information being passed to and checked with the document issuer, official record holder, a credit bureau and authorised third parties for the purpose of verifying my identity and address.",
+        "title": "Authorise Hnry to verify your identity"
+      },
+      "blocked_identity": {
+        "paragraph_1": "Your application is now with our team for review. We'll let you know as soon as it's complete - or if we need anything else from you.",
+        "paragraph_2": "While you wait, keep an eye on your email for updates from us.",
+        "paragraph_3": "And just a quick note: please hold off on submitting another Hnry application while we finish reviewing this one.",
+        "title": "We're excited you've chosen Hnry!"
+      },
+      "business_registration": {
+        "feedback_no": "If you’re a sole trader, contractor or freelancer, there’s no need to increase your hassle and costs by registering as a company. 😄",
+        "feedback_yes": "Unfortunately the Hnry service is for self-employed individuals only, and is not designed to cater for Registered Companies. If you are trading as a Registered Company and would like to speak to our team about your options, please click",
+        "heading": "Are you the director of a registered company?",
+        "paragraph_1": "Do you earn some or all of your income as the Director of a Registered Company?",
+        "title": "Is Hnry right for me?"
+      },
+      "card_opt_in": {
+        "paragraph_1": "Your virtual Hnry Debit Card is included as part of the Hnry service.",
+        "paragraph_2": "Keep money in your account by setting aside a portion of each payment you receive! On average, our users leave aside 20%.",
+        "paragraph_3": "of each pay will be left in your Hnry Account",
+        "percentage_label": "How much do you want to set aside for business expenses?",
+        "title": "Automate your expenses!"
+      },
+      "choose_an_id_document": {
+        "expires_on": {
+          "errors": {
+            "expired": "Passport must not have expired",
+            "required": "Please enter the expiry date of your passport"
+          }
+        },
+        "heading": "Upload a current ID document",
+        "label": {
+          "country_of_issue": "ID country of issue",
+          "drivers_licence_number": "Drivers licence number",
+          "expires_on": "Expiry date",
+          "passport_number": "Passport number"
+        },
+        "paragraph": "If you don’t have a passport or UK driving licence please ",
+        "required": {
+          "country_of_issue": "Please select a country of issue",
+          "document_type": "Please select an option",
+          "drivers_licence_number": "Please provide a drivers licence number",
+          "drivers_licence_number_length": "Drivers licence number must be at least 16 characters long",
+          "has_uploaded_file": "Please upload a file",
+          "passport_number": "Please provide a valid passport number"
+        },
+        "title": "Identity verification"
+      },
+      "confirm_your_income": {
+        "checkbox": "I accept this as my starting tax rate based on the information I provided",
+        "display": {
+          "income": "Total Income",
+          "national_insurance": "National Insurance",
+          "student_loan": "Student Loan",
+          "tax": "Income Tax"
+        },
+        "label": {
+          "other": "Total other income estimate",
+          "salary": "Annual PAYE/Salary income estimate",
+          "self_employed": "Annual self-employed income estimate"
+        },
+        "paragraph_1": "Your tax rate is based on your estimated income, then automatically adjusts over time to reflect your actual income and expenses.",
+        "sub_title": "How does my starting tax rate work?",
+        "title": "Review your starting tax rate",
+        "warnings": {
+          "below_tax_threshold": "Income under taxable threshold",
+          "min": "Self-employed income estimate must be greater than £0.",
+          "required": "This field is required."
+        }
+      },
+      "generic_error": "Something went wrong, please try again",
+      "income_details": {
+        "heading": {
+          "other_income": "Other sources of income",
+          "salary_income": "PAYE/Salary income",
+          "self_employed_income": "Self-employed income"
+        },
+        "label": {
+          "other_income": "Total other income",
+          "salary_income": "Annual PAYE/Salary income estimate",
+          "salary_income_end_date": "End date (optional)",
+          "self_employed_income": "How have you been tracking your self-employed income?"
+        },
+        "salary_income_options": {
+          "accountant": "I used accounting software",
+          "manual": "I did it myself, e.g via a spreadsheet, bank statements",
+          "no_expenses": "I haven't done anything yet"
+        },
+        "title": "Income details",
+        "warnings": {
+          "other_income": {
+            "max": "Other income must be equal to or less than £9,999,999",
+            "min": "Other income must be equal to or greater than 0",
+            "required": "Please enter the approximate total of your other income"
+          },
+          "salary_income": {
+            "max": "Salary must be equal to or less than £9,999,999",
+            "min": "Salary must be equal to or greater than 0",
+            "required": "Please enter your approximate salary income"
+          }
+        }
+      },
+      "menu_actions": {
+        "do_it_later": "I'll do it later",
+        "sign_out": "Sign out",
+        "talk_to_team": "Talk to the team"
+      },
+      "mobile_based_verification": {
+        "heading": "Download the Hnry App to complete your setup!",
+        "paragraph_1": "Send invoices, raise expenses in less than a minute, and use your Hnry Business Mastercard - all with the Hnry App.",
+        "qr_code_value": "https://hnry.co.uk?m=app&q=true",
+        "scan_qr_code": "Scan the QR code to download the Hnry App",
+        "steps": {
+          "step_1": {
+            "description": "Get the Hnry App on your phone.",
+            "name": "Download the Hnry App"
+          },
+          "step_2": {
+            "description": "Set up biometrics and verify your ID.",
+            "name": "Secure your account"
+          },
+          "step_3": {
+            "description": "Relax - Hnry will take care of everything from here.",
+            "name": "Never think about tax again!"
+          }
+        },
+        "title": "Identity Verification"
+      },
+      "payment_confirmed": {
+        "paragraph_1": "We paid you £1 so you can see how Hnry works.",
+        "paragraph_2": "Here's what happened:",
+        "steps": {
+          "step_1": "We automatically calculated and deducted all your taxes",
+          "step_2": "We claimed our 1% fee as a business expense for you",
+          "step_3": "We transferred the remaining amount to your personal bank account"
+        },
+        "title": "You just got paid!"
+      },
+      "personal_bank_account": {
+        "account_name": {
+          "error": "Please provide a valid account name",
+          "label": "Account name"
+        },
+        "account_number": {
+          "error": "Please provide a valid account number",
+          "label": "Account number"
+        },
+        "account_type": {
+          "business": "Business",
+          "error": "Please provide an account type",
+          "personal": "Personal"
+        },
+        "errors": {
+          "required": "This field is required"
+        },
+        "heading": "Personal bank account details",
+        "paragraph_1": "This is the bank account we will send your income to after tax and deductions.",
+        "sort_code": {
+          "error": "Please provide a valid sort code",
+          "label": "Sort code"
+        },
+        "title": "Payment details"
+      },
+      "personal_contact_details": {
+        "acquisition": {
+          "error": "Please provide how you heard about Hnry",
+          "label": "How did you hear about Hnry?"
+        },
+        "acquisition_detail_other": {
+          "error": "Please enter how you heard about Hnry",
+          "label": "Tell us more, how did you hear about Hnry?"
+        },
+        "acquisition_detail_recruiter_or_agent": {
+          "label": "Which recruitment agent was this?"
+        },
+        "acquisition_detail_referral": {
+          "label": "Which referral partner was this?"
+        },
+        "acquisition_select_option": {
+          "accountant_or_financial_advisor": "Accountant/Financial Advisor",
+          "billboard_adshel": "Billboard/Bus stop/Bus advertisement",
+          "event_or_meetup": "Event / Meetup",
+          "friend_or_family": "Friend / Family",
+          "google": "Google",
+          "hnry_team": "Hnry Team Member / Hnry Vehicle",
+          "news_article": "News Article",
+          "other": "Other",
+          "radio": "Radio",
+          "recruiter_or_agent": "Recruitment Agent / Hnry Partner",
+          "referral_partner": "Referral Partner",
+          "social_media": "Social Media",
+          "tiktok": "TikTok",
+          "tv": "TV"
+        },
+        "address": {
+          "errors": {
+            "invalid": "Please provide a valid address"
+          },
+          "label": "Home address (cannot be a PO box)"
+        },
+        "paragraph_1": "Please enter your contact information",
+        "phone_number": {
+          "errors": {
+            "invalid": "Please provide a valid phone number"
+          }
+        },
+        "tax_residence": {
+          "invalid": "Please select a tax residence",
+          "label": "Which UK country do you pay and file taxes in?"
+        }
+      },
+      "personal_details": {
+        "date_of_birth": {
+          "errors": {
+            "max": "Date of birth exceeds maximum age allowed",
+            "min": "You must be at least 18 years old to use Hnry",
+            "required": "Please provide a valid date of birth"
+          },
+          "label": "Date of birth"
+        },
+        "first_name": {
+          "errors": {
+            "required": "Please provide a first name"
+          },
+          "label": "First name"
+        },
+        "last_name": {
+          "errors": {
+            "required": "Please provide a last name"
+          },
+          "label": "Last name"
+        },
+        "middle_name": {
+          "label": "Middle name(s)"
+        },
+        "paragraph_1": "Please enter your full legal name",
+        "preferred_name": {
+          "label": "Preferred name (optional)"
+        },
+        "title": "Personal details"
+      },
+      "proof_of_address": {
+        "document_options": {
+          "item_1": "Bank credit card or bank statement (from last 3 months).",
+          "item_2": "Letter or bill from utility company (from last 3 months).",
+          "item_3": "Council tax bill (from last 12 months).",
+          "item_4": "Mortgage statement (from last 12 months and excluding online statements)."
+        },
+        "paragraph_1": "Upload proof of address",
+        "paragraph_2": "To process payments, we need to verify your address. Please upload a copy of one of the documents below:",
+        "title": "Identity verification"
+      },
+      "resend_confirmation_email": {
+        "error": "Your email hasn’t been confirmed, please click the resend email button and try again",
+        "paragraph_1": "All you need to do is click the link in the email we sent to %{email_address}.",
+        "paragraph_2": "If it’s not in your inbox, check your spam folder, just in case it ended up in there.",
+        "title": "Confirm your email"
+      },
+      "section_introductions": {
+        "customise_hnry_section": {
+          "heading": "Customise your Hnry Account",
+          "list_items": {
+            "list_item_1": "Choose how much to set aside for expenses",
+            "list_item_2": "Let us know where to pay your after-tax income",
+            "list_item_3": "Review your starting income tax rate"
+          },
+          "list_items_intro": "You'll need to:",
+          "paragraph1": "Let's take you through the Hnry service, and get you ready to get paid for the first time.",
+          "paragraph2": "After that, we'll pay you £1 to show you how it works!",
+          "sub_heading": "Almost there!"
+        },
+        "generic_error": "Something went wrong, please try again",
+        "identity_details_section": {
+          "heading": "Identity verification",
+          "list_items": {
+            "list_item_1": "Valid photo ID (passport or UK driving licence)",
+            "list_item_2": "Proof of current address (bank statement, utility bill, mortgage statement or council tax bill)"
+          },
+          "list_items_intro": "You'll need to upload:",
+          "paragraph2": "This won’t affect your credit score and we’ll store your ID securely, and only use it to verify your identity.",
+          "sub_heading": "We need to know you're you!"
+        },
+        "personal_details_section": {
+          "heading": "Personal details",
+          "list_items": {
+            "list_item_1": "Full legal name (and preferred name)",
+            "list_item_2": "Date of birth",
+            "list_item_3": "Mobile number",
+            "list_item_4": "Home address"
+          },
+          "list_items_intro": "We need to know your:",
+          "sub_heading": "Lets start with the basics!"
+        },
+        "work_details_section": {
+          "heading": "Work details",
+          "list_items": {
+            "list_item_1": "National insurance (NI) number",
+            "list_item_2": "UTR - Unique Taxpayer Reference (if you have one)",
+            "list_item_3": "Estimated income for this financial year"
+          },
+          "list_items_intro": "We need to know your:",
+          "paragraph1": "Please tell us about <strong>all</strong> your sources of income for the <strong>current financial year.</strong>",
+          "paragraph2": "You don’t need to worry about exact figures - just your best estimate is fine and we’ll handle the rest.",
+          "sub_heading": "What keeps you busy?"
+        }
+      },
+      "self_employed_estimate": {
+        "label": "Annual self-employed income",
+        "paragraph_1": "How much self-employed income do you think you'll earn this financial year?",
+        "paragraph_2": "To work out your starting tax rate, we need to know a",
+        "paragraph_3": "rough estimate",
+        "paragraph_4": "of your self-employed income between %{financial_year} (before tax and expenses).",
+        "title": "Work details",
+        "warnings": {
+          "min": "Self-employed income estimate must be greater than £0.",
+          "required": "This field is required."
+        }
+      },
+      "step_overview": {
+        "required_text": "Required to get your Hnry account",
+        "step_data": {
+          "num_1": {
+            "description": "Great start! On to the next step",
+            "number": 1,
+            "timeEstimate": "1 min to complete",
+            "title": "Create your account"
+          },
+          "num_2": {
+            "description": "Enter your personal and contact details",
+            "number": 2,
+            "timeEstimate": "1 min to complete",
+            "title": "Personal details"
+          },
+          "num_3": {
+            "description": "Enter your income and tax details",
+            "number": 3,
+            "timeEstimate": "3 mins to complete",
+            "title": "Work details"
+          },
+          "num_4": {
+            "description": "Use the Hnry App to upload your ID",
+            "number": 4,
+            "timeEstimate": "3 mins to complete",
+            "title": "Identity verification"
+          },
+          "num_5": {
+            "description": "Confirm your payment details",
+            "number": 5,
+            "timeEstimate": "1 min to complete",
+            "title": "Automate and understand your pay"
+          }
+        },
+        "title": "Sign up steps"
+      },
+      "tax_details": {
+        "tax_id_number": {
+          "about": "2 letters, 6 numbers, 1 letter",
+          "error": "Invalid NI number. 2 letters, 6 numbers, 1 letter",
+          "required": "You must enter an NI Number",
+          "title": "National insurance number (NI)"
+        },
+        "title": "Tax details",
+        "utr_number": {
+          "about": "10 or 13 numbers. Sometimes starts or ends with 'K'",
+          "error": "Invalid UTR number. 10 or 13 numbers. Sometimes starts or ends with 'K'",
+          "info_text": "If you’re not sure what your UTR is, you can add this later. If you don’t have a UTR, you’ll need to register for Self Assessment so that Hnry can manage your tax obligations.",
+          "learn_more_link": "https://help.hnry.io/en/articles/8967710-what-is-a-utr-number",
+          "title": "Unique taxpayer reference (UTR)"
+        },
+        "vat_number": {
+          "about": "9 numbers. Sometimes starts with 'GB'",
+          "error": "Invalid UK VAT number. 9 numbers. Sometimes starts with 'GB'",
+          "label": "20% VAT will automatically be added to your invoices",
+          "required": "You must enter a valid VAT number",
+          "title": "VAT registration number"
+        }
+      },
+      "verify_identity_basic_details": {
+        "description": "Before we can provision you with a Hnry account, we need to verify your identity.",
+        "heading": "Basic details",
+        "labels": {
+          "country_of_birth": "Place of birth",
+          "nationality": "Nationality"
+        },
+        "required": {
+          "country_of_birth": "Please select your place of birth",
+          "nationality": "Please select a nationality"
+        },
+        "title": "Identity verification"
+      },
+      "verify_identity_external_verification": {
+        "address": {
+          "errors": {
+            "invalid": "Please provide a valid address"
+          },
+          "label": "Home address (cannot be a PO box)"
+        },
+        "date_of_birth": {
+          "errors": {
+            "max": "Date of birth exceeds maximum age allowed",
+            "min": "You must be at least 18 years old to use Hnry",
+            "required": "Please provide a valid date of birth"
+          },
+          "label": "Date of birth"
+        },
+        "errors": {
+          "failed": "We couldn’t verify your identity with the information provided. Please check the details are correct and up to date.",
+          "max_failed_attempts_reached": "Max failed attempts reached"
+        },
+        "expires_on": {
+          "expired": "Passport must not be expired",
+          "label": "Expiry date",
+          "required": "Please provide passport expiry"
+        },
+        "first_name": {
+          "errors": {
+            "required": "Please provide a first name"
+          },
+          "label": "First name"
+        },
+        "last_name": {
+          "errors": {
+            "required": "Please provide a last name"
+          },
+          "label": "Last name"
+        },
+        "loading": "Checking data sources",
+        "middle_name": {
+          "label": "Middle name(s)"
+        },
+        "passport_number": {
+          "label": "Passport number",
+          "required": "Please provide a valid passport number"
+        },
+        "title": "Identity verification"
+      },
+      "work_details": {
+        "financial_year": "Financial year: ",
+        "income_details": {
+          "label": "Income details",
+          "none": "None of the above",
+          "other_income": "I have/will have other sources of income this financial year",
+          "salary_income": "I have/will have PAYE/Salary income this financial year",
+          "self_employed_income": "I have already earned self-employed income this financial year"
+        },
+        "paragraph_1": "Income and tax details",
+        "paragraph_2": "Select any of the following options that will have applied to you during this financial year.",
+        "required": "Please select at least one option",
+        "tax_details": {
+          "label": "Tax details",
+          "none": "None of the above",
+          "sales_tax_registration": "I am registered for VAT",
+          "student_loan": "I have a Student Loan"
+        },
+        "title": "Work details"
+      }
+    }
+  },
+  "onboarding_progress_bar": {
+    "v2": {
+      "bank": {
+        "description": "Let us know where to pay you",
+        "name": "Confirm your bank details"
+      },
+      "dollar_free": {
+        "description": "We’ll give you £1 free so you can see how this works",
+        "name": "Try out your Hnry Account"
+      },
+      "identity": {
+        "description": "Upload your passport, drivers licence and proof of address",
+        "name": "Verify your identity"
+      },
+      "income": {
+        "description": "Let us know how you earn your income",
+        "name": "Tell us about your income"
+      },
+      "secure": {
+        "description": "Great start! On to the next step",
+        "name": "Secure your account"
+      }
+    },
+    "v3": {
+      "demo_pay": {
+        "description": "Confirm your payment details",
+        "name": "Automate and understand your pay"
+      },
+      "identity": {
+        "description": "Use the Hnry App to upload your ID",
+        "name": "Identity verification"
+      },
+      "personal": {
+        "description": "Enter your personal and contact details",
+        "name": "Personal details"
+      },
+      "secure": {
+        "description": "Great start! On to the next step",
+        "name": "Create your account"
+      },
+      "work": {
+        "description": "Enter your income and tax details",
+        "name": "Work details"
+      }
+    }
+  },
+  "onboarding_tour": {
+    "confirm_your_income": {
+      "income_tax_percentage_tooltip_learn_more_link_html": "<a href='https://help.hnry.io/en/articles/3189201-how-does-hnry-ird-calculate-your-income-tax-rate' target='_blank'>Learn more</a>",
+      "income_tax_percentage_tooltip_paragraph_1_html": "<p>If you have other sources of income (e.g. PAYE/Salary job), your self-employed income will be taxed at a secondary rate. This is to ensure you have no tax owing at the end of the financial year.</p>"
+    },
+    "payment_confirmation": {
+      "fee_image_path": "tour/GB_you-just-got-paid-fee.svg",
+      "taxes_image_path": "tour/GB_you-just-got-paid-taxes.svg",
+      "transfer_image_path": "tour/GB_you-just-got-paid-transfer.svg"
+    },
+    "uk": {
+      "consent_to_act_agreement": {
+        "authority_to_act": "I grant Hnry the Authority to Act on my behalf"
+      }
+    },
+    "verify_your_identity": {
+      "alert": {
+        "body": "We could not verify your details with the information provided. Please check the details you've provided are correct and up to date."
+      },
+      "has_tax_number": {
+        "content": "National Insurance Number (NI)",
+        "tooltip": {
+          "content": "Your NI number is on letters and statements from HMRC or on payslips from past employers."
+        }
+      }
+    }
+  },
+  "pay_lines": {
+    "index": {
+      "tooltip": "",
+      "tooltip_learn_more_link": ""
+    },
+    "payslip": {
+      "adaptive_sales_tax_tooltip": {
+        "link": "http://help.hnry.io/en/articles/11742875-how-does-hnry-manage-your-vat"
+      },
+      "income_tax_tooltip": {
+        "link": "",
+        "text": ""
+      },
+      "levies": "National Insurance",
+      "levies_tooltip": {
+        "link": "",
+        "text": ""
+      },
+      "sales_tax": "VAT",
+      "service_fee_description": " (incl. VAT)"
+    }
+  },
+  "pre_hnry_expenses": {
+    "index": {
+      "intro_html": "<p>Use this section to tell us about any expenses you have from prior to joining us (excluding any expenses you have already uploaded to Hnry).</p> <p>You should enter the <b>total amount</b> for each Expense category per month.</p> <p><b>N.B.</b> Given that Hnry will not be reviewing receipts for these expenses, we are unable to warrant the validity of Expenses raised in this section. You will need to ensure you hold onto the receipts for 5 years should HMRC ever require them. If you would like us to review and approve any expenses then you should raise these in the system as individual claims instead.</p> <p>If you're not sure what is claimable, check our <a href='http://help.hnry.io/en/articles/8682293-what-can-i-claim-as-a-business-expense' target='_blank''>Guide to Claiming Business Expenses</a>.</p>",
+      "title": "Pre-Hnry Expenses"
+    }
+  },
+  "quotes": {
+    "index": {
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/9026928-wip-how-to-create-a-quote"
+    },
+    "update": {
+      "success_saved": "Quote draft updated"
+    }
+  },
+  "refer_a_friend": {
+    "invite_friends": {
+      "paragraph_1": "For every person who joins Hnry using your promo code, you'll both get £15 credit on your Hnry account when they start using the service. 🎉",
+      "title": "Get free credit!"
+    }
+  },
+  "reports": {
+    "financial_statement": {
+      "expenses": {
+        "columns": {
+          "expense_total_gst_registered": "Expense Total (ex VAT)"
+        }
+      }
+    },
+    "payment_summary": {
+      "sales_tax": "Less VAT"
+    }
+  },
+  "sales_tax": {
+    "short_name": "VAT"
+  },
+  "services": {
+    "form": {
+      "gst_type_warning_paragraph_1": "Only certain services are exempt from VAT. Selecting this option means that no VAT will be deducted and you will be liable if VAT should've been charged.",
+      "gst_type_warning_paragraph_2_html": "If you are unsure if your services are exempt, IRD have more information. <a href=\"https://www.ird.govt.nz/gst/charging-gst/exempt-supplies\" target='_blank'> Learn more </a>",
+      "price": "Price (excl VAT)",
+      "sales_tax_type": "How will you charge VAT on your Service?",
+      "taxable_income_tooltip": "VAT is passed to HMRC and is not included in your income. This is the amount that will have tax deducted."
+    },
+    "index": {
+      "tooltip_learn_more_link": "https://help.hnry.io/en/articles/9817315-how-to-add-a-service-with-hnry"
+    },
+    "sales_tax_types": {
+      "exclusive": "Exclusive (VAT charged on top of price)",
+      "inclusive": "Inclusive (VAT included in price)",
+      "not_required": "VAT is not required for this service"
+    },
+    "table": {
+      "service_name": "Price excl VAT"
+    },
+    "upload": {
+      "add": {
+        "template_body": "Make sure your CSV file is less than 1MB, and is formatted like the example below. All prices will be exclusive of VAT."
+      }
+    }
+  },
+  "shared": {
+    "income_forecast": {
+      "fields": {
+        "salary_income": "Annual Salary income"
+      }
+    },
+    "phone_number_fields": {
+      "tooltip": "You must have a local phone number to join Hnry in the United Kingdom"
+    }
+  },
+  "signup": {
+    "jurisdiction_selection": {
+      "consent_label": "I agree to the %{service_agreement_link} and %{privacy_policy_link}"
+    }
+  },
+  "suppliers": {
+    "account_number": {
+      "label": "Account number"
+    },
+    "account_number_and_sort_code": {
+      "branch_code": "Sort code"
+    },
+    "account_type": {
+      "error": "Account type is required",
+      "label": "Account type"
+    },
+    "bank_transactions": {
+      "notice": "If you want to edit your Supplier details, you'll need to make these changes from the <b><a href=\"%{suppliers_path}\"> Clients and Suppliers page</a></b> ."
+    },
+    "create": {
+      "not_allowed": "Not allowed to create a supplier."
+    },
+    "form": {
+      "account_name_error": "Bank account name is required",
+      "supplier_name_error": "Supplier name is required",
+      "supplier_payment_reference_error": "Payment reference is required"
+    },
+    "new": {
+      "account_type": "Account type",
+      "business": "Business",
+      "personal": "Personal",
+      "sort_code": "Sort code"
+    },
+    "reference": {
+      "character_length_error": "Maximum length is 18 characters",
+      "error": "Payment reference is required"
+    }
+  },
+  "tour": {
+    "create_client": {
+      "deducts_tax_prior": {
+        "paragraph_1": "Does this Client deduct tax prior to payment?",
+        "tooltip": {
+          "content": "Some Clients may be required to deduct part of your Income Tax before paying you. This is called 'Withholding Tax'"
+        }
+      },
+      "deducts_tax_prior_rate": {
+        "tooltip": {
+          "content": "What tax rate did you specify on your IR330C form? (e.g. 20 for 20%)"
+        }
+      },
+      "prior_deduction_percentage": "What tax rate did you specify on your IR330C form? (e.g. 20 for 20%)",
+      "sales_tax_exempt": {
+        "paragraph_1": "Is this Client outside of the UK or zero-rated for VAT?",
+        "tooltip_html": "<p>VAT will be set to 0% for zero-rated Clients.</p><p>Clients should be zero-rated if you are in Great Britain and they do not trade in the UK. Or you are in Northern Ireland and they do not trade in the UK and EU, or they are VAT registered in EU</p><p><a href=\"https://www.gov.uk/charge-reclaim-record-vat\" target=\"_blank\">Learn more</a></p>"
+      }
+    },
+    "demonstration_pay_amount": "£1",
+    "salary_fields": {
+      "feedback": {
+        "yes": "After you get paid for the first time into your Hnry Account, we'll fetch the info about your PAYE/Salary job directly from the HMRC and then send it to you for review. 👍"
+      }
+    },
+    "salary_income": {
+      "paragraph_1": "A PAYE/Salary job is where you get paid holiday, sick leave, and your taxes are taken care of by your employer."
+    },
+    "sales_tax_registration": {
+      "feedback_no": "No problem. 😊 If it looks like you may need to register for VAT, we'll automatically let you know.",
+      "feedback_yes": "Great! As soon as you start using your Hnry Account, we'll pay and file all your VAT for you.",
+      "paragraph_1_html": "You don't need to be registered for VAT to use Hnry, unless you're earning more than £90,000/year in self-employed income.",
+      "paragraph_3": {
+        "content_html": "<strong>Are you currently registered for VAT?</strong>",
+        "tooltip": {
+          "content": "You don't need to be registered for VAT to be a contractor, freelancer or sole trader. If you earn more than £90,000/year of self-employed income, you must be registered for Value Added Tax (VAT) as per HMRC's legislation.",
+          "link": "https://www.gov.uk/register-for-vat"
+        }
+      }
+    },
+    "step_titles": {
+      "salary_income": "Do you have a PAYE/Salary job?",
+      "sales_tax_registration": "Are you registered for VAT?",
+      "student_loan": "Do you have a Student Loan?"
+    },
+    "student_loan": {
+      "feedback": {
+        "yes": "We’ll deduct and pay your Student Loan as you get paid. If you don’t want us to deduct this, you can change it later."
+      }
+    }
+  },
+  "user_verifications": {
+    "alternative_passport": "Current British Passport",
+    "certified_documents": "If you don’t have a current British Passport or British Driver Licence",
+    "compulsory_documents": "A full birth or citizenship certificate issued by a British or foreign government"
+  },
+  "users": {
+    "financial": {
+      "account_details": {
+        "bank_code_name": "Sort code",
+        "hnry_account_link": "https://help.hnry.io/en/articles/9818477-wip-how-does-the-hnry-account-work",
+        "international_payments_link": ""
+      },
+      "edit": {
+        "adaptive_sales_tax": {
+          "learn_more_link": "http://help.hnry.io/en/articles/11742875-how-does-hnry-manage-your-vat"
+        },
+        "business_number": {
+          "label": "My UTR",
+          "title": "UTR format is 10 digits e.g. 1234567890",
+          "tooltip": "As a sole trader, having a Unique Taxpayer Reference (UTR) is totally optional. If you have one and you add it here, it will appear on your Invoices and Quotes."
+        },
+        "has_sales_tax_exempt_services": {
+          "label": "Some of the goods/services I sell are exempt from VAT",
+          "learn_more_link": "https://www.gov.uk/charge-reclaim-record-vat",
+          "tooltip": "Only certain services are exempt from VAT. You will be liable if VAT should've been charged. Please get in touch with the team if you have VAT exempt services."
+        },
+        "sales_tax_registered": {
+          "label": "I am currently registered for VAT as an individual",
+          "tooltip": {
+            "locked": {
+              "content": "If you need to change your VAT Status please get in touch with the Hnry team."
+            },
+            "not_locked": {
+              "content": "If you earn more than £90,000/year of self-employed income, you must be registered for Value Added Tax (VAT) as per HMRC's legislation.",
+              "link": "https://www.gov.uk/register-for-vat"
+            }
+          }
+        },
+        "student_loan": {
+          "label": "I have a Student Loan",
+          "tooltip": {
+            "locked": {
+              "content": "If you no longer have a Student Loan then you need to get in contact with the Hnry team."
+            },
+            "not_locked": {
+              "content": "If you have a student loan we may need to deduct additional tax amounts to cover Student Loan repayments."
+            }
+          }
+        },
+        "tax_id_number": {
+          "label": "My NI number",
+          "pattern": "[\\da-zA-Z\\-\\s]*",
+          "title": "must be digits and letters with optional spaces or dashes",
+          "tooltip": {
+            "disabled": "If you need to change your NI number please get in touch with the Hnry team."
+          }
+        },
+        "unique_taxpayer_reference": {
+          "label": "My UTR",
+          "learn_more_link": "https://app.intercom.com/a/apps/hl2pzvgv/articles/articles/8967710/show",
+          "title": "UTR format is 10 or 13 digits e.g. 1234567890",
+          "tooltip": "As a sole trader, you are required to have a Unique Taxpayer Reference (UTR). If you don’t have a UTR, you’ll need to register for Self Assessment with HMRC<br/></br/>%{href}"
+        },
+        "vat_number": {
+          "tooltip": {
+            "disabled": "If you need to change your VAT number please get in touch with the Hnry team."
+          }
+        }
+      },
+      "gst_registered_warning_modal": {
+        "add_services_paragraph": "Any Services you have already created will default to VAT exclusive. You can update your prices to be VAT inclusive in your Services.",
+        "tell_clients_and_recruiters": "If you do not send invoices, then you must ensure you let your Client or Recruiter know that you are VAT Registered.",
+        "title": "VAT Registration"
+      },
+      "intro": {
+        "intro_p1": "Use the sections below to tell us about your financial information. We need to know your tax details like your NI Number and VAT registration, as well as the Bank Account you would like to be paid into."
+      },
+      "invoice_quote_financial_field_modal": {
+        "input_id": "user_financial_vat_registration_number",
+        "input_length": 9,
+        "input_name": "user[financial_attributes][jurisdiction_fields_attributes][vat_registration_number]",
+        "input_pattern": "([A-Za-z]{2})?\\d{3}\\s?\\d{4}\\s?\\d{2}$",
+        "input_pattern_title": "must be 9-digits, (sometimes with \"GB\" at the start) and can be found on your VAT registration certificate",
+        "label": "My VAT number",
+        "label_tooltip": "VAT number must be 9-digits, (sometimes with \"GB\" at the start) and can be found on your VAT registration certificate.",
+        "paragraph_clients": "Since you are VAT registered we need to know your VAT number before you can create an Invoice.",
+        "paragraph_invoices": "Since you are VAT registered we need to know your VAT number before you can create an Invoice.",
+        "paragraph_quotes": "Since you are VAT registered we need to know your VAT number before you can create a Quote.",
+        "title": "VAT number"
+      }
+    },
+    "security": {
+      "two_factor_toggle": {
+        "label": "Authenticator app"
+      }
+    },
+    "vehicles": {
+      "categories": {
+        "fuel_type": "Vehicle Type"
+      },
+      "dropdown": {
+        "default": "Select Vehicle Type"
+      }
+    }
+  },
+  "validation_regex": {
+    "utr_number": "^([Kk]?(\\d{10}|\\d{13})|(\\d{10}|\\d{13})[Kk]?)$",
+    "vat_number": "([A-Za-z]{2})?\\d{3}\\s?\\d{4}\\s?\\d{2}$"
+  }
+}

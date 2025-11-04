@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { Switch as HeadlessSwitch } from "@headlessui/react";
-import "./styles.scss";
+// import "./styles.scss";
 
 export interface iSwitch {
   checked: boolean;

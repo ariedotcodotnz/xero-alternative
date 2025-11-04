@@ -1,5 +1,6 @@
 import React from "react";
-import { formatNumeral } from "cleave-zen";
+import Cleave from 'cleave-zen';
+const { formatNumeral } = Cleave;
 import Tooltip from "@hui/_atoms/tooltip/Tooltip";
 import I18n from "../../utilities/translations";
 import { iIncomeSource as financialIncomeSource } from "../../types/financialIncomeSource.type";

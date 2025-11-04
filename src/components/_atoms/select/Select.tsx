@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import classNames from "classnames";
 import * as RadixSelect from "@radix-ui/react-select";
 import Icon from "../icons/icon/Icon";
-import "./styles.scss";
+// import "./styles.scss";
 
 export type SelectOptionType = {
   /*

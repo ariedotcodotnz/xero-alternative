@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { formatNumeral, registerCursorTracker, DefaultNumeralDelimiter } from "cleave-zen";
+import Cleave from 'cleave-zen';
+const { formatNumeral, registerCursorTracker, DefaultNumeralDelimiter } = Cleave;
 import classNames from "classnames";
 import isMobile from "../../../es_utilities/isMobile";
 

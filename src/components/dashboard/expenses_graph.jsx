@@ -6,7 +6,8 @@ import React, {
   useLayoutEffect,
 } from "react";
 import classNames from "classnames";
-import { VictoryPie, VictoryLabel, VictoryAnimation } from "victory";
+import { VictoryPie } from "victory";
+import { VictoryLabel, VictoryAnimation } from "victory-core";
 import { truncate } from "../utils/base_helper";
 import {
   BRAND_BLUE,
@@ -22,6 +23,7 @@ const BASE_COLOURS = [BRAND_GREEN, GREY_SUPERLIGHT];
 const EXPENSES_LABEL = "Claimable total";
 
 const splitText = (text) => {
+  if (!text) return "";
   if (text.length <= 25) return text;
 
   let firstLine = text.substring(0, 22);
@@ -63,7 +65,7 @@ const ExpensesGraph = ({
   const [svgHeight, setSvgHeight] = useState(220);
   const [graphPosX, setGraphPosX] = useState(18);
   const [legendOrientation, setLegendOrientation] = useState("horizontal");
-  const [truncateText, setTruncateText] = useState(false);
+  const [truncateTextLegend, setTruncateTextLegend] = useState(false);
   const [maxCharacters, setMaxCharacters] = useState(20);
   const [legendFont, setLegendFont] = useState(10.5);
 
@@ -75,9 +77,16 @@ const ExpensesGraph = ({
   }, [hideLegend, isMobile]);
 
   useLayoutEffect(() => {
-    if (expensesGraph) {
+    if (!expensesGraph) {
+      setWidth(hideLegend || isMobile ? 280 : 400);
+      setHeight(maxHeight ?? (isMobile ? 400 : 220));
+      return;
+    }
+
+    const updateLayout = () => {
+      if (!ref.current) return;
+
       const pWidth = ref.current.offsetWidth;
-      const pHeight = ref.current.offsetHeight;
       const screenWidth = window.innerWidth;
 
       if (screenWidth < 640) {
@@ -89,31 +98,29 @@ const ExpensesGraph = ({
         setHeight(h);
         setGraphPosX((pWidth - w) / 2);
         setInnerRadius(screenWidth < 375 ? 70 : 90);
-        setTruncateText(false);
+        setTruncateTextLegend(false);
         setLegendOrientation(screenWidth >= 550 ? "horizontal" : "vertical");
         setLegendFont(screenWidth >= 550 ? 11 : 10.5);
         setSvgHeight(125 + h);
       } else if (screenWidth >= 1280 || (screenWidth >= 768 && pWidth < 400)) {
-        // Settings for 3-cols (>= Tailwinds xl)
-        // Settings for 2-cols (Tailwinds md: 768 - 925px)
+        // Settings for 3-cols (>= Tailwinds xl) or 2-cols (md: 768 - 925px with narrow container)
         const h = 200;
         setWidth(280);
         setHeight(h);
         setInnerRadius(70);
         setGraphPosX((pWidth - 280) / 2);
-        setTruncateText(pWidth < 360);
+        setTruncateTextLegend(pWidth < 360);
         setLegendOrientation(pWidth >= 360 ? "vertical" : "horizontal");
         setMaxCharacters(24);
         setSvgHeight((pWidth >= 360 ? 125 : 60) + h);
       } else {
-        // Settings for 2-cols (926 - 1023px)
-        // Settings for 1-col (Tailwinds sm: 640px - 767px)
+        // Settings for 2-cols (926 - 1023px) or 1-col (sm: 640px - 767px)
         const h = 230;
 
         setWidth(320);
         setHeight(h);
         setGraphPosX((pWidth - 320) / 2);
-        setTruncateText(false);
+        setTruncateTextLegend(false);
         setLegendOrientation(pWidth >= 560 ? "horizontal" : "vertical");
         setInnerRadius(80);
         setLegendFont(pWidth >= 560 ? 11 : 10.5);
@@ -121,10 +128,11 @@ const ExpensesGraph = ({
       }
 
       setSvgWidth(pWidth);
-    } else {
-      setWidth(hideLegend || isMobile ? 280 : 400);
-      setHeight(maxHeight || isMobile ? 400 : 220);
-    }
+    };
+
+    updateLayout();
+    window.addEventListener("resize", updateLayout);
+    return () => window.removeEventListener("resize", updateLayout);
   }, [expensesGraph, hideLegend, isMobile, maxHeight]);
 
   useEffect(() => {
@@ -139,62 +147,56 @@ const ExpensesGraph = ({
     setCenterLabelText(splitText(centerLabel || EXPENSES_LABEL));
   }, [centerLabel]);
 
-  useEffect(() => {
-    setCenterLabelValue(isAnimated ? 0 : total);
-
-    // After a 1 second delay, set the initial graph data that was passed in
-    // to replace the pre-animation values.
-    if (isAnimated) {
-      setTimeout(() => {
-        setGraphData(expensesCategories);
-        setCenterLabelValue(total);
-      }, 300);
-    }
-  }, [isAnimated, total, expensesCategories]);
-
-  useEffect(() => {
-    setGraphData(isAnimated ? getInitialGraphData : expensesCategories);
-  }, [isAnimated, expensesCategories]);
-
-  // This will only be called for an isAnimated instance of the component.
-  // It replaces the weighted value of each item on the graph with an item
-  // with the same name, but its value set to 0 (unless it's the last value
-  // which is set to 100)
-  const getInitialGraphData = useMemo(() =>
-    expensesCategories.map((dataPoint, index) => ({
-      x: dataPoint.x,
-      y: index < expensesCategories.length - 1 ? 0 : 100,
-    })),
+  // Prepare initial zeroed data for animation
+  const getInitialGraphData = useMemo(
+    () =>
+      expensesCategories.map((dataPoint, index) => ({
+        x: dataPoint.x,
+        y: index < expensesCategories.length - 1 ? 0 : 100,
+      })),
+    [expensesCategories]
   );
 
-  const engagedRecentlyRef = useRef(false);
-
+  // Drive animated transitions for data and center value
   useEffect(() => {
-    let channelingEngagementId;
-    if (expensesGraph && centerLabelText !== EXPENSES_LABEL) {
-      channelingEngagementId = setTimeout(() => {
-        if (!engagedRecentlyRef.current) {
-          window.analytics.track("dashboard_expenses_graph_engagement");
-          engagedRecentlyRef.current = true;
-        }
-      }, 300);
+    if (!isAnimated) {
+      setGraphData(expensesCategories);
+      setCenterLabelValue(total);
+      return;
     }
 
-    // Whenever a different section of the donut is hovered, restart the 300ms timer
+    setCenterLabelValue(0);
+    setGraphData(getInitialGraphData);
+
+    const id = setTimeout(() => {
+      setGraphData(expensesCategories);
+      setCenterLabelValue(total);
+    }, 300);
+
+    return () => clearTimeout(id);
+  }, [isAnimated, expensesCategories, total, getInitialGraphData]);
+
+  // Track user engagement with a cooldown
+  const [engagedRecently, setEngagedRecently] = useState(false);
+
+  useEffect(() => {
+    if (!(expensesGraph && centerLabelText !== EXPENSES_LABEL)) return;
+
+    const channelingEngagementId = setTimeout(() => {
+      if (!engagedRecently && window?.analytics?.track) {
+        window.analytics.track("dashboard_expenses_graph_engagement");
+        setEngagedRecently(true);
+      }
+    }, 300);
+
     return () => clearTimeout(channelingEngagementId);
-  }, [centerLabelText]);
+  }, [expensesGraph, centerLabelText, engagedRecently]);
 
   useEffect(() => {
-    let engagementCooldownId;
-    if (expensesGraph && engagedRecentlyRef.current) {
-      engagementCooldownId = setTimeout(() => {
-        engagedRecentlyRef.current = false;
-      }, 3000);
-    }
-
-    // Clearing to prevent from timeout cb running after the component unmounts (causes memory leaks)
-    return () => clearTimeout(engagementCooldownId);
-  }, [engagedRecentlyRef.current]);
+    if (!engagedRecently) return;
+    const cooldownId = setTimeout(() => setEngagedRecently(false), 3000);
+    return () => clearTimeout(cooldownId);
+  }, [engagedRecently]);
 
   // using the same function for legend and graph, unfortunately props have different params
   // so I need to get the index differently
@@ -203,7 +205,8 @@ const ExpensesGraph = ({
     const expense = expensesCategories[i];
     const { x, label } = expense;
 
-    (setCenterLabelText(splitText(x)), setCenterLabelValue(label));
+    setCenterLabelText(splitText(x));
+    setCenterLabelValue(label);
 
     return {
       style: {
@@ -229,7 +232,7 @@ const ExpensesGraph = ({
             <VictoryLabel
               textAnchor="middle"
               verticalAnchor={({ text }) =>
-                text.length > 1 ? "middle" : "start"
+                Array.isArray(text) ? "middle" : "start"
               }
               x={width / 2}
               y={innerRadius * 1.1}
@@ -249,8 +252,6 @@ const ExpensesGraph = ({
                 data={{
                   centerLabelText,
                   centerLabelValue,
-                  graphData,
-                  colours,
                 }}
               >
                 {(newProps) => (
@@ -263,7 +264,7 @@ const ExpensesGraph = ({
               </VictoryAnimation>
             ) : (
               <PieCenterLabel
-                label={centerLabelValue}
+                label={`${Math.round(centerLabelValue)}%`}
                 labelPadding={width / 2}
                 fill={BRAND_BLUE}
                 y={innerRadius * 1.5}
@@ -275,6 +276,9 @@ const ExpensesGraph = ({
               innerRadius={innerRadius}
               padding={{ top: 10, bottom: 10 }}
               data={graphData}
+              animate={
+                isAnimated ? { duration: 1000, easing: "quadInOut" } : undefined
+              }
               events={
                 disableMouseEvents
                   ? null
@@ -300,7 +304,7 @@ const ExpensesGraph = ({
               width={width}
               height={height}
               labels={[]}
-              style={{ labels: { display: "none" }, cursor: "pointer" }}
+              style={{ data: { cursor: "pointer" }, labels: { display: "none" } }}
             />
           </g>
           <PieLegend
@@ -312,7 +316,7 @@ const ExpensesGraph = ({
             colours={colours}
             fill={BRAND_BLUE}
             orientation={legendOrientation}
-            truncateText={truncateText}
+            truncateText={truncateTextLegend}
             maxCharacters={maxCharacters}
             fontSize={legendFont}
             rowGutter={{ bottom: -2 }}
@@ -350,11 +354,11 @@ const ExpensesGraph = ({
               : "translate(18px, -18px)",
           }}
         >
-          <g style={{ transform: !isMobile && "translate(-2px, 2px)" }}>
+          <g style={{ transform: !isMobile ? "translate(-2px, 2px)" : undefined }}>
             <VictoryLabel
               textAnchor="middle"
               verticalAnchor={({ text }) =>
-                text.length > 1 ? "middle" : "start"
+                Array.isArray(text) ? "middle" : "start"
               }
               x={labelPadding}
               y={centerLabelText.length > 0 ? 98 : 100}
@@ -374,8 +378,6 @@ const ExpensesGraph = ({
                 data={{
                   centerLabelText,
                   centerLabelValue,
-                  graphData,
-                  colours,
                 }}
               >
                 {(newProps) => (
@@ -399,6 +401,9 @@ const ExpensesGraph = ({
             colorScale={colours}
             innerRadius={80}
             data={graphData}
+            animate={
+              isAnimated ? { duration: 1000, easing: "quadInOut" } : undefined
+            }
             events={
               disableMouseEvents
                 ? null
@@ -429,7 +434,7 @@ const ExpensesGraph = ({
               right: 0,
             }}
             labels={[]}
-            style={{ labels: { display: "none" }, cursor: "pointer" }}
+            style={{ data: { cursor: "pointer" }, labels: { display: "none" } }}
           />
         </g>
       </svg>

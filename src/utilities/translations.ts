@@ -16,7 +16,7 @@ I18n.missingTranslation.register("notify", (i18n, thescope) => {
   let scope = thescope;
   if (window.Rollbar && Rollbar.warning) {
     Rollbar.warning(
-      `Missing translation for ${scope} using ${i18n.locale} locale.`,
+        `Missing translation for ${scope} using ${i18n.locale} locale.`,
     );
   }
 
@@ -28,11 +28,11 @@ I18n.missingTranslation.register("notify", (i18n, thescope) => {
   // Replace underscore with space and camelcase with space and lowercase letter.
   let message = scope.split(i18n.defaultSeparator).slice(-1)[0];
   message = message
-    .replace("_", " ")
-    .replace(
-      /([a-z])([A-Z])/g,
-      (_match: string, p1: string, p2: string) => `${p1} ${p2.toLowerCase()}`,
-    );
+      .replace("_", " ")
+      .replace(
+          /([a-z])([A-Z])/g,
+          (_match: string, p1: string, p2: string) => `${p1} ${p2.toLowerCase()}`,
+      );
 
   if (navigator.webdriver) {
     message = `[[[MISSING TRANSLATION]]] ${message}`;
@@ -68,7 +68,7 @@ export const storeRequiredLocales = (forceLocale?: hnryLocales) => {
 storeRequiredLocales();
 
 document.addEventListener("turbolinks:before-render", () =>
-  storeRequiredLocales(),
+    storeRequiredLocales(),
 );
 
 export default I18n;

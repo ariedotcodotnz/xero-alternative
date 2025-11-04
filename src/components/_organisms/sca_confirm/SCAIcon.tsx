@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "../../_atoms/icons/icon/Icon";
 import { SCA_FAILED, SCA_SUCCESS, confirmStatusType } from "./types";
-import "./styles.scss";
+// import "./styles.scss";
 
 interface iSCAIcon {
   confirmStatus: confirmStatusType;

@@ -3,7 +3,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import classNames from "classnames";
 import Icon from "../../_atoms/icons/icon/Icon";
 import Button from "../../_atoms/button/Button";
-import "./styles.scss";
+// import "./styles.scss";
 
 export interface iModal {
   cancelCTA?: string;

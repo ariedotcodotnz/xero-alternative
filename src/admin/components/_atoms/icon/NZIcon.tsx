@@ -1,4 +1,4 @@
-import React from "react.js";
+import React from "react";
 
 interface iNZIcon {
   className?: string;

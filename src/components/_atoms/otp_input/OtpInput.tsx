@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactOtpInput from "react-otp-input";
-import "./styles.scss";
+// import "./styles.scss";
 
 const OtpCodeInput = ({
   value,

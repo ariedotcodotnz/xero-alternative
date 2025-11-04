@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import classNames from "classnames";
 import Icon from "../../_atoms/icons/icon/Icon";
-import "./styles.scss";
+// import "./styles.scss";
 
 interface iBanner {
   /**

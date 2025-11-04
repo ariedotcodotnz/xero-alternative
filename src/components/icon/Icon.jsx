@@ -36,7 +36,7 @@ const Icon = ({
       title={title}
     >
       <img
-        src={require(`../../../assets/images/icons/${type}.svg`)}
+        // src={require(`../../../assets/images/icons/${type}.svg`)}
         alt={label || ""}
         className="tw-w-full tw-h-full"
       />

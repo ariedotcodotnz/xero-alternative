@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React, { useState } from "react";
 
-import "./styles.scss";
+// import "./styles.scss";
 import { useReward } from "react-rewards";
 
 import { addFeature, removeFeature } from "../../../API/users.api";
